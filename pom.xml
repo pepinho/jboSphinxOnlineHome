@@ -1,0 +1,111 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.jbo.jbo-soo-home</groupId>
+	<artifactId>root</artifactId>
+	<version>${root.version}</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<timestamp>b${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+		<root.version>1.0.0</root.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/aopalliance/aopalliance -->
+			<dependency>
+				<groupId>aopalliance</groupId>
+				<artifactId>aopalliance</artifactId>
+				<version>1.0</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>1.6</version>
+			</dependency>
+
+			<!-- in-gmbh weblets aaa common -->
+			<dependency>
+				<groupId>de.ingmbh.aaa</groupId>
+				<artifactId>de.ingmbh.aaa.common</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+
+			<!-- in-gmbh sphinx online common -->
+			<dependency>
+				<groupId>de.ingmbh.sphinx.online</groupId>
+				<artifactId>de.ingmbh.sphinx.online.common</artifactId>
+				<version>4.0.0</version>
+			</dependency>
+
+			<!-- in-gmbh sphinx online adapter common -->
+			<dependency>
+				<groupId>de.ingmbh.sphinx.online</groupId>
+				<artifactId>sphinx-online-adapter-common</artifactId>
+				<version>4.0.0</version>
+			</dependency>
+
+			<!-- in-gmbh sphinx online adapter common tests -->
+			<dependency>
+				<groupId>de.ingmbh.sphinx.online</groupId>
+				<artifactId>sphinx-online-adapter-common-tests</artifactId>
+				<version>4.0.0</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/commons-configuration/commons-configuration -->
+			<dependency>
+				<groupId>commons-configuration</groupId>
+				<artifactId>commons-configuration</artifactId>
+				<version>1.10</version>
+			</dependency>
+
+
+		</dependencies>
+	</dependencyManagement>
+
+	<modules>
+		<module>adapter</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<inherited>true</inherited>
+				<configuration>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+						</manifest>
+						<manifestEntries>
+							<Implementation-Build>${timestamp}</Implementation-Build>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+
+	</profiles>
+</project>

@@ -1,0 +1,4 @@
+call mvn install:install-file -Dfile=libs\de.ingmbh.sphinx.online.common-4.0.0.jar -DgroupId=de.ingmbh.sphinx.online -DartifactId=de.ingmbh.sphinx.online.common -Dversion=4.0.0 -Dpackaging=jar
+call mvn install:install-file -Dfile=libs\de.ingmbh.aaa.common-1.1.0.jar -DgroupId=de.ingmbh.aaa -DartifactId=de.ingmbh.aaa.common -Dversion=1.1.0 -Dpackaging=jar
+call mvn install:install-file -Dfile=libs\sphinx-online-adapter-common-4.0.0.jar -DgroupId=de.ingmbh.sphinx.online -DartifactId=sphinx-online-adapter-common -Dversion=4.0.0 -Dpackaging=jar
+call mvn install:install-file -Dfile=libs\sphinx-online-adapter-common-4.0.0-tests.jar -DgroupId=de.ingmbh.sphinx.online -DartifactId=sphinx-online-adapter-common-tests -Dversion=4.0.0 -Dpackaging=jar
