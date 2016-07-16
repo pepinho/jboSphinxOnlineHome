@@ -54,3 +54,4 @@ adapter/.settings/org.eclipse.wst.common.project.facet.core.xml
 connection/wut/servlet/.settings/org.eclipse.wst.common.project.facet.core.xml
 *.container
 *.name
+*.project
