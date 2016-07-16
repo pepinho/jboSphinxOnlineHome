@@ -43,3 +43,14 @@ Temporary Items
 .apdisk
 adapter/.classpath
 adapter/.project
+*.project
+*.prefs
+*.component
+adapter/.settings/org.eclipse.wst.common.project.facet.core.xml
+*.project
+*.project
+*.classpath
+*.jsdtscope
+connection/wut/servlet/.settings/org.eclipse.wst.common.project.facet.core.xml
+*.container
+*.name

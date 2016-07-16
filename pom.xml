@@ -1,4 +1,5 @@
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.jbo.jbo-soo-home</groupId>
 	<artifactId>root</artifactId>
@@ -9,7 +10,24 @@
 		<timestamp>b${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 		<root.version>1.0.0</root.version>
+		<jdk.version>1.8</jdk.version>
+		<spring.version>4.1.1.RELEASE</spring.version>
+		<jstl.version>1.2</jstl.version>
+		<junit.version>4.11</junit.version>
+		<logback.version>1.0.13</logback.version>
+		<jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
+		<aopalliance.version>1.0</aopalliance.version>
+		<commons-codec.version>1.6</commons-codec.version>
+		<commons-configuration.version>1.10</commons-configuration.version>
+		<ingmbh-aaa.version>1.1.0</ingmbh-aaa.version>
+		<ingmbh-soo.version>4.0.0</ingmbh-soo.version>
+		<slf4j.version>1.6.1</slf4j.version>
 	</properties>
+
+	<modules>
+		<module>adapter</module>
+		<module>connection</module>
+	</modules>
 
 	<dependencyManagement>
 		<dependencies>
@@ -17,75 +35,145 @@
 			<dependency>
 				<groupId>aopalliance</groupId>
 				<artifactId>aopalliance</artifactId>
-				<version>1.0</version>
+				<version>${aopalliance.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
-				<version>1.6</version>
+				<version>${commons-codec.version}</version>
 			</dependency>
 
 			<!-- in-gmbh weblets aaa common -->
 			<dependency>
 				<groupId>de.ingmbh.aaa</groupId>
 				<artifactId>de.ingmbh.aaa.common</artifactId>
-				<version>1.1.0</version>
+				<version>${ingmbh-aaa.version}</version>
 			</dependency>
 
 			<!-- in-gmbh sphinx online common -->
 			<dependency>
 				<groupId>de.ingmbh.sphinx.online</groupId>
 				<artifactId>de.ingmbh.sphinx.online.common</artifactId>
-				<version>4.0.0</version>
+				<version>${ingmbh-soo.version}</version>
 			</dependency>
 
 			<!-- in-gmbh sphinx online adapter common -->
 			<dependency>
 				<groupId>de.ingmbh.sphinx.online</groupId>
 				<artifactId>sphinx-online-adapter-common</artifactId>
-				<version>4.0.0</version>
+				<version>${ingmbh-soo.version}</version>
 			</dependency>
 
 			<!-- in-gmbh sphinx online adapter common tests -->
 			<dependency>
 				<groupId>de.ingmbh.sphinx.online</groupId>
 				<artifactId>sphinx-online-adapter-common-tests</artifactId>
-				<version>4.0.0</version>
+				<version>${ingmbh-soo.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
-				<version>1.6.1</version>
+				<version>${slf4j.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-log4j12</artifactId>
-				<version>1.6.1</version>
+				<version>${slf4j.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/commons-configuration/commons-configuration -->
 			<dependency>
 				<groupId>commons-configuration</groupId>
 				<artifactId>commons-configuration</artifactId>
-				<version>1.10</version>
+				<version>${commons-configuration.version}</version>
 			</dependency>
 
+			<!-- Unit Test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+			</dependency>
+
+			<!-- Spring Core -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${jcl-over-slf4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- jstl -->
+			<dependency>
+				<groupId>jstl</groupId>
+				<artifactId>jstl</artifactId>
+				<version>${jstl.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.1.0</version>
+			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
 
-	<modules>
-		<module>adapter</module>
-	</modules>
+
 
 	<build>
 		<plugins>
+		    <!-- Eclipse project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<!-- Always download and attach dependencies source code -->
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+					<!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
+					<wtpversion>2.0</wtpversion>
+				</configuration>
+			</plugin>
+
+			<!-- jar-plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -100,6 +188,17 @@
 							<Implementation-Build>${timestamp}</Implementation-Build>
 						</manifestEntries>
 					</archive>
+				</configuration>
+			</plugin>
+			
+			<!-- compiler plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<!-- or whatever version you use -->
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
 		</plugins>
