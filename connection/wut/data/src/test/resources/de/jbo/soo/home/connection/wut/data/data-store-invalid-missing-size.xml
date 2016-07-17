@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>WUT data-store
+Stored: 2 inputs, outputs and counters.
+Changed: 17.07.16 12:29</comment>
+<entry key="input1">false</entry>
+<entry key="input0">true</entry>
+<entry key="counter1">0</entry>
+<entry key="counter0">1</entry>
+<entry key="output1">true</entry>
+<entry key="output0">false</entry>
+</properties>

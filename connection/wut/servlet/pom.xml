@@ -4,7 +4,7 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>de.jbo.jbo-soo-home</groupId>
+		<groupId>de.jbo.jbo-soo-home.connection.wut</groupId>
 		<artifactId>wut</artifactId>
 		<version>${root.version}</version>
 	</parent>
@@ -14,12 +14,6 @@
 	<name>servlet Wut-simulator</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
-		<!-- Unit Test -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-		</dependency>
-
 		<!-- Spring Core -->
 		<dependency>
 			<groupId>org.springframework</groupId>
