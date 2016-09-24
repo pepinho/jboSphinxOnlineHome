@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.jbo.jbo-soo-home.connection.wut</groupId>
 		<artifactId>wut</artifactId>
-		<version>${root.version}</version>
+		<version>0.9.1</version>
 	</parent>
 	<groupId>de.jbo.jbo-soo-home.connection.wut.io</groupId>
 	<artifactId>io</artifactId>
@@ -18,7 +18,7 @@
 	<dependency>
 		<groupId>de.jbo.jbo-soo-home.connection.wut.data</groupId>
 		<artifactId>data</artifactId>
-		<version>${root.version}</version>
+		<version>${parent.version}</version>
 	</dependency>
 	</dependencies>
 

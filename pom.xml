@@ -3,13 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.jbo.jbo-soo-home</groupId>
 	<artifactId>root</artifactId>
-	<version>${root.version}</version>
+	<version>0.9.1</version>
 	<packaging>pom</packaging>
 
 	<properties>
 		<timestamp>b${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-		<root.version>1.0.0</root.version>
 		<jdk.version>1.8</jdk.version>
 		<spring.version>4.1.1.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
@@ -184,6 +183,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.6</version>
 				<inherited>true</inherited>
 				<configuration>
 					<archive>
@@ -202,6 +202,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
 				<configuration>
 					<!-- or whatever version you use -->
 					<source>${jdk.version}</source>
