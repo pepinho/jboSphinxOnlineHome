@@ -195,4 +195,12 @@ public class DataStoreTest {
         DataStore data = new DataStore();
         assertFalse(data.load(getInputStream("data-store-invalid-data-counter.xml")));
     }
+
+    @Test
+    public void test_clear() {
+        DataStore data = new DataStore(2);
+        data.setOutput(0, true);
+        data.clear();
+        assertFalse("The value should be 'false'!", data.getOutput(0));
+    }
 }

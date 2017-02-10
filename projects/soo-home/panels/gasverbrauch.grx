@@ -1,0 +1,52 @@
+integrierte informationssysteme (c)
+grinx a 10 30
+nd 0
+dd 29.11.2013 21.01.2015
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   105.0 63.0
+   0
+ep 11 1 0 0 0 0
+   11 hintergrund
+   1
+   4100 0 19 "title=Gasverbrauch\000"
+ap 0
+   0
+gp 1.0 0.0
+   6.217248937900877E-15 0.0
+   1.0 0.09139784946236773
+   12 _GR_SYM_PTH/
+   15 hintergrund.grx
+ep 19 1 0 0 0 0
+   0
+   2
+   4200 0 48 "soo-home.energie.gasverbrauch.value.1m@Curve:0
+\000"
+   4100 0 146 "soo:chart.time.interval=1H
+soo:chart.time.offset=-3H
+soo:chart.timeunit.count=4
+soo:chart.rangeaxis.lowerbound=0
+soo:chart.rangeaxis.upperbound=2\000"
+ap 0 1 1 1 22 1 0 10
+gp 2 ./
+   33 soo:chartLogicalName=gasverbrauch
+   4
+   13.646952467804908 2.834981820422879
+   91.30227857761192 2.834981820422879
+   91.30227857761192 54.60519922696085
+   13.646952467804908 54.60519922696085
+ep 11 1 0 0 0 0
+   15 nav_back_button
+   0
+ap 0
+   0
+gp 0.41939178737637245 0.0
+   -51.17788491744736 0.0
+   0.41939178737637245 10.141191971780625
+   12 _GR_SYM_PTH/
+   19 nav_back_button.grx
+ee

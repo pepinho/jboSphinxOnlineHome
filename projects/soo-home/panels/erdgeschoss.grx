@@ -1,0 +1,379 @@
+integrierte informationssysteme (c)
+grinx a 10 30
+nd 0
+dd 12.11.2013 21.01.2015
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   105.0 63.0
+   0
+ep 11 1 0 0 0 0
+   11 hintergrund
+   1
+   4100 0 18 "title=Erdgeschoss\000"
+ap 0
+   0
+gp 1.0 0.0
+   6.217248937900877E-15 0.0
+   1.0 0.09139784946236773
+   12 _GR_SYM_PTH/
+   15 hintergrund.grx
+ep 11 1 0 0 0 0
+   19 stockwerk_grundriss
+   1
+   4100 0 49 "soo:nodeId=soo-home.kueche.licht.rechts.2.status\000"
+ap 0
+   0
+gp 0.8161070779110917 0.0
+   11.094569828906026 0.0
+   0.8161070779110917 2.2291580387227223
+   12 _GR_SYM_PTH/
+   23 stockwerk_grundriss.grx
+ep 7 1 0 0 0 0
+   0
+   0
+ap 1 1 33 0 0 1 0 10
+gp 36
+   94.46425419240953 43.216240070609004
+   94.41718906714284 43.514185399280244
+   94.27742374135792 43.803077809907414
+   94.04920491375408 44.07413945278023
+   93.73946689792375 44.31913425704381
+   93.35762092674294 44.53061817954395
+   92.91526919682259 44.70216538831152
+   92.42585234163556 44.82856350821519
+   91.90424104466983 44.905971996342224
+   91.36628420123564 44.932038834951456
+   90.82832735780146 44.905971996342224
+   90.30671606083573 44.82856350821519
+   89.81729920564871 44.70216538831152
+   89.37494747572835 44.53061817954395
+   88.99310150454754 44.31913425704381
+   88.6833634887172 44.07413945278023
+   88.45514466111337 43.803077809907414
+   88.31537933532844 43.514185399280244
+   88.26831421006176 43.216240070609004
+   88.31537933532844 42.918294741937764
+   88.45514466111337 42.629402331310594
+   88.6833634887172 42.35834068843778
+   88.99310150454754 42.1133458841742
+   89.37494747572835 41.90186196167406
+   89.8172992056487 41.73031475290649
+   90.30671606083573 41.60391663300282
+   90.82832735780146 41.526508144875784
+   91.36628420123564 41.50044130626655
+   91.90424104466982 41.526508144875784
+   92.42585234163555 41.60391663300282
+   92.91526919682259 41.73031475290649
+   93.35762092674294 41.90186196167406
+   93.73946689792375 42.1133458841742
+   94.04920491375408 42.35834068843778
+   94.27742374135792 42.629402331310594
+   94.41718906714284 42.918294741937764
+ep 5 1 0 0 0 0
+   0
+   0
+ap 1 1 33 0 0 1 0 10
+gp 92.36716681376875 51.22330097087379
+   2.3075050153332684
+ep 6 1 0 0 0 0
+   0
+   0
+ap 1 1 33 0 0 1 0 10
+gp 89.31685789938217 48.55428067078552
+   95.41747572815535 48.55428067078552
+   95.41747572815535 53.89232127096205
+   89.31685789938217 53.89232127096205
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 52 "soo:nodeId=soo-home.wohnzimmer.licht.rechts.status
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   9.332434704534592 0.0
+   1.0 20.093042409717896
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 49 "soo:nodeId=soo-home.wohnzimmer.licht.oben.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   18.681964316832897 0.0
+   1.0 5.451042711551928
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 51 "soo:nodeId=soo-home.wohnzimmer.rauchmelder.status
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   37.87310387729834 0.0
+   1.0 21.442458787216175
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   9 fernseher
+   1
+   4100 0 48 "soo:nodeId=soo-home.wohnzimmer.fernseher.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   40.6918330832309 0.0
+   1.0 11.10426983897987
+   12 _GR_SYM_PTH/
+   13 fernseher.grx
+ep 11 1 0 0 0 0
+   12 radio_on_off
+   1
+   4100 0 44 "soo:nodeId=soo-home.wohnzimmer.radio.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   33.59509940828451 0.0
+   1.0 12.01960483991002
+   12 _GR_SYM_PTH/
+   16 radio_on_off.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 46 "soo:nodeId=soo-home.kueche.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   70.56654337973332 0.0
+   1.0 19.726748866638374
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 45 "soo:nodeId=soo-home.kueche.licht.oben.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   51.37540381926786 0.0
+   0.9999999999999992 3.7353327909741694
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 46 "soo:nodeId=soo-home.kueche.standlampe.status
+\000"
+ap 0
+   0
+gp 0.7999999999999999 0.0
+   48.854459919186795 0.0
+   0.7999999999999994 -5.169734111451606
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 49 "soo:nodeId=soo-home.kueche.licht.rechts.1.status\000"
+ap 0
+   0
+gp 0.8000000000000008 0.0
+   40.46175108659568 0.0
+   0.7999999999999999 -4.529024295792368
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 49 "soo:nodeId=soo-home.kueche.licht.rechts.2.status\000"
+ap 0
+   0
+gp 0.8000000000000019 0.0
+   40.461751086595655 0.0
+   0.7999999999999994 0.3750000425564757
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 47 "soo:nodeId=soo-home.kueche.licht.links.status
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   53.69465540144532 0.0
+   0.9999999999999992 -10.872009449054238
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   4 tuer
+   1
+   4100 0 40 "soo:nodeId=soo-home.tuer.eingang.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   85.46336633147891 0.0
+   1.0 25.9866457941896
+   12 _GR_SYM_PTH/
+   8 tuer.grx
+ep 11 1 0 0 0 0
+   7 fenster
+   1
+   4100 0 42 "soo:nodeId=soo-home.kueche.fenster.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   85.19879780787441 0.0
+   1.0 16.547679927071634
+   12 _GR_SYM_PTH/
+   11 fenster.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 49 "soo:nodeId=soo-home.bad.erdgeschoss.licht.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   56.128824154632355 0.0
+   1.0 18.86092034110277
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   15 bewegungsmelder
+   1
+   4100 0 50 "soo:nodeId=soo-home.bewegungsmelder.garage.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   63.18616270259837 0.0
+   0.9999999999999992 -1.9119377313909904
+   12 _GR_SYM_PTH/
+   19 bewegungsmelder.grx
+ep 11 1 0 0 0 0
+   15 bewegungsmelder
+   1
+   4100 0 50 "soo:nodeId=soo-home.bewegungsmelder.garten.status\000"
+ap 0
+   0
+gp 1.000000000000001 0.0
+   8.376572005835541 0.0
+   0.9999999999999992 -2.0730457573930257
+   12 _GR_SYM_PTH/
+   19 bewegungsmelder.grx
+ep 11 1 0 0 0 0
+   15 bewegungsmelder
+   1
+   4100 0 48 "soo:nodeId=soo-home.bewegungsmelder.tuer.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   91.1303367463053 0.0
+   1.0000000000000062 21.35392971054541
+   12 _GR_SYM_PTH/
+   19 bewegungsmelder.grx
+ep 11 1 0 0 0 0
+   16 rolladen_anzeige
+   1
+   4100 0 47 "soo:nodeId=soo-home.wohnzimmer.rolladen.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   30.04974259089533 0.0
+   1.0 31.50688501939766
+   12 _GR_SYM_PTH/
+   20 rolladen_anzeige.grx
+ep 11 1 0 0 0 0
+   9 rollladen
+   1
+   4100 0 47 "soo:nodeId=soo-home.wohnzimmer.rolladen.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   25.0028813981852 0.0
+   1.0 28.65669200540818
+   12 _GR_SYM_PTH/
+   13 rollladen.grx
+ep 11 1 0 0 0 0
+   16 rollladen_status
+   1
+   4100 0 47 "soo:nodeId=soo-home.wohnzimmer.rolladen.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   27.875260091530972 0.0
+   1.0 27.344341442022497
+   12 _GR_SYM_PTH/
+   20 rollladen_status.grx
+ep 11 1 0 0 0 0
+   7 fenster
+   1
+   4100 0 46 "soo:nodeId=soo-home.wohnzimmer.fenster.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   25.66474693429446 0.0
+   1.0 21.994962187663806
+   12 _GR_SYM_PTH/
+   11 fenster.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 55 "soo:nodeId=soo-home.bad.erdgeschoss.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   75.54107048438661 0.0
+   1.0 35.14260297527741
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 52 "soo:nodeId=soo-home.treppe.erdgeschoss.licht.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   35.90791190457639 0.0
+   1.0 14.07317507196695
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   4 tuer
+   1
+   4100 0 48 "soo:nodeId=soo-home.tuer.bad.erdgeschoss.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   68.17878568431094 0.0
+   1.0 34.73282364130719
+   12 _GR_SYM_PTH/
+   8 tuer.grx
+ep 11 1 0 0 0 0
+   7 fenster
+   1
+   4100 0 51 "soo:nodeId=soo-home.bad.erdgeschoss.fenster.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   69.46377753356606 0.0
+   1.0 44.2406308453517
+   12 _GR_SYM_PTH/
+   11 fenster.grx
+ep 11 1 0 0 0 0
+   15 nav_back_button
+   0
+ap 0
+   0
+gp 0.41939178737637245 0.0
+   -51.17788491744736 0.0
+   0.41939178737637245 10.141191971780625
+   12 _GR_SYM_PTH/
+   19 nav_back_button.grx
+ee

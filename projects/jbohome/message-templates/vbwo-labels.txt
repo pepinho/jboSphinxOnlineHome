@@ -1,0 +1,56 @@
+<#assign
+label_subject = "Quittierung Ihres Auftrags"
+label_receipt = "Kundenquittung"
+label_details = "Auftragsdetails"
+label_caseNumber = "Dossiernr."
+label_workOrderNumber = "Auftragsnr."
+label_location = "Ort"
+label_nearby = "In der Nähe"
+label_contact = "Kontaktperson"
+label_phone = "Telefon"
+label_latitude = "Breitengrad"
+label_longitude = "Längengrad"
+label_insuranceProduct = "Produktname der Versicherung"
+label_vehicleDetails = "Fahrzeugdetails"
+label_vehicle = "Fahrzeug"
+label_event = "Beschreibung"
+label_licensePlate = "Kennzeichen"
+label_registrationDate = "Erstzulassung"
+label_chassisNumber = "Fahrgestell-Nr"
+label_odometerKilometers = "Aktueller Kilometerstand"
+label_transmissionType = "Getriebe"
+label_transmissionTypes = {
+   "UNKNOWN":"unbekannt",
+   "MANUAL":"manuell",
+   "MANUMATIC":"Manumatic",
+   "AUTOMATIC":"Automatik",
+   "AUTOMATIC_DUAL_CLUTCH":"Doppelkupplung",
+   "OTHER":"andere"
+}
+label_propulsionType = "Kraftstoff"
+label_propulsionTypes = {
+   "UNKNOWN":"unbekannt",
+   "GASOLINE":"Benzin",
+   "DIESEL":"Diesel",
+   "GASOLINE_HYBRID":"Benzin-Hybrid",
+   "DIESEL_HYBRID":"Diesel-Hybrid",
+   "ELECTRIC":"elektrisch",
+   "OTHER":"andere"
+}
+label_history = "Verlauf"
+label_report = "Bericht"
+label_result = "Auftrag beendet als"
+label_comment = "Kommentar"
+label_damageCode = "Schadencode"
+label_damages = "Bestehende Schäden"
+label_signature = "Unterschrift"
+label_signatureNone = "<keine Unterschrift>"
+label_photos = "Fotos"
+label_photosNone = "<keine Fotos>"
+label_transmissionType_manual = "manuell"
+label_transmissionType_manumatic = "manumatic"
+label_transmissionType_automatic = "Automatik"
+label_transmissionType_dual_clutch = "Doppelklupplung"
+label_unknown = "Unbekannt"
+label_mail_footer = "Dies ist eine automatisch versendete Nachricht. Antworten Sie bitte nicht auf diese E-Mail und kontaktieren bei Fragen ihre Assistance Zentrale."
+>

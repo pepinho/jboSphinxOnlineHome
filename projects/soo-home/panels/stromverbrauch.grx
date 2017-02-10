@@ -1,0 +1,52 @@
+integrierte informationssysteme (c)
+grinx a 10 30
+nd 0
+dd 29.11.2013 21.01.2015
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   105.0 63.0
+   0
+ep 11 1 0 0 0 0
+   11 hintergrund
+   1
+   4100 0 21 "title=Stromverbrauch\000"
+ap 0
+   0
+gp 0.999999999999999 0.0
+   7.993605777301127E-15 0.0
+   0.9998619239448024 0.0917293083703501
+   12 _GR_SYM_PTH/
+   15 hintergrund.grx
+ep 19 1 0 0 0 0
+   0
+   2
+   4200 0 49 "soo-home.energie.stromverbrauch.value.1m@Curve:0\000"
+   4100 0 147 "soo:chart.time.interval=1H
+soo:chart.time.offset=-3H
+soo:chart.timeunit.count=4
+soo:chart.rangeaxis.lowerbound=0
+soo:chart.rangeaxis.upperbound=3
+\000"
+ap 0 1 1 1 22 1 0 10
+gp 2 ./
+   35 soo:chartLogicalName=stromverbrauch
+   4
+   13.24048807594989 2.4747997116311415
+   91.19486894270052 2.4747997116311415
+   91.19486894270052 54.4443869561316
+   13.24048807594989 54.4443869561316
+ep 11 1 0 0 0 0
+   15 nav_back_button
+   0
+ap 0
+   0
+gp 0.41939178737637245 0.0
+   -51.17788491744736 0.0
+   0.41939178737637245 10.141191971780625
+   12 _GR_SYM_PTH/
+   19 nav_back_button.grx
+ee

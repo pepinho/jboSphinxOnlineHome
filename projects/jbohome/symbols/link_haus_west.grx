@@ -1,0 +1,48 @@
+integrierte informationssysteme (c)
+grinx a 11 079
+nd 0
+dd 19.11.2016 04.02.2017
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   297.0 210.0
+   0
+ep 6 1 0 0 0 0
+   17 background_shadow
+   0
+ap 1 2 15 1 0 15 0 10
+gp 5.0 -5.0
+   275.0 -5.0
+   275.0 175.0
+   5.0 175.0
+ep 6 1 0 0 0 0
+   10 background
+   0
+ap 1 2 15 1 0 0 0 10
+gp 0.0 0.0
+   270.0 0.0
+   270.0 180.0
+   0.0 180.0
+ep 11 8193 0 0 0 0
+   9 haus_west
+   0
+ap 0
+   0
+gp 0.2 0.0
+   1.0 0.0
+   0.2 0.0
+   12 _GR_SYM_PTH/
+   13 haus_west.grx
+ep 6 1 0 0 0 0
+   8 sensitiv
+   1
+   4009 0 20 "index_haus_west.grx\000"
+ap 1 2 15 0 0 0 0 10
+gp 0.0 0.0
+   270.0 0.0
+   270.0 180.0
+   0.0 180.0
+ee

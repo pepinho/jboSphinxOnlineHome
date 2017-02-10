@@ -6,7 +6,7 @@
 	<display-name>WUT simulator application</display-name>
 
 	<servlet>
-		<servlet-name>mvc-dispatcher</servlet-name>
+		<servlet-name>wut-servlet</servlet-name>
 		<servlet-class>
 			org.springframework.web.servlet.DispatcherServlet
 		</servlet-class>
@@ -14,13 +14,13 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>mvc-dispatcher</servlet-name>
+		<servlet-name>wut-servlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
+		<param-value>/WEB-INF/wut-servlet-servlet.xml</param-value>
 	</context-param>
 
 	<listener>

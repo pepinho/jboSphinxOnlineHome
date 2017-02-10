@@ -14,13 +14,17 @@ package de.jbo.soo.home.io;
  * @version 10.07.2016 jbo - created <br>
  */
 public interface ITcpConnector {
-    void connect(String hostNameOrIp, int port) throws ConnectionFailedException;
+    void connect(String address) throws ConnectionFailedException;
 
     void close();
 
-    void sendCommand(String command) throws SendFailedException;
+    void sendCommand(String command);
 
     void addResultListener(IConnectionResultListener listener);
 
     void removeResultListener(IConnectionResultListener listener);
+
+    boolean isInitialized();
+
+    String getAddress();
 }

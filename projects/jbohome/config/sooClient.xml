@@ -1,0 +1,20 @@
+<sooClientConfiguration>
+    <version>4</version>
+	<releaseCode></releaseCode>
+	<colors>colors.txt</colors>
+	<hyperlinkHighlightingPenEnabled>true</hyperlinkHighlightingPenEnabled>
+	<hyperlinkHighlightingBrushEnabled>true</hyperlinkHighlightingBrushEnabled>
+	<hyperlinkHighlightingByParentEnabled>false</hyperlinkHighlightingByParentEnabled>
+	<highlightPenColor>-5</highlightPenColor>
+	<highlightPenWidth>1</highlightPenWidth>
+	<panels>
+		<panel>
+			<welcomeFile>index.grx</welcomeFile>
+		</panel>
+	</panels>
+	<browserConfiguration>
+		<enabled>false</enabled>
+		<tabName>Browser </tabName>
+		<url></url>
+	</browserConfiguration>
+</sooClientConfiguration>

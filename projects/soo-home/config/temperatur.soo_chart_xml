@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sooChartConfig label="temperatur">
+	<timeUnit>H</timeUnit>
+	<timeUnitFormatString>HH:mm</timeUnitFormatString>
+    <domainAxisType>DATE</domainAxisType>
+    <showLegend>false</showLegend>
+    <xAxisLabel>Zeit</xAxisLabel>
+    <yAxisLabel>°C</yAxisLabel>
+    <seriesList>
+    	<series chartType="LINE_CHART">
+    		<index>0</index>
+    		<color>red</color>
+    	</series>
+    </seriesList>
+</sooChartConfig>

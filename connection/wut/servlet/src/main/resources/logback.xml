@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
 <configuration>
     
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -16,7 +17,7 @@
         <appender-ref ref="STDOUT" />
     </logger>
 
-    <root level="error">
+    <root level="info">
         <appender-ref ref="STDOUT" />
     </root>
 

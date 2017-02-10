@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>de.jbo.jbo-soo-home.connection.wut</groupId>
-		<artifactId>wut</artifactId>
+		<artifactId>jbo-soo-home-connection-wut</artifactId>
 		<version>0.9.1</version>
 	</parent>
 	<groupId>de.jbo.jbo-soo-home.connection.wut.data</groupId>
-	<artifactId>data</artifactId>
-	<name>WUT data model</name>
+	<artifactId>jbo-soo-home-connection-wut-data</artifactId>
+	<name>data model for wut-io-devices</name>
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>

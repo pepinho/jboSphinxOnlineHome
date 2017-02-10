@@ -1,0 +1,56 @@
+<#assign
+label_subject = "Conferma del'intervento"
+label_receipt = "Rapporto"
+label_details = "Dettagli intervento"
+label_caseNumber = "Numero pratica"
+label_workOrderNumber = "Numero intervento"
+label_location = "Luogo"
+label_nearby = "Vicino a"
+label_contact = "Persona da contattare"
+label_phone = "Telefono"
+label_latitude = "Latitudine"
+label_longitude = "Longitudine"
+label_insuranceProduct = "Nome prodotto"
+label_vehicleDetails = "Dettagli vehicolo"
+label_vehicle = "Vehicolo"
+label_event = "Descrizione"
+label_licensePlate = "Targa"
+label_registrationDate = "1a entrata in circolazione"
+label_chassisNumber = "Telaio"
+label_odometerKilometers = "Chilometraggio attuale"
+label_transmissionType = "Cambio"
+label_transmissionTypes = {
+   "UNKNOWN":"Scnonsciuto",
+   "MANUAL":"Manuale",
+   "MANUMATIC":"Manumatica",
+   "AUTOMATIC":"Automatica",
+   "AUTOMATIC_DUAL_CLUTCH":"Tip-tronic",
+   "OTHER":"Altri"
+}
+label_propulsionType = "Bezina"
+label_propulsionTypes = {
+   "UNKNOWN":"Sconosciuto",
+   "GASOLINE":"Benzina",
+   "DIESEL":"Nafta",
+   "GASOLINE_HYBRID":"Ibrida a benzina",
+   "DIESEL_HYBRID":"Ibrida a nafta",
+   "ELECTRIC":"Elettrico",
+   "OTHER":"Altri"
+}
+label_history = "Riepilogo"
+label_report = "Rapporto"
+label_result = "Intervento eseguito come"
+label_comment = "Commento"
+label_damageCode = "Codice intervento"
+label_damages = "Danni esistenti"
+label_signature = "Firma"
+label_signatureNone = "<Senza firma>"
+label_photos = "Foto"
+label_photosNone = "<Senza foto>"
+label_transmissionType_manual = "Manuale"
+label_transmissionType_manumatic = "Manumatica"
+label_transmissionType_automatic = "Automatica"
+label_transmissionType_dual_clutch = "Tip-tronic"
+label_unknown = "Sconosciuto"
+label_mail_footer = "Questo messaggio è stato generato automaticamente. La preghiamo di non rispondere a questa Mail e di contattare la vostra centrale d‘assistenza per ulteriori informazioni."
+>

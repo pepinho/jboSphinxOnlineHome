@@ -1,0 +1,382 @@
+integrierte informationssysteme (c)
+grinx a 10 30
+nd 0
+dd 10.12.2013 21.01.2015
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   105.0 63.0
+   0
+ep 11 1 0 0 0 0
+   11 hintergrund
+   1
+   4100 0 22 "title=Home Management\000"
+ap 0
+   0
+gp 1.0 0.0
+   0.0 0.0
+   1.0 0.09139784946236729
+   12 _GR_SYM_PTH/
+   15 hintergrund.grx
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.9629629629629766 0 4
+   10 0 0
+gp 15.965217391304357 50.0516935758558
+   0.0 1.0
+   11
+   11 "Treppenhaus"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.9629629629629766 0 4
+   10 0 0
+gp 45.84347826086958 50.0516935758558
+   0.0 1.0
+   11
+   11 "Rauchmelder"
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 51 "soo:nodeId=soo-home.treppe.stockwerk1.licht.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   -10.091986983189038 0.0
+   1.0 6.8538048567423395
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 51 "soo:nodeId=soo-home.treppe.stockwerk2.licht.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   -10.091986983189038 0.0
+   1.0 -0.3070647084750533
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 52 "soo:nodeId=soo-home.treppe.erdgeschoss.licht.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   -10.091986983189038 0.0
+   1.0 14.014674421959725
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 22.24782608695653 44.00821531498624
+   0.0 1.0
+   11
+   11 "Erdgeschoss"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 22.24782608695653 29.747345749768833
+   0.0 1.0
+   11
+   12 "2. Stockwerk"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 22.24782608695653 36.877780532377535
+   0.0 1.0
+   11
+   12 "1. Stockwerk"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.9629629629629766 0 4
+   10 0 0
+gp 75.83913043478263 50.0516935758558
+   0.0 1.0
+   11
+   15 "Bewegungsmelder"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 52.065217391304365 44.00821531498624
+   0.0 1.0
+   11
+   5 "K\374che"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 52.065217391304365 32.65045133983097
+   0.0 1.0
+   11
+   13 "Arbeitszimmer"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 52.065217391304365 38.45231469386824
+   0.0 1.0
+   11
+   10 "Wohnzimmer"
+ep 8 1 0 0 0 0
+   0
+   1
+   4100 0 55 "soo:nodeId=soo-home.bad.erdgeschoss.rauchmelder.status\000"
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 52.065217391304365 21.010699787035932
+   0.0 1.0
+   11
+   11 "Bad (erdg.)"
+ep 8 1 0 0 0 0
+   0
+   1
+   4100 0 54 "soo:nodeId=soo-home.bad.stockwerk1.rauchmelder.status\000"
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 52.065217391304365 15.109457551011086
+   0.0 1.0
+   11
+   12 "Bad (1. St.)"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 52.065217391304365 3.6908240106383943
+   0.0 1.0
+   11
+   13 "Mietwohnung 2"
+ep 8 1 0 0 0 0
+   0
+   1
+   4100 0 52 "soo:nodeId=soo-home.schlafzimmer.rauchmelder.status\000"
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 52.065217391304365 26.798898544799904
+   0.0 1.0
+   11
+   12 "Schlafzimmer"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 52.065217391304365 9.257904755980025
+   0.0 1.0
+   11
+   13 "Mietwohnung 1"
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 46 "soo:nodeId=soo-home.kueche.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   38.977413446841645 0.0
+   1.0 35.82714691156575
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 50 "soo:nodeId=soo-home.wohnzimmer.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   38.977413446841645 0.0
+   1.0 30.01117816782702
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 53 "soo:nodeId=soo-home.arbeitszimmer.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   38.977413446841645 0.0
+   1.0 24.19520942408829
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 52 "soo:nodeId=soo-home.schlafzimmer.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   38.977413446841645 0.0
+   1.0 18.37924068034956
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 55 "soo:nodeId=soo-home.bad.erdgeschoss.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   38.977413446841645 0.0
+   1.0 12.563271936610832
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 54 "soo:nodeId=soo-home.bad.stockwerk1.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   38.977413446841645 0.0
+   1.0 6.747303192872103
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 58 "soo:nodeId=soo-home.mietswohnung.rauchmelder.links.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   38.977413446841645 0.0
+   1.0 0.9313344491333737
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 59 "soo:nodeId=soo-home.mietswohnung.rauchmelder.rechts.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   38.977413446841645 0.0
+   1.0 -4.884634294605354
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 82.30000000000003 22.703867488899277
+   0.0 1.0
+   11
+   6 "Balkon"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 82.30000000000003 36.877780532377535
+   0.0 1.0
+   11
+   6 "Garten"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 82.30000000000003 44.00821531498624
+   0.0 1.0
+   11
+   11 "Eingangst\374r"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 17 0 1 0 0
+   2.605021128511075 0 4
+   10 0 0
+gp 82.30000000000003 29.747345749768833
+   0.0 1.0
+   11
+   6 "Garage"
+ep 11 1 0 0 0 0
+   15 bewegungsmelder
+   1
+   4100 0 50 "soo:nodeId=soo-home.bewegungsmelder.garage.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   69.51000551447575 0.0
+   1.0 23.623218860917206
+   12 _GR_SYM_PTH/
+   19 bewegungsmelder.grx
+ep 11 1 0 0 0 0
+   15 bewegungsmelder
+   1
+   4100 0 50 "soo:nodeId=soo-home.bewegungsmelder.garten.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   69.51000551447575 0.0
+   1.0 30.784088426134595
+   12 _GR_SYM_PTH/
+   19 bewegungsmelder.grx
+ep 11 1 0 0 0 0
+   15 bewegungsmelder
+   1
+   4100 0 48 "soo:nodeId=soo-home.bewegungsmelder.tuer.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   69.51000551447575 0.0
+   1.0 37.944957991351984
+   12 _GR_SYM_PTH/
+   19 bewegungsmelder.grx
+ep 11 1 0 0 0 0
+   15 bewegungsmelder
+   1
+   4100 0 50 "soo:nodeId=soo-home.bewegungsmelder.balkon.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   69.51000551447575 0.0
+   1.0 16.34495799135199
+   12 _GR_SYM_PTH/
+   19 bewegungsmelder.grx
+ep 11 1 0 0 0 0
+   15 nav_back_button
+   0
+ap 0
+   0
+gp 0.41939178737637245 0.0
+   -51.17788491744736 0.0
+   0.41939178737637245 10.141191971780625
+   12 _GR_SYM_PTH/
+   19 nav_back_button.grx
+ee

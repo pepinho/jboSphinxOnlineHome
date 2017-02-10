@@ -1,0 +1,33 @@
+integrierte informationssysteme (c)
+grinx a 11 079
+nd 0
+dd 19.11.2016 19.11.2016
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   128.0 128.0
+   0
+ep 19 1 0 0 0 0
+   0
+   0
+ap 0 1 1 1 22 1 0 10
+gp 12 _GR_PIX_PTH/
+   16 Settings-128.png
+   4
+   0.0 0.0
+   128.0 0.0
+   128.0 128.0
+   0.0 128.0
+ep 6 1 0 0 0 0
+   8 sensitiv
+   1
+   4009 2 19 "index_settings.grx\000"
+ap 0 1 1 0 0 1 0 10
+gp 0.0 0.0
+   128.0 0.0
+   128.0 128.0
+   0.0 128.0
+ee

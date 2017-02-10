@@ -1,0 +1,15 @@
+<sooClientConfiguration>
+    <version>4</version>
+	<releaseCode></releaseCode>
+	<colors>colors.txt</colors>
+	<hyperlinkHighlightingPenEnabled>true</hyperlinkHighlightingPenEnabled>
+	<hyperlinkHighlightingBrushEnabled>true</hyperlinkHighlightingBrushEnabled>
+	<hyperlinkHighlightingByParentEnabled>false</hyperlinkHighlightingByParentEnabled>
+	<highlightPenColor>0</highlightPenColor>
+	<highlightPenWidth>0</highlightPenWidth>
+	<panels>
+		<panel>
+			<welcomeFile>index.grx</welcomeFile>
+		</panel>
+	</panels>
+</sooClientConfiguration>

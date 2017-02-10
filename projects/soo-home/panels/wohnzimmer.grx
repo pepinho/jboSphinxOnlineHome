@@ -1,0 +1,145 @@
+integrierte informationssysteme (c)
+grinx a 10 30
+nd 0
+dd 05.11.2013 21.01.2015
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   105.0 63.0
+   0
+ep 11 1 0 0 0 0
+   11 hintergrund
+   1
+   4100 0 17 "title=Wohnzimmer\000"
+ap 0
+   0
+gp 0.9999999999999999 0.0
+   7.105427357601001E-15 0.0
+   1.0 0.09139784946236773
+   12 _GR_SYM_PTH/
+   15 hintergrund.grx
+ep 19 1 0 0 0 0
+   0
+   0
+ap 0 1 1 1 22 1 0 10
+gp 12 _GR_PIX_PTH/
+   14 wohnzimmer.jpg
+   4
+   13.709172482037395 2.548860534673352
+   91.46492682592972 2.548860534673352
+   91.46492682592972 54.411948682049456
+   13.709172482037395 54.411948682049456
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 49 "soo:nodeId=soo-home.wohnzimmer.licht.oben.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   8.110699150552989 0.0
+   1.0 19.3876678881209
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   12 radio_on_off
+   1
+   4100 0 44 "soo:nodeId=soo-home.wohnzimmer.radio.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   15.710176749237522 0.0
+   1.0 10.952085170827615
+   12 _GR_SYM_PTH/
+   16 radio_on_off.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 52 "soo:nodeId=soo-home.wohnzimmer.licht.rechts.status
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   55.59863978135077 0.0
+   1.0 3.4581688157646937
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   9 rollladen
+   1
+   4100 0 47 "soo:nodeId=soo-home.wohnzimmer.rolladen.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   35.802976771192384 0.0
+   1.0 20.15507737476109
+   12 _GR_SYM_PTH/
+   13 rollladen.grx
+ep 11 1 0 0 0 0
+   16 rolladen_anzeige
+   1
+   4100 0 47 "soo:nodeId=soo-home.wohnzimmer.rolladen.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   40.91233242237246 0.0
+   1.0 23.093468213204236
+   12 _GR_SYM_PTH/
+   20 rolladen_anzeige.grx
+ep 11 1 0 0 0 0
+   16 rollladen_status
+   1
+   4100 0 47 "soo:nodeId=soo-home.wohnzimmer.rolladen.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   38.74493244774713 0.0
+   1.0 18.825495950510568
+   12 _GR_SYM_PTH/
+   20 rollladen_status.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 50 "soo:nodeId=soo-home.wohnzimmer.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   63.41433103894096 0.0
+   1.0 39.70736655669135
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   7 fenster
+   1
+   4100 0 46 "soo:nodeId=soo-home.wohnzimmer.fenster.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   26.850734055305185 0.0
+   1.0 21.127393771866192
+   12 _GR_SYM_PTH/
+   11 fenster.grx
+ep 11 1 0 0 0 0
+   9 fernseher
+   1
+   4100 0 48 "soo:nodeId=soo-home.wohnzimmer.fernseher.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   8.088131093030356 0.0
+   1.0 9.42040037319244
+   12 _GR_SYM_PTH/
+   13 fernseher.grx
+ep 11 1 0 0 0 0
+   15 nav_back_button
+   0
+ap 0
+   0
+gp 0.41939178737637245 0.0
+   -51.17788491744736 0.0
+   0.41939178737637245 10.141191971780625
+   12 _GR_SYM_PTH/
+   19 nav_back_button.grx
+ee

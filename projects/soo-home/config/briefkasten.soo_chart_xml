@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sooChartConfig label="briefkasten">
+	<timeUnit>m</timeUnit>
+	<timeUnitFormatString>HH:mm</timeUnitFormatString>
+    <domainAxisType>DATE</domainAxisType>
+    <showLegend>false</showLegend>
+    <xAxisLabel>Zeit</xAxisLabel>
+    <yAxisLabel>Öffnung</yAxisLabel>
+    <seriesList>
+    	<series chartType="LINE_CHART">
+    		<index>0</index>
+    		<color>black</color>
+    	</series>
+    </seriesList>
+</sooChartConfig>

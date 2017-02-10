@@ -1,0 +1,85 @@
+integrierte informationssysteme (c)
+grinx a 11 079
+nd 0
+dd 26.02.2014 04.02.2017
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   1920.0 1080.0
+   1
+   0.0 0.0
+ep 11 8193 0 0 2 0
+   6 rahmen
+   1
+   4100 0 28 "titel=&#220;bersicht - Haus\000"
+ap 0
+   0
+gp 1.0 0.0
+   0.0 0.0
+   1.0 0.0
+   12 _GR_SYM_PTH/
+   10 rahmen.grx
+ep 11 1 0 0 0 0
+   14 link_haus_sued
+   0
+ap 0
+   0
+gp 2.4217231651734434 0.0
+   107.66368218470862 0.0
+   2.3939732142857135 57.5585981424458
+   12 _GR_SYM_PTH/
+   18 link_haus_sued.grx
+ep 11 1 0 0 0 0
+   14 link_haus_west
+   0
+ap 0
+   0
+gp 1.8333333333333364 0.0
+   968.0 0.0
+   1.8333333333333364 545.0
+   12 _GR_SYM_PTH/
+   18 link_haus_west.grx
+ep 11 1 0 0 0 0
+   13 link_haus_ost
+   0
+ap 0
+   0
+gp 2.399984609488702 0.0
+   829.7857142857134 0.0
+   2.3999846094887016 56.476547005908074
+   12 _GR_SYM_PTH/
+   17 link_haus_ost.grx
+ep 11 1 0 0 0 0
+   14 link_haus_nord
+   0
+ap 0
+   0
+gp 2.4234234234234258 0.0
+   188.8396274212739 0.0
+   2.4237288135593236 530.9741790625873
+   12 _GR_SYM_PTH/
+   18 link_haus_nord.grx
+ep 11 1 0 0 0 0
+   14 link_haus_west
+   0
+ap 0
+   0
+gp 2.376714170200336 0.0
+   829.7857142857131 0.0
+   2.3767141702003394 532.1656284265259
+   12 _GR_SYM_PTH/
+   18 link_haus_west.grx
+ep 11 1 0 0 0 0
+   14 symbol_compass
+   0
+ap 0
+   0
+gp 1.0 0.0
+   685.7106781186549 0.0
+   1.0 406.74348198457835
+   12 _GR_SYM_PTH/
+   18 symbol_compass.grx
+ee

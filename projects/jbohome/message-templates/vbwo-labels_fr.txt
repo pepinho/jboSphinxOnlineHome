@@ -1,0 +1,56 @@
+<#assign
+label_subject = "Confirme l'ordre"
+label_receipt = "Rapport client"
+label_details = "Details d'ordre"
+label_caseNumber = "Numéro Dossier"
+label_workOrderNumber = "Numéro d'ordre"
+label_location = "Lieu"
+label_nearby = "Près du"
+label_contact = "Persone à contacter"
+label_phone = "Téléphone"
+label_latitude = "Latitude"
+label_longitude = "Longitude"
+label_insuranceProduct = "Nom du produit"
+label_vehicleDetails = "Détails véhicule"
+label_vehicle = "Véhicule"
+label_event = "Description"
+label_licensePlate = "Plaque"
+label_registrationDate = "1re mise en circulation"
+label_chassisNumber = "Chassis"
+label_odometerKilometers = "Kilométrage actuel"
+label_transmissionType = "Boite"
+label_transmissionTypes = {
+   "UNKNOWN":"Inconnu",
+   "MANUAL":"Manuelle",
+   "MANUMATIC":"Manumatic",
+   "AUTOMATIC":"Mutomatique",
+   "AUTOMATIC_DUAL_CLUTCH":"Tip-tronic",
+   "OTHER":"Autres"
+}
+label_propulsionType = "Carburant"
+label_propulsionTypes = {
+   "UNKNOWN":"Inconnu",
+   "GASOLINE":"Essence",
+   "DIESEL":"Diesel",
+   "GASOLINE_HYBRID":"Hydride essence",
+   "DIESEL_HYBRID":"Hybride diesel",
+   "ELECTRIC":"Electrique",
+   "OTHER":"Autres"
+}
+label_history = "Historique"
+label_report = "Rapport"
+label_result = "Ordre fini comme"
+label_comment = "Commentaires"
+label_damageCode = "Damage code"
+label_damages = "Dégâts existent"
+label_signature = "Signature"
+label_signatureNone = "<Pas de signature>"
+label_photos = "Photos"
+label_photosNone = "<Pas de photos>"
+label_transmissionType_manual = "Manuelle"
+label_transmissionType_manumatic = "Manumatic"
+label_transmissionType_automatic = "Automatique"
+label_transmissionType_dual_clutch = "Tip-tronic"
+label_unknown = "Inconnu"
+label_mail_footer = "Ceci est une réponse automatique. Nous vous prions de ne pas répondre à ce mail. Pour toutes autres questions, veuillez prendre contact avec votre central d’assistance."  
+>

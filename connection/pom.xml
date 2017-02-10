@@ -4,13 +4,13 @@
 
 	<parent>
 		<groupId>de.jbo.jbo-soo-home</groupId>
-		<artifactId>root</artifactId>
+		<artifactId>jbo-soo-home</artifactId>
 		<version>0.9.1</version>
 		<relativePath>..</relativePath>
 	</parent>
 
 	<groupId>de.jbo.jbo-soo-home.connection</groupId>
-	<artifactId>connection</artifactId>
+	<artifactId>jbo-soo-home-connection</artifactId>
 	<packaging>pom</packaging>
 	
 	<modules>
@@ -25,4 +25,5 @@
 
 
 	
+	<name>connection framework</name>
 </project>

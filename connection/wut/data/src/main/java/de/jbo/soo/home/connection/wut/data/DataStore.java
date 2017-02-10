@@ -53,10 +53,14 @@ public class DataStore {
         initLists(size);
     }
 
+    public void clear() {
+        initLists(size);
+    }
+
     /**
      * @param size
      */
-    private void initLists(int size) {
+    private synchronized void initLists(int size) {
         this.size = size;
 
         init(valuesOutput, Boolean.FALSE);
@@ -66,13 +70,21 @@ public class DataStore {
 
     private void init(List<Boolean> list, Boolean initValue) {
         for (int i = 0; i < size; i++) {
-            list.add(initValue);
+            if (list.size() <= i) {
+                list.add(initValue);
+            } else {
+                list.set(i, initValue);
+            }
         }
     }
 
     private void init(List<Integer> list, Integer initValue) {
         for (int i = 0; i < size; i++) {
-            list.add(initValue);
+            if (list.size() <= i) {
+                list.add(initValue);
+            } else {
+                list.set(i, initValue);
+            }
         }
     }
 
@@ -80,13 +92,13 @@ public class DataStore {
         set(index, valuesInput, value);
     }
 
-    private void set(int index, List<Boolean> list, Boolean value) {
+    private synchronized void set(int index, List<Boolean> list, Boolean value) {
         if ((index >= 0) && (index < size)) {
             list.set(index, value);
         }
     }
 
-    private boolean get(int index, List<Boolean> list) {
+    private synchronized boolean get(int index, List<Boolean> list) {
         if ((index >= 0) && (index < size)) {
             return list.get(index);
         }
@@ -105,24 +117,24 @@ public class DataStore {
         return get(index, valuesOutput);
     }
 
-    public void setCounter(int index, int value) {
+    public synchronized void setCounter(int index, int value) {
         if ((index >= 0) && (index < size)) {
             valuesCounter.set(index, value);
         }
     }
 
-    public int getCounter(int index) {
+    public synchronized int getCounter(int index) {
         if ((index >= 0) && (index < size)) {
             return valuesCounter.get(index);
         }
         return 0;
     }
 
-    public int size() {
+    public synchronized int size() {
         return size;
     }
 
-    public boolean load(InputStream in) {
+    public synchronized boolean load(InputStream in) {
         boolean ret = false;
         Properties properties = new Properties();
         try {
@@ -214,7 +226,7 @@ public class DataStore {
         }
     }
 
-    public boolean save(OutputStream out) {
+    public synchronized boolean save(OutputStream out) {
         StringBuilder comments = new StringBuilder();
         Properties properties = new Properties();
         boolean ret = true;

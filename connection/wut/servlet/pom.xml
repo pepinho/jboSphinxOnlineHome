@@ -5,15 +5,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>de.jbo.jbo-soo-home.connection.wut</groupId>
-		<artifactId>wut</artifactId>
+		<artifactId>jbo-soo-home-connection-wut</artifactId>
 		<version>0.9.1</version>
 	</parent>
 	<groupId>de.jbo.jbo-soo-home.connection.wut.servlet</groupId>
-	<artifactId>servlet</artifactId>
+	<artifactId>jbo-soo-home-connection-wut-servlet</artifactId>
 	<packaging>war</packaging>
-	<name>servlet Wut-simulator</name>
+	<name>servlet wut-io-simulator</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+        
 		<!-- Spring Core -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -57,6 +58,17 @@
 			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
 
+
+		<dependency>
+			<groupId>de.jbo.jbo-soo-home.connection.wut.data</groupId>
+			<artifactId>jbo-soo-home-connection-wut-data</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.jbo.jbo-soo-home.connection.wut.io</groupId>
+			<artifactId>jbo-soo-home-connection-wut-io</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>wut-servlet</finalName>

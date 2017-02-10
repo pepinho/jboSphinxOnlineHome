@@ -1,18 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>de.jbo.jbo-soo-home</groupId>
-		<artifactId>root</artifactId>
+		<artifactId>jbo-soo-home</artifactId>
 		<version>0.9.1</version>
 		<relativePath>..</relativePath>
 	</parent>
 
 	<groupId>de.jbo.jbo-soo-home.adapter</groupId>
-	<artifactId>adapter</artifactId>
+	<artifactId>jbo-soo-home-adapter</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>
@@ -20,58 +19,179 @@
 		<dependency>
 			<groupId>aopalliance</groupId>
 			<artifactId>aopalliance</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- in-gmbh weblets aaa common -->
 		<dependency>
 			<groupId>de.ingmbh.aaa</groupId>
 			<artifactId>de.ingmbh.aaa.common</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- in-gmbh sphinx online common -->
 		<dependency>
 			<groupId>de.ingmbh.sphinx.online</groupId>
 			<artifactId>de.ingmbh.sphinx.online.common</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- in-gmbh sphinx online adapter common -->
 		<dependency>
 			<groupId>de.ingmbh.sphinx.online</groupId>
 			<artifactId>sphinx-online-adapter-common</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- in-gmbh sphinx online adapter common tests -->
 		<dependency>
 			<groupId>de.ingmbh.sphinx.online</groupId>
 			<artifactId>sphinx-online-adapter-common-tests</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- in-gmbh sphinx online application-war -->
+		<dependency>
+			<groupId>de.ingmbh.sphinx.online</groupId>
+			<artifactId>sphinx-online-application</artifactId>
+			<scope>provided</scope>
+			<type>war</type>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/commons-configuration/commons-configuration -->
 		<dependency>
 			<groupId>commons-configuration</groupId>
 			<artifactId>commons-configuration</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>de.jbo.jbo-soo-home.connection.wut.data</groupId>
+			<artifactId>jbo-soo-home-connection-wut-data</artifactId>
+			<version>${project.parent.version}</version>
 		</dependency>
 
 
+		<dependency>
+			<groupId>de.jbo.jbo-soo-home.connection.wut.io</groupId>
+			<artifactId>jbo-soo-home-connection-wut-io</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
 	</dependencies>
 
+	<build>
+		<plugins>
+			<!-- Dependencies -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<!-- unpack soo.war -->
+					<execution>
+						<id>unpack-soo-war</id>
+						<phase>package</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>de.ingmbh.sphinx.online</groupId>
+									<artifactId>sphinx-online-application</artifactId>
+									<type>war</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/soo-war</outputDirectory>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+					<!-- copy adapter jar to unpack directory (libraries) -->
+					<execution>
+						<id>copy-adapter-jar</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>${project.groupId}</groupId>
+									<artifactId>${project.artifactId}</artifactId>
+									<version>${project.version}</version>
+									<type>jar</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/soo-war/WEB-INF/lib</outputDirectory>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/soo-war/WEB-INF/lib</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+							<includeScope>runtime</includeScope>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Assembly the soo.war again -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<finalName>soo</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptor>config-soo-war-assembly.xml</descriptor>
+					<archive>
+						<manifestFile>${project.build.directory}/soo-war/META-INF/MANIFEST.MF</manifestFile>
+					</archive>
+				</configuration>
 
+				<executions>
+					<execution>
+						<id>create-archive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<name>soo data adapter</name>
 </project>

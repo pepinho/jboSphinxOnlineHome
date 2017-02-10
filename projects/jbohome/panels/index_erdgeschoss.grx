@@ -1,0 +1,44 @@
+integrierte informationssysteme (c)
+grinx a 11 079
+nd 0
+dd 19.11.2016 04.02.2017
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   1920.0 1080.0
+   0
+ep 11 1 0 0 0 0
+   21 erdgeschoss_grundriss
+   0
+ap 0
+   0
+gp -1.516202354739692E-4 0.8999999872285022
+   130.24959202291944 -0.899999987228502
+   -1.5162023547396508E-4 986.8413644211397
+   12 _GR_SYM_PTH/
+   25 erdgeschoss_grundriss.grx
+ep 11 8193 0 0 0 0
+   6 rahmen
+   1
+   4100 0 35 "titel=&#220;bersicht - Erdgeschoss\000"
+ap 0
+   0
+gp 1.0 0.0
+   0.0 0.0
+   1.0 0.0
+   12 _GR_SYM_PTH/
+   10 rahmen.grx
+ep 11 1 0 0 0 0
+   20 symbol_etagen_side_e
+   0
+ap 0
+   0
+gp 4.0 0.0
+   1288.0000000000005 0.0
+   4.0 224.0
+   12 _GR_SYM_PTH/
+   24 symbol_etagen_side_e.grx
+ee

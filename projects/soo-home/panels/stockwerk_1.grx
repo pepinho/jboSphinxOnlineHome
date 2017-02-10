@@ -1,0 +1,209 @@
+integrierte informationssysteme (c)
+grinx a 10 30
+nd 0
+dd 28.11.2013 21.01.2015
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   105.0 63.0
+   0
+ep 11 1 0 0 0 0
+   11 hintergrund
+   1
+   4100 0 19 "title=1. Stockwerk\000"
+ap 0
+   0
+gp 1.0 0.0
+   1.1546319456101628E-14 0.0
+   0.9999102916733169 0.09161247422244223
+   12 _GR_SYM_PTH/
+   15 hintergrund.grx
+ep 11 1 0 0 0 0
+   21 stockwerk_grundriss_2
+   0
+ap 0
+   0
+gp 0.8837050869710456 0.0
+   9.462062402028137 0.0
+   0.9288673273655922 -1.3860795101731318
+   12 _GR_SYM_PTH/
+   25 stockwerk_grundriss_2.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 54 "soo:nodeId=soo-home.bad.stockwerk1.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   80.92957549082676 0.0
+   1.0 22.71671511971907
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 53 "soo:nodeId=soo-home.arbeitszimmer.licht.tisch.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   11.603674637690894 0.0
+   0.9999999999999998 -22.097237504346097
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 52 "soo:nodeId=soo-home.schlafzimmer.licht.links.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   68.92360350294395 0.0
+   1.0 -4.5094192310954195
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 51 "soo:nodeId=soo-home.schlafzimmer.licht.oben.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   50.87877028533923 0.0
+   0.9999999999999992 -12.211664096050297
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 52 "soo:nodeId=soo-home.schlafzimmer.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   70.0699098458047 0.0
+   1.0 2.9212409828150285
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   7 fenster
+   1
+   4100 0 48 "soo:nodeId=soo-home.schlafzimmer.fenster.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   84.02314400042282 0.0
+   1.0 -2.621096018328355
+   12 _GR_SYM_PTH/
+   11 fenster.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 47 "soo:nodeId=soo-home.arbeitszimmer.licht.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   10.110926811603989 0.0
+   0.9999999999999992 -0.44466442985073584
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 53 "soo:nodeId=soo-home.arbeitszimmer.rauchmelder.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   29.30206637206944 0.0
+   1.0 14.441721103233515
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   15 bewegungsmelder
+   1
+   4100 0 50 "soo:nodeId=soo-home.bewegungsmelder.balkon.status\000"
+ap 0
+   0
+gp 0.9999999999999993 0.0
+   7.911439545769634 0.0
+   1.0000000000000002 8.83888752581335
+   12 _GR_SYM_PTH/
+   19 bewegungsmelder.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 48 "soo:nodeId=soo-home.bad.stockwerk1.licht.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   56.551491277680526 0.0
+   1.0 6.97119616109017
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   7 fenster
+   1
+   4100 0 49 "soo:nodeId=soo-home.arbeitszimmer.fenster.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   15.201434618644775 0.0
+   1.0 19.328714046276158
+   12 _GR_SYM_PTH/
+   11 fenster.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 51 "soo:nodeId=soo-home.treppe.stockwerk1.licht.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   31.547143451593563 0.0
+   1.0 10.023370074133645
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   4 tuer
+   1
+   4100 0 46 "soo:nodeId=soo-home.tuer.bad.stockwek1.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   64.88610909901554 0.0
+   1.0 26.37932082460923
+   12 _GR_SYM_PTH/
+   8 tuer.grx
+ep 11 1 0 0 0 0
+   4 tuer
+   1
+   4100 0 45 "soo:nodeId=soo-home.tuer.schlafzimmer.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   61.36436996858076 0.0
+   1.0 14.053233868087489
+   12 _GR_SYM_PTH/
+   8 tuer.grx
+ep 11 1 0 0 0 0
+   7 fenster
+   1
+   4100 0 50 "soo:nodeId=soo-home.bad.stockwerk1.fenster.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   87.07247318573997 0.0
+   1.0 42.47755125557848
+   12 _GR_SYM_PTH/
+   11 fenster.grx
+ep 11 1 0 0 0 0
+   15 nav_back_button
+   0
+ap 0
+   0
+gp 0.41939178737637245 0.0
+   -51.17788491744736 0.0
+   0.41939178737637245 10.141191971780625
+   12 _GR_SYM_PTH/
+   19 nav_back_button.grx
+ee

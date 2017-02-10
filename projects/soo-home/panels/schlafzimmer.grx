@@ -1,0 +1,92 @@
+integrierte informationssysteme (c)
+grinx a 10 30
+nd 0
+dd 12.11.2013 21.01.2015
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   105.0 63.0
+   0
+ep 11 1 0 0 0 0
+   11 hintergrund
+   1
+   4100 0 19 "title=Schlafzimmer\000"
+ap 0
+   0
+gp 1.0 0.0
+   0.08267716535434655 0.0
+   1.0 0.09139784946236773
+   12 _GR_SYM_PTH/
+   15 hintergrund.grx
+ep 19 1 0 0 0 0
+   0
+   0
+ap 0 1 1 1 22 1 0 10
+gp 12 _GR_PIX_PTH/
+   16 schlafzimmer.jpg
+   4
+   13.709172482037395 2.548860534673352
+   91.4649268259297 2.548860534673352
+   91.4649268259297 54.41194868204947
+   13.709172482037395 54.41194868204947
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 52 "soo:nodeId=soo-home.schlafzimmer.licht.oben.status
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   30.45207206335447 0.0
+   1.0 19.48785341687786
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   5 licht
+   1
+   4100 0 53 "soo:nodeId=soo-home.schlafzimmer.licht.links.status
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   -7.3178722780184415 0.0
+   1.0 -15.877638234328073
+   12 _GR_SYM_PTH/
+   9 licht.grx
+ep 11 1 0 0 0 0
+   7 fenster
+   1
+   4100 0 48 "soo:nodeId=soo-home.schlafzimmer.fenster.status\000"
+ap 0
+   0
+gp 1.0 0.0
+   61.41103896778401 0.0
+   1.0 29.542978187450604
+   12 _GR_SYM_PTH/
+   11 fenster.grx
+ep 11 1 0 0 0 0
+   11 rauchmelder
+   1
+   4100 0 53 "soo:nodeId=soo-home.schlafzimmer.rauchmelder.status
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   30.739495977678 0.0
+   1.0 40.114529610414245
+   12 _GR_SYM_PTH/
+   15 rauchmelder.grx
+ep 11 1 0 0 0 0
+   15 nav_back_button
+   0
+ap 0
+   0
+gp 0.41939178737637245 0.0
+   -51.17788491744736 0.0
+   0.41939178737637245 10.141191971780625
+   12 _GR_SYM_PTH/
+   19 nav_back_button.grx
+ee

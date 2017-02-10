@@ -1,0 +1,73 @@
+integrierte informationssysteme (c)
+grinx a 11 079
+nd 0
+dd 19.11.2016 08.02.2017
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   1920.0 1080.0
+   0
+ep 6 16385 0 0 0 0
+   10 light-room
+   3
+   4200 0 14 "${soo:nodeId}\000"
+   4100 0 27 "soo:nodeId=wut.1.output.0
+\000"
+   4218 2 3 "64\000"
+ap 0 1 1 1 0 6 0 10
+gp 557.8129614093484 584.2269135205356
+   826.0714285714286 584.2269135205356
+   826.0714285714286 885.5357142857142
+   557.8129614093484 885.5357142857142
+dp 0
+   6
+   0 1 0.0
+   1.0 2.0
+   -1
+ep 11 1 0 0 0 0
+   22 dachgeschoss_grundriss
+   0
+ap 0
+   0
+gp 0.00175978844280084 0.8999982795231537
+   150.0 -0.8999982795231536
+   0.0017597884428008398 990.698067904502
+   12 _GR_SYM_PTH/
+   26 dachgeschoss_grundriss.grx
+ep 11 8193 0 0 0 0
+   6 rahmen
+   1
+   4100 0 36 "titel=&#220;bersicht - Dachgeschoss\000"
+ap 0
+   0
+gp 1.0 0.0
+   0.0 0.0
+   1.0 0.0
+   12 _GR_SYM_PTH/
+   10 rahmen.grx
+ep 11 1 0 0 0 0
+   20 symbol_etagen_side_d
+   0
+ap 0
+   0
+gp 4.0 0.0
+   1288.0000000000005 0.0
+   4.0 223.9999999999999
+   12 _GR_SYM_PTH/
+   24 symbol_etagen_side_d.grx
+ep 11 1 0 0 0 0
+   13 symbol_switch
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.0
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   655.0 0.0
+   1.0 685.8928571428571
+   12 _GR_SYM_PTH/
+   17 symbol_switch.grx
+ee

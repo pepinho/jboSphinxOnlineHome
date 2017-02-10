@@ -1,0 +1,6 @@
+Es gibt eine Alarmanlage:
+
+Intern Scharf EI/AUS
+Extern Scharf EIN/AUS
+und 
+PANIKKNOPF

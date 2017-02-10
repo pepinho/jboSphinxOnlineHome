@@ -66,3 +66,4 @@ connection/wut/servlet/.settings/org.eclipse.wst.common.project.facet.core.xml
 *.project
 *.project
 connection/wut/io/.settings/org.eclipse.wst.common.project.facet.core.xml
+connection/wut/data/DataStore.xml

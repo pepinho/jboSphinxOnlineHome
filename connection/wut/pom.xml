@@ -5,17 +5,18 @@
 
 	<parent>
 		<groupId>de.jbo.jbo-soo-home.connection</groupId>
-		<artifactId>connection</artifactId>
+		<artifactId>jbo-soo-home-connection</artifactId>
 		<version>0.9.1</version>
 		<relativePath>..</relativePath>
 	</parent>
 
 	<groupId>de.jbo.jbo-soo-home.connection.wut</groupId>
-	<artifactId>wut</artifactId>
+	<artifactId>jbo-soo-home-connection-wut</artifactId>
 	<packaging>pom</packaging>
 
 	<modules>
 		<module>data</module>
+		<module>io</module>
 		<module>servlet</module>
 	</modules>
 
@@ -26,4 +27,5 @@
 	</dependencies>
 
 
+	<name>wut-io device framework</name>
 </project>
