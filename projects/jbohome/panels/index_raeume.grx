@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 11 079
 nd 0
-dd 19.11.2016 19.11.2016
+dd 19.11.2016 11.02.2017
 sd 1 0 0
 ad 0 0
    0
@@ -13,7 +13,7 @@ gd 1.0 1.0
 ep 11 8193 0 0 0 0
    6 rahmen
    1
-   4100 0 34 "titel=&#220;bersicht - R&#228;ume\000"
+   4100 0 13 "titel=Etagen\000"
 ap 0
    0
 gp 1.0 0.0
@@ -29,20 +29,20 @@ ep 11 1 0 0 0 0
 ap 0
    0
 gp 3.0 0.0
-   944.0 0.0
-   3.0 -136.0
+   1099.0 0.0
+   3.0 -151.0
    12 _GR_SYM_PTH/
    18 symbol_etage_0.grx
 ep 11 1 0 0 0 0
    14 symbol_etage_1
    2
-   4100 0 22 "etage=Erdgescho&#223;\000"
+   4100 0 18 "etage=Erdgeschoss\000"
    4009 0 22 "index_erdgeschoss.grx\000"
 ap 0
    0
 gp 3.0 0.0
-   514.9999999999998 0.0
-   3.0 159.5
+   669.9999999999998 0.0
+   3.0 144.5
    12 _GR_SYM_PTH/
    18 symbol_etage_1.grx
 ep 11 1 0 0 0 0
@@ -53,8 +53,8 @@ ep 11 1 0 0 0 0
 ap 0
    0
 gp 3.0 0.0
-   89.0 0.0
-   3.0 458.0
+   244.0 0.0
+   3.0 443.0
    12 _GR_SYM_PTH/
    18 symbol_etage_2.grx
 ee

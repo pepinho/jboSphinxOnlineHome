@@ -19,6 +19,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -26,6 +27,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.border.BevelBorder;
 import javax.swing.filechooser.FileFilter;
 
 import de.ingmbh.sphinx.api2d.core.Core;
@@ -52,6 +54,8 @@ public class Frame extends JFrame {
     private JColorCombobox comboColorSource = null;
 
     private JColorCombobox comboColorTarget = null;
+
+    private JLabel labelState = null;
 
     public Frame() {
         super("Color converter");
@@ -129,6 +133,13 @@ public class Frame extends JFrame {
 
         });
         getContentPane().add(button, constraint);
+
+        constraint.gridx += constraint.gridwidth;
+        constraint.fill = GridBagConstraints.BOTH;
+        constraint.gridwidth = 4;
+        labelState = new JLabel("");
+        labelState.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
+        getContentPane().add(labelState, constraint);
     }
 
     private void convert() {
@@ -136,7 +147,11 @@ public class Frame extends JFrame {
         FileBackup backup = new FileBackup();
         if (backup.backup(graphicsFile)) {
             ConverterLogic logic = new ConverterLogic();
-            logic.convert(graphicsFile, comboColorSource.getSelectedColor(), comboColorTarget.getSelectedColor());
+            if (logic.convert(graphicsFile, comboColorSource.getSelectedColor(), comboColorTarget.getSelectedColor())) {
+                labelState.setText("Graphics successfully converted!");
+            } else {
+                labelState.setText("Graphics was NOT converted!");
+            }
         }
     }
 
@@ -225,7 +240,11 @@ public class Frame extends JFrame {
 
     private void updateCursorPosition(JTextField text) {
         String content = text.getText();
+        text.setAutoscrolls(true);
         text.setCaretPosition(content.length());
+        if (labelState != null) {
+            labelState.setText("");
+        }
     }
 
     private File chooseFile(String toBeSelected, FileFilter filter) {

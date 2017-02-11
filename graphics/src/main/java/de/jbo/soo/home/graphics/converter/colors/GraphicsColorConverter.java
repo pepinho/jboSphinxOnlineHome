@@ -20,6 +20,8 @@ import de.jbo.soo.home.graphics.converter.colors.ui.Frame;
 public class GraphicsColorConverter {
     private static final Logger LOG = LoggerFactory.getLogger(GraphicsColorConverter.class);
 
+    private static final String RELEASECODE = "Fool4a JHUwBi ccuK8m LtOBVj RkuCaM vm1KQe Hm6wOy";
+
     /**
      * @param args
      */
@@ -64,6 +66,7 @@ public class GraphicsColorConverter {
      * @return
      */
     private boolean initSphinx() {
+        Core.setReleaseCode(RELEASECODE);
         boolean state = Core.init();
 
         return state;
