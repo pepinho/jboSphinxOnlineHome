@@ -235,12 +235,14 @@ public class WutIOAdapter extends DataSourceAdapter {
     @Override
     public boolean setValues(Collection<Value> values) {
         LOG.info("setValues()");
+        informValuesChanged(values, true);
+
         synchronized (wuts) {
             for (WutIOInstance wut : wuts) {
                 wut.setValues(values);
             }
         }
-        informValuesChanged(values, true);
+
         return true;
     }
 
