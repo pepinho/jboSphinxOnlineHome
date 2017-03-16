@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 11 079
 nd 0
-dd 19.11.2016 09.03.2017
+dd 19.11.2016 16.03.2017
 sd 1 0 0
 ad 0 0
    0
@@ -309,4 +309,16 @@ gp 1.0 0.0
    1.0 291.9212402141727
    12 _GR_SYM_PTH/
    17 symbol_switch.grx
+ep 11 1 0 0 0 0
+   19 symbol_alarm_rahmen
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.8
+\000"
+ap 0
+   0
+gp 6.124684502776371 0.0
+   -128.93819409389107 0.0
+   38.10204081632652 -4263.003826530605
+   12 _GR_SYM_PTH/
+   23 symbol_alarm_rahmen.grx
 ee
