@@ -259,9 +259,11 @@ public class WutIOInstance implements IConnectionResultListener {
             Object previousValue = value.getValue();
             value.setValue(newValue);
 
+            LOG.trace("Refreshing id '" + id + "' - old = " + previousValue + " - new = " + newValue);
             if ((previousValue == null) || !newValue.equals(previousValue)) {
                 value.setTimeOfChange(time);
                 changedValues.add(value);
+                LOG.trace("   --> value changed!!!");
             }
             this.values.put(id, value);
         }

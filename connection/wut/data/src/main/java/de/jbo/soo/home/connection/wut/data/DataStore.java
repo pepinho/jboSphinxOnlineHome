@@ -10,9 +10,7 @@ package de.jbo.soo.home.connection.wut.data;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -138,7 +136,7 @@ public class DataStore {
         boolean ret = false;
         Properties properties = new Properties();
         try {
-            properties.loadFromXML(in);
+            properties.load(in);
             parseProperties(properties);
             ret = true;
         } catch (IOException e) {
@@ -228,12 +226,11 @@ public class DataStore {
 
     public synchronized boolean save(OutputStream out) {
         StringBuilder comments = new StringBuilder();
-        Properties properties = new Properties();
+        Properties properties = new SortedKeysProperties();
         boolean ret = true;
 
         comments.append("WUT data-store\n");
         comments.append("Stored: " + size + " inputs, outputs and counters.\n");
-        comments.append("Changed: " + new SimpleDateFormat().format(new Date()));
 
         properties.setProperty(PROPERTY_KEY_SIZE, Integer.toString(size));
         setProperties(properties, valuesInput, PROPERTY_KEY_INPUT);
@@ -241,7 +238,7 @@ public class DataStore {
         setProperties(properties, valuesCounter, PROPERTY_KEY_COUNTER);
 
         try {
-            properties.storeToXML(out, comments.toString());
+            properties.store(out, comments.toString());
         } catch (IOException e) {
             LOG.error("Saving the datastore failed.", e);
             ret = false;
