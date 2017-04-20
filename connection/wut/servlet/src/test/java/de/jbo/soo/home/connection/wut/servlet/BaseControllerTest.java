@@ -29,10 +29,10 @@ public class BaseControllerTest {
     private ModelMap model = null;
 
     private DataStore dataStore() {
-        DataStore store = BaseController.getDataStore();
+        DataStore store = baseController.getDataStore();
         if (store == null) {
-            BaseController.validateDataStore();
-            store = BaseController.getDataStore();
+            baseController.validateDataStore();
+            store = baseController.getDataStore();
         }
         return store;
     }
@@ -66,14 +66,14 @@ public class BaseControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        dataStore().clear();
         baseController = new BaseController();
+        dataStore().clear();
         model = new ModelMap();
     }
 
     @After
     public void tearDown() throws Exception {
-        BaseController.clearDataStoreFile();
+        baseController.clearDataStoreFile();
     }
 
     @Test(expected = IllegalAccessException.class)
@@ -118,6 +118,7 @@ public class BaseControllerTest {
         dataStore().setCounter(1, 24);
         dataStore().setOutput(0, true);
         dataStore().setInput(2, true);
+        baseController.saveDataStore();
         String ret = baseController.index(model);
         assertEquals("The return-value doesn't match!", BaseController.VIEW_INDEX, ret);
         assertModel(IOProcessor.ATTRIBUTE_PREFIX_COUNTER + 1, 24);

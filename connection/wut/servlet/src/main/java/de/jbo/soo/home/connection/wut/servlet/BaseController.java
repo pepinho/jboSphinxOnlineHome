@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import de.jbo.soo.home.connection.wut.data.DataStore;
 import de.jbo.soo.home.connection.wut.io.IOProcessor;
@@ -45,11 +46,13 @@ public class BaseController {
 
     private static String lastResponse = "";
 
-    private static DataStore dataStore;
-
     static final String VIEW_INDEX = "index";
 
     private final static org.slf4j.Logger logger = LoggerFactory.getLogger(BaseController.class);
+
+    private DataStore dataStore;
+
+    private String dataStoreFileName;
 
     private static synchronized void assertPassword(String password) throws IllegalAccessException {
         if (!password.equals(IOProcessor.PASSWORD)) {
@@ -57,27 +60,46 @@ public class BaseController {
         }
     }
 
-    static synchronized void clearDataStoreFile() {
-        new File(DATASTORE_FILENAME).delete();
+    synchronized void clearDataStoreFile() {
+        validateDataStore();
+        new File(dataStoreFileName).delete();
     }
 
-    static synchronized void validateDataStore() {
+    synchronized void validateDataStore() {
         if (dataStore == null) {
             logger.info("Initializing datastore...");
+            dataStoreFileName = createDataStoreFilename();
             dataStore = new DataStore(DATA_STORE_SIZE);
-            logger.info("Initializing datastore finished.");
-            if (!new File(DATASTORE_FILENAME).exists()) {
+            logger.info("Initializing datastore '" + dataStoreFileName + "' finished.");
+            if (!new File(dataStoreFileName).exists()) {
                 saveDataStore();
             }
         }
         loadDataStore();
     }
 
-    private static synchronized void loadDataStore() {
+    private String createDataStoreFilename() {
+        String prefix = DATASTORE_FILENAME.substring(0, DATASTORE_FILENAME.indexOf('.'));
+        String suffix = DATASTORE_FILENAME.substring(DATASTORE_FILENAME.indexOf('.'));
+        String middle = "";
+        try {
+            ServletUriComponentsBuilder myUri = ServletUriComponentsBuilder.fromCurrentServletMapping();
+            if (myUri != null) {
+                String uri = myUri.toUriString();
+                middle = "-" + uri.substring(uri.indexOf("wut-servlet"));
+            }
+        } catch (IllegalStateException e) {
+            // ntbd
+        }
+
+        return prefix + middle + suffix;
+    }
+
+    private synchronized void loadDataStore() {
         FileInputStream fis = null;
         try {
-            logger.info("Loading datastore from: " + DATASTORE_FILENAME + "...");
-            fis = new FileInputStream(DATASTORE_FILENAME);
+            logger.info("Loading datastore from: " + dataStoreFileName + "...");
+            fis = new FileInputStream(dataStoreFileName);
             if (!dataStore.load(fis)) {
                 throw new IOException("dataStore.load() returned 'false'");
             }
@@ -94,11 +116,11 @@ public class BaseController {
         }
     }
 
-    static synchronized void saveDataStore() {
+    synchronized void saveDataStore() {
         FileOutputStream fos = null;
         try {
-            logger.info("Saving datastore to: " + DATASTORE_FILENAME + "...");
-            fos = new FileOutputStream(DATASTORE_FILENAME);
+            logger.info("Saving datastore to: " + dataStoreFileName + "...");
+            fos = new FileOutputStream(dataStoreFileName);
             if (!dataStore.save(fos)) {
                 throw new IOException("dataStore.save() returned 'false'");
             }
@@ -233,7 +255,7 @@ public class BaseController {
         return VIEW_INDEX;
     }
 
-    static DataStore getDataStore() {
+    DataStore getDataStore() {
         return dataStore;
     }
 }
