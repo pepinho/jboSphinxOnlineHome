@@ -57,6 +57,8 @@ public class WutIOAdapter extends DataSourceAdapter {
 
     private TimerTask timerWutRefreshTaks = null;
 
+    private volatile boolean isConnected = false;
+
     private void closeWUTs() {
         LOG.info("Closed WUTs...");
         synchronized (wuts) {
@@ -118,24 +120,32 @@ public class WutIOAdapter extends DataSourceAdapter {
      */
     @Override
     public void afterPropertiesSet() {
-        LOG.info("afterPropertiesSet()");
-        stopTimer();
-        closeWUTs();
-        initWUTs();
-        startTimer();
+        synchronized (wuts) {
+            if (isConnected) {
+                LOG.info("afterPropertiesSet()");
+                stopTimer();
+                closeWUTs();
+                initWUTs();
+                startTimer();
+            }
+        }
     }
 
     private void refreshWUTs() {
         synchronized (wuts) {
+            LOG.info("--> refreshWUTs()");
             for (WutIOInstance wut : wuts) {
                 if (wut.isConnected()) {
-                    LOG.debug("Refreshing wut...");
+                    LOG.debug("    refreshing " + wut.toString());
                     Collection<Value> changedValues = wut.refreshValues();
                     if (!changedValues.isEmpty()) {
-                        LOG.debug("wut values changed on refresh...");
+                        LOG.debug("    values changed on refresh...");
                         informValuesChanged(changedValues, true);
+                    } else {
+                        LOG.debug("    no changes on refresh...");
                     }
                 }
+                LOG.info("<-- refreshWUTs()");
             }
         }
     }
@@ -180,6 +190,7 @@ public class WutIOAdapter extends DataSourceAdapter {
     protected void doDisposeAdapter() throws Throwable {
         stopTimer();
         closeWUTs();
+        isConnected = false;
     }
 
     /*
@@ -192,6 +203,11 @@ public class WutIOAdapter extends DataSourceAdapter {
         LOG.info("getAvailableData()");
         List<ValueDefinition2> definitions = new ArrayList<>();
         synchronized (wuts) {
+            if (!isConnected) {
+                initWUTs();
+                startTimer();
+                isConnected = true;
+            }
             for (WutIOInstance wut : wuts) {
                 definitions.addAll(wut.getValueDefinitions());
             }
@@ -234,15 +250,14 @@ public class WutIOAdapter extends DataSourceAdapter {
      */
     @Override
     public boolean setValues(Collection<Value> values) {
-        LOG.info("setValues()");
-        informValuesChanged(values, true);
-
         synchronized (wuts) {
+            LOG.info("--> setValues()");
             for (WutIOInstance wut : wuts) {
                 wut.setValues(values);
             }
+            informValuesChanged(values, true);
+            LOG.info("<-- setValues()");
         }
-
         return true;
     }
 

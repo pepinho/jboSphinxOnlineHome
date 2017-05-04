@@ -7,8 +7,10 @@
 //
 package de.jbo.soo.home.data;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -77,12 +79,20 @@ public class WutIOInstance implements IConnectionResultListener {
         connector = new HttpConnector();
     }
 
+    /*
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        return "Wut" + wutIndex + " (" + hostAddress + ")";
+    }
+
     public void connect() {
         LOG.info("Connecting WUT " + wutIndex + " ...");
         connector.addResultListener(this);
         try {
             connector.connect(hostAddress);
-            isConnected = true;
+            isConnected = connector.isInitialized();
             LOG.info("Successfully connected.");
         } catch (ConnectionFailedException e) {
             isConnected = false;
@@ -194,13 +204,14 @@ public class WutIOInstance implements IConnectionResultListener {
                     boolean output = transformValue(Integer.parseInt(value.getValue().toString()));
                     dataStore.setOutput(index, output);
                     String request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_OUTPUTACCESS + index, password, IOProcessor.PARAM_STATE, (output == true) ? IOProcessor.OUTPUT_ACCESS_STATE_ON : IOProcessor.OUTPUT_ACCESS_STATE_OFF);
-                    LOG.debug("Sending output-access: " + request);
+                    LOG.debug("     Sending output-access: " + request);
                     connector.sendCommand(request);
                 }
-                value.setTimeOfChange(System.currentTimeMillis());
+                value.setTimeOfValue(value.getTimeOfChange() - 1);
                 this.values.put(value.getId(), value);
             }
         }
+        dump(values);
     }
 
     private Set<String> getKeys(String substring, Set<String> originalKeys) {
@@ -221,8 +232,22 @@ public class WutIOInstance implements IConnectionResultListener {
         refreshValuesSubset(VALUE_ID_PREFIX_COUNTER, changedValues, time);
         refreshValuesSubset(VALUE_ID_PREFIX_OUTPUT, changedValues, time);
         refreshValuesSubset(VALUE_ID_PREFIX_INPUT, changedValues, time);
-        LOG.debug(changedValues.toString());
+        dump(changedValues);
         return changedValues;
+    }
+
+    private void dump(Collection<Value> values) {
+        DateFormat formatter = DateFormat.getDateTimeInstance();
+        if (!values.isEmpty()) {
+            for (Value value : values) {
+                StringBuilder buffer = new StringBuilder();
+                buffer.append("      value id=" + value.getId());
+                buffer.append(", time-of-value=" + formatter.format(new Date(value.getTimeOfValue())));
+                buffer.append(", time-of-change=" + formatter.format(new Date(value.getTimeOfChange())));
+                buffer.append(", value=" + value.getValue());
+                LOG.debug(buffer.toString());
+            }
+        }
     }
 
     /**
@@ -259,11 +284,11 @@ public class WutIOInstance implements IConnectionResultListener {
             Object previousValue = value.getValue();
             value.setValue(newValue);
 
-            LOG.trace("Refreshing id '" + id + "' - old = " + previousValue + " - new = " + newValue);
+            LOG.trace("     Refreshing id '" + id + "' - old = " + previousValue + " - new = " + newValue);
             if ((previousValue == null) || !newValue.equals(previousValue)) {
                 value.setTimeOfChange(time);
                 changedValues.add(value);
-                LOG.trace("   --> value changed!!!");
+                LOG.trace("     --> value changed!!!");
             }
             this.values.put(id, value);
         }
@@ -313,7 +338,7 @@ public class WutIOInstance implements IConnectionResultListener {
     public void onResult(Object result) {
         synchronized (this) {
             try {
-                LOG.debug("response: " + result);
+                LOG.trace("     response: " + result);
                 IOProcessor.fillResponseFromWutToDataStore(result.toString(), dataStore);
             } catch (InvalidFormatException | UnknownCommandException e) {
                 LOG.error("Error parsing response from WUT: " + result, e);

@@ -43,6 +43,7 @@ public class HttpConnector extends AbstractTcpConnector {
         try {
             HttpResponse response = httpClient.execute(getRequest);
             boolean status = response.getStatusLine().getStatusCode() == HttpStatus.SC_OK;
+            getRequest.releaseConnection();
             LOG.info("Connection established: " + status);
             return status;
         } catch (IOException e) {
@@ -67,14 +68,16 @@ public class HttpConnector extends AbstractTcpConnector {
      */
     @Override
     protected String execSendCommand(String command) throws SendFailedException {
-        LOG.debug("execSendCommand: " + getAddress() + command);
+        LOG.trace("      execSendCommand: " + getAddress() + command);
         HttpGet getRequest = new HttpGet(getAddress() + command);
         try {
             HttpResponse response = httpClient.execute(getRequest);
             int status = response.getStatusLine().getStatusCode();
             if (status == HttpStatus.SC_OK) {
-                LOG.debug("Command sent. Reading response content...");
-                return getContent(response);
+                LOG.trace("     Command sent. Reading response content...");
+                String content = getContent(response);
+                getRequest.releaseConnection();
+                return content;
             } else {
                 throw new IOException("HTTP call returned status " + status + " (" + response.getStatusLine().getReasonPhrase() + ")");
             }
@@ -94,7 +97,7 @@ public class HttpConnector extends AbstractTcpConnector {
         }
         content.close();
         String contentRead = stringBuffer.toString();
-        LOG.debug("Response content: " + contentRead);
+        LOG.trace("     Response content: " + contentRead);
         return contentRead;
     }
 
