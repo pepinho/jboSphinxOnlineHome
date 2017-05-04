@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 11 079
 nd 0
-dd 19.11.2016 19.11.2016
+dd 19.11.2016 01.05.2017
 sd 1 0 0
 ad 0 0
    0
@@ -21,4 +21,16 @@ gp 1.0 0.0
    1.0 0.0
    12 _GR_SYM_PTH/
    10 rahmen.grx
+ep 8 1 0 0 0 0
+   0
+   2
+   4221 0 36 "&#220;bersicht - Ein- Ausg&#228;nge\000"
+   4009 2 38 "index_settings_overview_all_inout.grx\000"
+ap 1 0 1 0 0
+   25.5 0 4
+   10 0 0
+gp 267.1145038167939 867.297709923664
+   0.0 1.9607843137254901
+   11
+   25 "\334bersicht - Ein- Ausg\344nge"
 ee

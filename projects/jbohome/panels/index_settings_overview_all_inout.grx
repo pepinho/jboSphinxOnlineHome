@@ -1,0 +1,600 @@
+integrierte informationssysteme (c)
+grinx a 11 079
+nd 0
+dd 01.05.2017 01.05.2017
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   1920.0 1080.0
+   0
+ep 11 8193 0 0 2 0
+   6 rahmen
+   1
+   4100 0 34 "titel=Alle Ein- und Ausg&#228;nge\000"
+ap 0
+   0
+gp 1.0 0.0
+   0.0 0.0
+   1.0 0.0
+   12 _GR_SYM_PTH/
+   10 rahmen.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.0
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   286.25000000000006 0.0
+   1.0 815.2678571428571
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.1
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   515.7142857142856 0.0
+   1.0 815.2678571428571
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.2
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   745.1785714285711 0.0
+   1.0 815.2678571428571
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.5
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1433.571428571428 0.0
+   1.0 815.2678571428571
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.3
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   974.6428571428564 0.0
+   1.0 815.2678571428571
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.4
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1204.1071428571422 0.0
+   1.0 815.2678571428571
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.6
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   286.25000000000006 0.0
+   1.0 709.9617346938776
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.7
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   515.7142857142856 0.0
+   1.0 709.9617346938776
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.8
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   745.1785714285711 0.0
+   1.0 709.9617346938776
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 28 "soo:nodeId=wut.1.output.11
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1433.571428571428 0.0
+   1.0 709.9617346938776
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.9
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   974.6428571428564 0.0
+   1.0 709.9617346938776
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 28 "soo:nodeId=wut.1.output.10
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1204.1071428571422 0.0
+   1.0 709.9617346938776
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.0
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   286.25000000000006 0.0
+   1.0 604.6556122448981
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.1
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   515.7142857142856 0.0
+   1.0 604.6556122448981
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.2
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   745.1785714285711 0.0
+   1.0 604.6556122448981
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.5
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1433.571428571428 0.0
+   1.0 604.6556122448981
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.3
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   974.6428571428567 0.0
+   1.0 604.6556122448981
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.4
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1204.1071428571422 0.0
+   1.0 604.6556122448981
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.6
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   286.25000000000006 0.0
+   1.0 499.34948979591854
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.7
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   515.7142857142856 0.0
+   1.0 499.34948979591854
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.8
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   745.1785714285711 0.0
+   1.0 499.34948979591854
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 28 "soo:nodeId=wut.2.output.11
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1433.571428571428 0.0
+   1.0 499.34948979591854
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.9
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   974.6428571428567 0.0
+   1.0 499.34948979591854
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 28 "soo:nodeId=wut.2.output.10
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1204.1071428571422 0.0
+   1.0 499.34948979591854
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.3.output.0
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   286.25000000000006 0.0
+   1.0 394.043367346939
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.3.output.1
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   515.7142857142856 0.0
+   1.0 394.043367346939
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.3.output.2
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   745.1785714285711 0.0
+   1.0 394.043367346939
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.3.output.5
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1433.571428571428 0.0
+   1.0 394.043367346939
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.3.output.3
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   974.6428571428569 0.0
+   1.0 394.043367346939
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.3.output.4
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1204.1071428571422 0.0
+   1.0 394.043367346939
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.3.output.6
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   286.25000000000006 0.0
+   1.0 288.73724489795944
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.3.output.7
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   515.7142857142856 0.0
+   1.0 288.73724489795944
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.3.output.8
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   745.1785714285711 0.0
+   1.0 288.73724489795944
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 28 "soo:nodeId=wut.3.output.11
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1433.571428571428 0.0
+   1.0 288.73724489795944
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.3.output.9
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   974.6428571428567 0.0
+   1.0 288.73724489795944
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 28 "soo:nodeId=wut.3.output.10
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1204.1071428571422 0.0
+   1.0 288.73724489795944
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.6
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   286.25000000000006 0.0
+   1.0 78.12500000000011
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.7
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   515.7142857142858 0.0
+   1.0 78.12500000000011
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.8
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   745.1785714285711 0.0
+   1.0 78.12500000000011
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 28 "soo:nodeId=wut.4.output.11
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1433.571428571428 0.0
+   1.0 78.12500000000011
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.9
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   974.6428571428564 0.0
+   1.0 78.12500000000011
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 28 "soo:nodeId=wut.4.output.10
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1204.1071428571422 0.0
+   1.0 78.12500000000011
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.0
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   286.25000000000006 0.0
+   1.0 183.43112244897986
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.1
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   515.7142857142858 0.0
+   1.0 183.43112244897986
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.2
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   745.1785714285711 0.0
+   1.0 183.43112244897986
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.5
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1433.571428571428 0.0
+   1.0 183.43112244897986
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.3
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   974.6428571428564 0.0
+   1.0 183.43112244897986
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.4
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   1204.1071428571422 0.0
+   1.0 183.43112244897986
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ee
