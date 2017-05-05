@@ -34,7 +34,7 @@ public class PropertiesProvider {
 
     public static final int SUPPORTED_WUT_COUNT = 5;
 
-    public static final int SUPPORTED_INPUT_OUTPUT_COUNT = 16;
+    public static final int SUPPORTED_INPUT_OUTPUT_COUNT = 12;
 
     private static final String EMPTY_VALUE = "";
 

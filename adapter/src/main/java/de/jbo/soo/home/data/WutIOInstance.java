@@ -58,7 +58,7 @@ public class WutIOInstance implements IConnectionResultListener {
 
     private volatile boolean isConnected = false;
 
-    private DataStore dataStore = new DataStore(16);
+    private DataStore dataStore = new DataStore(12);
 
     private Map<String, ValueDefinition2> valueDefinitions = new HashMap<>();
 

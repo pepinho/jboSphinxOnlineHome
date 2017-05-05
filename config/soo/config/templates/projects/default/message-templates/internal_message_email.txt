@@ -1,0 +1,5 @@
+Subject: sphinx open: ${severityType} auf ${ssp["soo.server.http.baseUrl"]}
+
+${severityType} auf ${ssp["soo.server.http.baseUrl"]}:
+
+${messageText}

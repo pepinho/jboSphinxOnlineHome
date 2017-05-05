@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+	<bean id="ldapContextSource"
+		class="org.springframework.security.ldap.DefaultSpringSecurityContextSource">
+		<constructor-arg value="${soo.server.security.ldap.context.providerUrl}" />
+		<property name="userDn"
+			value="${soo.server.security.ldap.context.credentials.userDn}" />
+		<property name="password"
+			value="${soo.server.security.ldap.context.credentials.password}" />
+	</bean>
+
+	<!-- needs to be named "authenticationProvider" because referenced by this 
+		name -->
+	<bean id="authenticationProvider"
+		class="org.springframework.security.ldap.authentication.LdapAuthenticationProvider">
+		<constructor-arg>
+			<bean
+				class="org.springframework.security.ldap.authentication.BindAuthenticator">
+				<constructor-arg ref="ldapContextSource" />
+				<property name="userSearch">
+					<ref bean="ldapUserSearch" />
+				</property>
+			</bean>
+		</constructor-arg>			
+		<constructor-arg ref="ldapAuthoritiesPopulator"/>
+	</bean>
+
+	<bean id="ldapAuthoritiesPopulator"
+		class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
+		<constructor-arg ref="ldapContextSource" />
+		<constructor-arg
+			value="${soo.server.security.ldap.authorities.groupSearchBase}" />
+		<property name="groupRoleAttribute"
+			value="${soo.server.security.ldap.authorities.groupRoleAttribute}" />
+		<property name="searchSubtree"
+			value="${soo.server.security.ldap.authorities.searchSubtree}" />
+		<property name="groupSearchFilter"
+			value="${soo.server.security.ldap.authorities.groupSearchFilter}" />
+	</bean>
+
+	<bean id="ldapUserSearch"
+		class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
+		<constructor-arg index="0"
+			value="${soo.server.security.ldap.userSearch.searchBase}" />
+		<constructor-arg index="1"
+			value="${soo.server.security.ldap.userSearch.searchFilter}" />
+		<constructor-arg index="2" ref="ldapContextSource" />
+	</bean>
+
+	<bean id="userDetailsService"
+		class="org.springframework.security.ldap.userdetails.LdapUserDetailsService">
+		<constructor-arg ref="ldapUserSearch" />
+		<constructor-arg ref="ldapAuthoritiesPopulator"/>
+	</bean>
+</beans>

@@ -1,0 +1,6 @@
+# tenant specific extensions to the global properties file
+# each tenant has its own database
+soo.server.database.driverClassName=com.mysql.jdbc.Driver
+soo.server.database.url=%databaseUrl%
+soo.server.database.username=%databaseUsername%
+soo.server.database.password=%databasePassword%

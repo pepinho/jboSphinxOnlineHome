@@ -1,0 +1,55 @@
+<#assign
+label_subject = "Receipt of your order"
+label_receipt = "Customer receipt"
+label_details = "Order Details"
+label_caseNumber = "File no."
+label_workOrderNumber = "Work Order Number"
+label_location = "Event Location"
+label_nearby = "Near to"
+label_contact = "Contact Person"
+label_phone = "Telephone"
+label_latitude = "Latitude"
+label_longitude = "Longitude"
+label_insuranceProduct = "Product name of insurance"
+label_vehicleDetails = "Vehicle Details"
+label_vehicle = "Vehicle"
+label_event = "Damage description"
+label_licensePlate = "License Plate"
+label_registrationDate = "Registration Date"
+label_chassisNumber = "Chassis Number"
+label_odometerKilometers = "Current mileage (km)"
+label_transmissionType = "Gearbox"
+label_transmissionTypes = {
+   "UNKNOWN":"unknown",
+   "MANUAL":"manual",
+   "MANUMATIC":"manumatic",
+   "AUTOMATIC":"automatic",
+   "AUTOMATIC_DUAL_CLUTCH":"dual-clutch",
+   "OTHER":"other"
+}
+label_propulsionType = "Fuel type"
+label_propulsionTypes = {
+   "UNKNOWN":"unknown",
+   "GASOLINE":"gasoline",
+   "DIESEL":"diesel",
+   "GASOLINE_HYBRID":"gasoline hybrid",
+   "DIESEL_HYBRID":"diesel hybrid",
+   "ELECTRIC":"electric",
+   "OTHER":"other"
+}
+label_history = "History"
+label_report = "Report"
+label_result = "Order finished as"
+label_comment = "Remark"
+label_damageCode = "Damage Code"
+label_damages = "Existing damages to the car body"
+label_signature = "Signature"
+label_signatureNone = "<no signature>"
+label_photos = "Photos"
+label_photosNone = "<no photos>"
+label_transmissionType_manumatic = "manumatic"
+label_transmissionType_automatic = "Automatik"
+label_transmissionType_dual_clutch = "Doppelklupplung"
+label_unknown = "Unbekannt"
+label_mail_footer = "This is an automatically generated message. Please do not reply to this e-mail and contact the Assistance Center with your questions."  
+>

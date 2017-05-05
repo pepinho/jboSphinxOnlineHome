@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <!-- Starting from 2.0 this is just for migration of previous user data or to bootstrap the user management -->
+
+	<bean id="userDetailsServiceInput"
+		class="de.ingmbh.sphinx.online.service.spring.InMemoryUserDetailsProvider">
+		<property name="userMap">
+			<value>
+			    admin=evET3XZMjXomvAwGgHj/7MNEyFfd0RG7,${soo.server.security.authorization.adminAuthority}
+				user=RWmxzOdjV6yja7mwbIx/kg==,${soo.server.security.authorization.viewerAuthority}
+				guest=kEBt0T9C0qK2DIs0gCfWSQ==,${soo.server.security.authorization.viewerGuestAuthority}
+				none=193AqMR2TwOr+AZubsJpNw==,ROLE_DENIED
+				test-password=RR7FnCAZM5zSOUiA3n3OVw==,${soo.server.security.authorization.viewerAuthority}
+        	</value>
+		</property>
+	</bean>
+
+</beans>

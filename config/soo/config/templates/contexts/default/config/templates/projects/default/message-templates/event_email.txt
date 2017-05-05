@@ -1,0 +1,13 @@
+subject: ${event.getSeverityType().getLabel()}: ${event.getDescription()} @ ${event.getSourceLabel()}
+
+Folgendes Ereignis hat sich zugetragen: 
+${event.getUpdateTime()?number_to_datetime} - ${event.getSeverityType().getLabel()}: ${event.getDescription()} @ ${event.getSourceLabel()}
+
+Aufruf der Anwendung:
+auf dem PC:
+${ssp["soo.server.http.baseUrl"]}/applet.jsp?soo.projectLogicalName=${event.project.logicalName}
+
+auf Android:
+https://www.sphinx-open.com/mobile/go?soo.projectLogicalName=${event.project.logicalName}
+
+

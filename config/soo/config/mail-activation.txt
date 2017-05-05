@@ -1,0 +1,14 @@
+subject=Your Registration at sphinx open
+Hello, <tenant.primaryContact.firstName> <tenant.primaryContact.lastName>!
+
+Thank you for your registration at the sphinx open Cloud Service!
+
+To confirm your e-mail and activate your service, please follow this link: 
+<baseUrl>?tenant=<tenant.name>&activationId=<tenant.activationId>
+If the above link cannot be clicked, copy the above link into the address line of your browser and hit the enter key.
+
+If you did not intend to register at the sphinx open Cloud Service, please forward this mail to hotline@in-gmbh.de
+
+Thank you!
+
+   Your IN-GmbH Support Team

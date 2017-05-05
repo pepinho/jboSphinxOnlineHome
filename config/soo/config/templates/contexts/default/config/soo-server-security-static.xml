@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <!-- Starting from 2.0 this is just for migration of previous user data -->
+    
+	<bean id="userDetailsServiceInput"
+		class="de.ingmbh.sphinx.online.service.spring.InMemoryUserDetailsProvider">
+		<property name="userMap">
+			<value>
+			<!-- old-style multi-tencancy via contexts - obsolete -->
+			<!-- %tenant.primaryAdmin.logonName%=%password%,${soo.server.security.authorization.managerAuthority} -->				
+        	</value>
+		</property>
+	</bean>
+		
+</beans>

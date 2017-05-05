@@ -133,7 +133,7 @@ public class WutIOAdapter extends DataSourceAdapter {
 
     private void refreshWUTs() {
         synchronized (wuts) {
-            LOG.info("--> refreshWUTs()");
+            LOG.debug("--> refreshWUTs()");
             for (WutIOInstance wut : wuts) {
                 if (wut.isConnected()) {
                     LOG.debug("    refreshing " + wut.toString());
@@ -145,7 +145,7 @@ public class WutIOAdapter extends DataSourceAdapter {
                         LOG.debug("    no changes on refresh...");
                     }
                 }
-                LOG.info("<-- refreshWUTs()");
+                LOG.debug("<-- refreshWUTs()");
             }
         }
     }
@@ -251,12 +251,12 @@ public class WutIOAdapter extends DataSourceAdapter {
     @Override
     public boolean setValues(Collection<Value> values) {
         synchronized (wuts) {
-            LOG.info("--> setValues()");
+            LOG.debug("--> setValues()");
             for (WutIOInstance wut : wuts) {
                 wut.setValues(values);
             }
             informValuesChanged(values, true);
-            LOG.info("<-- setValues()");
+            LOG.debug("<-- setValues()");
         }
         return true;
     }

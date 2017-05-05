@@ -1,0 +1,44 @@
+</#escape> <#-- escaping aus, da dieser Wert als HTML -->
+Subject: ${addressee.helperCreateGUILabel()}, Sie sind eingeladen, sphinx open zu verwenden
+<#escape x as x?html> <#-- escaping wieder an -->
+Content-Type: text/html
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+body {font-family:Arial,Helvetica,sans-serif;}
+tr {vertical-align: top; }
+table { border-collapse:collapse; }
+table, th, td { border: 1px solid black; }
+td {padding: 5px; }
+</style>
+</head>
+<body>
+${addressee.helperCreateGUILabel()}, Sie sind eingeladen, <em>sphinx open</em> zu verwenden!
+<p>
+Sie sind mit folgenden Daten registriert:
+<table>
+<tr><td>Benutzername:</td><td>${addressee.helperGetFullName()}<br>(Sie können auch Ihre Mail-Adresse als Benutzername verwenden)</td></tr>
+<tr><td>Vorname:</td><td>${addressee.firstName!""}</td></tr>
+<tr><td>Nachname:</td><td>${addressee.lastName!""}</td></tr>
+<tr><td>E-Mail:</td><td>${addressee.email}</td></tr>
+</table>
+<p>
+<#if addressee.activationId??>
+<p>
+Unter folgendem Link können Sie Ihre (Re-)Aktivierung abschließen:<br>
+<a href="${ssp["soo.server.http.baseUrl"]}/activation/${addressee.activationId}">${ssp["soo.server.http.baseUrl"]}/activation/${addressee.activationId}</a>
+<p>
+</#if>
+<p>
+Unter folgendem Link können Sie zukünftig auf das System zugreifen:<br>
+<a href="${ssp["soo.server.http.baseUrl"]}">${ssp["soo.server.http.baseUrl"]}</a>
+<p>
+<p>
+Wir freuen uns auf Ihren Besuch!
+<p>
+Mit freundlichen Grüßen,<br>
+&nbsp;&nbsp;Ihr <em>sphinx open Support Team</em>
+</body>
+</html>

@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.2.v201410272105 Build &lt;4.4.2.v20150217-1805></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/simple_listing.gif</property>
+    <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.simplelisting</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">lib/SooReportLibrary.rptlibrary</property>
+            <property name="namespace">SooReportLibrary</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="rowLimit" id="150">
+            <text-property name="promptText">Row limit</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">10000</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="projectLogicalName" id="187">
+            <text-property name="promptText">Project Logical Name</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="timestampFrom" id="188">
+            <property name="valueType">static</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">-1</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="timePeriodTo" id="189">
+            <property name="valueType">static</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">-1</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <script-data-source name="sooDataSource" id="185"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="eventDataSet" id="186">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">dbId</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">creationTime</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">description</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">eventType</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">severityType</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">sourceId</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">updateTime</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">dbId</property>
+                    <text-property name="displayName">dbId</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">creationTime</property>
+                    <text-property name="displayName">creationTime</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">description</property>
+                    <text-property name="displayName">description</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">eventType</property>
+                    <text-property name="displayName">eventType</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">severityType</property>
+                    <text-property name="displayName">severityType</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sourceId</property>
+                    <text-property name="displayName">sourceId</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">updateTime</property>
+                    <text-property name="displayName">updateTime</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">dbId</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">creationTime</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">eventType</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">severityType</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">sourceId</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">updateTime</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">sooDataSource</property>
+            <method name="open"><![CDATA[count = 0;
+
+importPackage(Packages.java.util);
+importPackage(Packages.java.lang);
+importPackage(Packages.de.ingmbh.sphinx.online.common.vo);
+importPackage(Packages.de.ingmbh.sphinx.online.service);
+
+if (typeof eventService != 'undefined') {
+	var creationTimeStart = null;
+	var creationTimeStop = null;
+	
+	if (params["timestampFrom"] != undefined) {
+		creationTimeStart = new Long(params["timestampFrom"]);
+	}
+	if (params["timePeriodTo"] != undefined) {
+		creationTimeStop = new Long(params["timePeriodTo"]);
+	}
+
+	events = eventService.getEvents(params["projectLogicalName"], creationTimeStart, creationTimeStop, new Long(params["rowLimit"]));
+} else {
+	/* test data */
+	events = new ArrayList();
+	var event1 = new HashMap();
+	event1.put("dbId", 1);
+	event1.put("creationTime", 1396594260065);
+	event1.put("description", "Description text");
+	event1.put("eventType", "Event type");
+	event1.put("severityType", "WARNING");
+	event1.put("sourceId", "Source ID");
+	event1.put("updateTime", 1396594360065);
+	events.add(event1);
+}]]></method>
+            <method name="fetch"><![CDATA[if (count < events.size()) {
+	var event = events.get(count);
+
+	if (typeof eventService != 'undefined') {
+		row["dbId"] = event.getDbId();
+		row["creationTime"] = sooConversion.longToDate(event.getCreationTime());
+		row["description"] = event.getDescription();
+		row["eventType"] = event.getEventType();
+		row["severityType"] = event.getSeverityType();
+		row["sourceId"] = event.getSourceId();
+		row["updateTime"] = sooConversion.longToDate(event.getUpdateTime());
+	} else {
+		/* test data */
+		row["dbId"] = event.get("dbId");
+		row["creationTime"] = sooConversion.longToDate(event.get("creationTime"));
+		row["description"] = event.get("description");
+		row["eventType"] = event.get("eventType");
+		row["severityType"] = event.get("severityType");
+		row["sourceId"] = event.get("sourceId");
+		row["updateTime"] = sooConversion.longToDate(event.get("updateTime"));
+	}
+	
+	count++;
+	return true;
+}
+
+return false;]]></method>
+        </script-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="24">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="25">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="26">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="192">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="172">
+            <column id="173"/>
+            <column id="174"/>
+            <column id="175"/>
+            <row id="176">
+                <property name="height">0.75in</property>
+                <cell id="177"/>
+                <cell id="178">
+                    <label id="183">
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Report</text-property>
+                    </label>
+                    <text-data id="190">
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">"Alarm list for " + params["projectLogicalName"].value</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+                <cell id="179"/>
+            </row>
+        </grid>
+        <table id="4">
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">medium</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">medium</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">medium</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">medium</property>
+            <property name="width">7.947916666666667in</property>
+            <property name="dataSet">eventDataSet</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">creationTime</property>
+                    <text-property name="displayName">creationTime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["creationTime"]</expression>
+                    <property name="dataType">date-time</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">updateTime</property>
+                    <text-property name="displayName">updateTime</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["updateTime"]</expression>
+                    <property name="dataType">date-time</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">serverity</property>
+                    <text-property name="displayName">serverity</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["severityType"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">source</property>
+                    <text-property name="displayName">source</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["sourceId"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">message</property>
+                    <text-property name="displayName">message</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["description"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">typeOfEvent</property>
+                    <text-property name="displayName">typeOfEvent</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["eventType"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">0</property>
+            <column id="20">
+                <property name="width">1.53125in</property>
+            </column>
+            <column id="21">
+                <property name="width">1.4791666666666667in</property>
+            </column>
+            <column id="22">
+                <property name="width">0.84375in</property>
+            </column>
+            <column id="23">
+                <property name="width">1.5520833333333333in</property>
+            </column>
+            <column id="158">
+                <property name="width">1.21875in</property>
+            </column>
+            <column id="162">
+                <property name="width">1.3229166666666667in</property>
+            </column>
+            <header>
+                <row id="5">
+                    <property name="backgroundColor">#000080</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#FFFFFF</property>
+                    <cell id="6">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <label id="151">
+                            <text-property name="text">Creation Time</text-property>
+                        </label>
+                    </cell>
+                    <cell id="7">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <label id="152">
+                            <text-property name="text">Update Time</text-property>
+                        </label>
+                    </cell>
+                    <cell id="8">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <label id="153">
+                            <text-property name="text">Severity</text-property>
+                        </label>
+                    </cell>
+                    <cell id="9">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <label id="154">
+                            <text-property name="text">Source</text-property>
+                        </label>
+                    </cell>
+                    <cell id="155">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <label id="163">
+                            <text-property name="text">Message</text-property>
+                        </label>
+                    </cell>
+                    <cell id="159">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <label id="164">
+                            <text-property name="text">Type of event</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="10">
+                    <cell id="11">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <data id="165">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">creationTime</property>
+                        </data>
+                    </cell>
+                    <cell id="12">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <data id="166">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">updateTime</property>
+                        </data>
+                    </cell>
+                    <cell id="13">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <data id="167">
+                            <property name="textAlign">center</property>
+                            <method name="onCreate"><![CDATA[if (this.getValue().equals("ALARM")) {
+	this.getStyle().color = "red";
+} else if (this.getValue().equals("WARNING")) {
+	this.getStyle().color = "orange";
+} else if (this.getValue().equals("INFO")) {
+	this.getStyle().color = "green";
+}
+]]></method>
+                            <property name="resultSetColumn">serverity</property>
+                        </data>
+                    </cell>
+                    <cell id="14">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <data id="168">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">source</property>
+                        </data>
+                    </cell>
+                    <cell id="156">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <data id="169">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">message</property>
+                        </data>
+                    </cell>
+                    <cell id="160">
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <data id="170">
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">typeOfEvent</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="15">
+                    <property name="fontSize">9pt</property>
+                    <property name="fontStyle">italic</property>
+                    <cell id="16">
+                        <property name="fontSize">10pt</property>
+                        <property name="fontStyle">normal</property>
+                    </cell>
+                    <cell id="17"/>
+                    <cell id="18"/>
+                    <cell id="19"/>
+                    <cell id="157"/>
+                    <cell id="161"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

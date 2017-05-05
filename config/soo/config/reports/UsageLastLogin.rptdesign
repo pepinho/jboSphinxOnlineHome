@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.2.v201410272105 Build &lt;4.4.2.v20150217-1805></property>
+    <list-property name="includeScripts">
+        <property>lib/js/sooConversion.js</property>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/grouped_listing.gif</property>
+    <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.groupedlisting</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="timestampFrom" id="60">
+            <text-property name="promptText">Time of Count From</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">BirtDateTime.today()</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="timestampTo" id="61">
+            <text-property name="promptText">Time of Count To</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">decimal</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="javascript">BirtDateTime.now()</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="domainName" id="151">
+            <text-property name="promptText">Domain Name</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">local</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <script-data-source name="SooDataSource" id="153"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="ActionUsageCounterDataSet" id="208">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">serviceType</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">counterId</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">count</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">logonName</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">timeOfCount</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">serviceType</property>
+                    <text-property name="displayName">serviceType</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">counterId</property>
+                    <text-property name="displayName">counterId</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">count</property>
+                    <text-property name="displayName">count</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">logonName</property>
+                    <text-property name="displayName" key="logonName">Logon Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">timeOfCount</property>
+                    <text-property name="displayName">timeOfCount</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">serviceType</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">counterId</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">count</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">logonName</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">timeOfCount</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">SooDataSource</property>
+            <method name="open"><![CDATA[importPackage(Packages.java.util);
+importPackage(Packages.java.lang);
+importPackage(Packages.de.ingmbh.sphinx.online.common.services.audit.vo);
+importPackage(Packages.de.ingmbh.sphinx.online.service);
+importPackage(Packages.de.ingmbh.sphinx.online.service.tariff);
+importPackage(Packages.de.ingmbh.sphinx.online.common);
+
+count = 0;
+usages = new ArrayList();
+
+if (typeof auditService != 'undefined' &amp;&amp; typeof tariffService != 'undefined') {
+	var domainName = null;
+	var timeOfCountFrom = null;
+	var timeOfCountTo = null;
+
+	if (params["domainName"] != undefined) {
+		domainName = params["domainName"];
+	}
+	if (params["timestampFrom"] != undefined) {
+		timeOfCountFrom = new Long(params["timestampFrom"]);
+	}
+	if (params["timestampTo"] != undefined) {
+		timeOfCountTo = new Long(params["timestampTo"]);
+	}
+
+	var usageCriteria = new Usage();
+	usageCriteria.setDomainName(domainName);
+	usageCriteria.setCounterId("login");	
+	// need to set serviceType: ADMIN
+	usageCriteria.setServiceType(SooConstants.ServiceType.ADMIN);
+	var usageList = auditService.findUsages(usageCriteria, timeOfCountFrom, timeOfCountTo);
+	if (usageList != null) {
+		usages.addAll(usageList);
+	}
+	// need to set serviceType: VIEWER
+	usageCriteria.setServiceType(SooConstants.ServiceType.VIEWER);
+	var usageList = auditService.findUsages(usageCriteria, timeOfCountFrom, timeOfCountTo);
+	if (usageList != null) {
+		usages.addAll(usageList);
+	}	
+} else {
+    var currentTimeMillis = new Date().getTime();
+    
+	/* test data */
+	{
+		var usage = new HashMap();
+		usage.put("serviceType", "ADMIN");
+		usage.put("counterId", "login");
+		usage.put("count", 1);
+		usage.put("timeOfCount", currentTimeMillis-3*60*60*1000); // login 3 hours ago
+		usage.put("user", "whodunit");		
+		usages.add(usage);
+	}
+	{
+		var usage = new HashMap();
+		usage.put("serviceType", "ADMIN");
+		usage.put("counterId", "login");
+		usage.put("count", 1);
+		usage.put("timeOfCount", currentTimeMillis-4*60*60*1000); // login 4 hours ago
+		usage.put("user", "whodunit");
+		usages.add(usage);
+	}	
+}]]></method>
+            <method name="fetch"><![CDATA[if (count < usages.size()) {
+	var usage = usages.get(count);
+
+	if (typeof auditService != 'undefined' &amp;&amp; typeof tariffService != 'undefined') {
+		row["serviceType"] = usage.getServiceType();
+		row["counterId"] = usage.getCounterId();
+		row["count"] = usage.getCount();
+		row["timeOfCount"] = sooConversion.longToDate(usage.getTimeOfCount());
+	    // lookup
+		var user = aaaService.findUser(domainName, usage.getUuidUser());
+		if (user != null) {
+			logonName = user.getLogonName();
+		} else {
+			logonName = usage.getUuidUser();
+		}
+		row["logonName"] = logonName;
+	} else {
+		/* test data */
+		row["serviceType"] = usage.get("serviceType");
+		row["counterId"] = usage.get("counterId");
+		row["count"] = usage.get("count");
+		row["timeOfCount"] = sooConversion.longToDate(usage.get("timeOfCount"));		
+		row["logonName"] = usage.get("user");		
+	}
+
+	count++;
+	return true;
+}
+
+return false;]]></method>
+        </script-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="38">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="41">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="42">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-header>
+                <grid id="3">
+                    <property name="width">100%</property>
+                    <column id="4"/>
+                    <row id="5">
+                        <cell id="6"/>
+                    </row>
+                </grid>
+            </page-header>
+            <page-footer>
+                <text id="304">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="8">
+            <property name="height">0.4166666666666667in</property>
+            <property name="width">100%</property>
+            <column id="9"/>
+            <row id="10">
+                <property name="verticalAlign">text-bottom</property>
+                <property name="height">0.3in</property>
+                <cell id="11">
+                    <property name="verticalAlign">top</property>
+                    <label id="12">
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textUnderline">none</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Login Statistics</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="212">
+                <property name="verticalAlign">text-bottom</property>
+                <property name="height">0.25in</property>
+                <cell id="213">
+                    <property name="verticalAlign">top</property>
+                    <text-data id="43">
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">var dtStart = new Date(params["timestampFrom"]);&#13;
+var dtEnd = new Date(params["timestampTo"]);&#13;
+&#13;
+var start = Formatter.format(dtStart, "MMM d, yyyy, HH:mm:ss");&#13;
+var end = Formatter.format(dtEnd, "MMM d, yyyy, HH:mm:ss");&#13;
+"Service usages from " + start + " to " + end;</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="214">
+                <property name="verticalAlign">text-bottom</property>
+                <property name="height">0.25in</property>
+                <cell id="215">
+                    <property name="verticalAlign">top</property>
+                    <text-data id="211">
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <expression name="valueExpr">var domainName = params["domainName"];&#13;
+"Domain: " + domainName;</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+        </grid>
+        <table name="table11" id="169">
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">medium</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">medium</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">medium</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">medium</property>
+            <property name="pageBreakBefore">auto</property>
+            <property name="width">7.947916666666667in</property>
+            <property name="dataSet">ActionUsageCounterDataSet</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">serviceType</property>
+                    <text-property name="displayName">serviceType</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["serviceType"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">counterId</property>
+                    <text-property name="displayName">counterId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["counterId"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">count</property>
+                    <text-property name="displayName">count</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["count"]</expression>
+                    <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Column Binding</property>
+                    <text-property name="displayName">logonName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["logonName"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">sum</property>
+                    <text-property name="displayName">sumCount</text-property>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>NewTableGroup2</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["count"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">timeOfCount</property>
+                    <text-property name="displayName">timeOfCount</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["timeOfCount"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">max</property>
+                    <text-property name="displayName">maxTimeOfCount</text-property>
+                    <property name="dataType">date-time</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>NewTableGroup2</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">MAX</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["timeOfCount"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">timeOfCount_1</property>
+                    <text-property name="displayName">timeOfCount</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["timeOfCount"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">logonName</property>
+                    <text-property name="displayName">logonName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["logonName"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="repeatHeader">true</property>
+            <property name="pageBreakInterval">0</property>
+            <column id="204">
+                <property name="width">1.59375in</property>
+            </column>
+            <column id="297">
+                <property name="width">1.59375in</property>
+            </column>
+            <column id="206">
+                <property name="width">1.4895833333333333in</property>
+            </column>
+            <column id="207">
+                <property name="width">1.6770833333333333in</property>
+            </column>
+            <header>
+                <row id="170">
+                    <property name="backgroundColor">#000080</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">white</property>
+                    <property name="textAlign">left</property>
+                    <cell id="171">
+                        <label id="172">
+                            <text-property name="text">Service Type</text-property>
+                        </label>
+                    </cell>
+                    <cell id="290">
+                        <label id="298">
+                            <text-property name="text" key="logonName">Logon Name</text-property>
+                        </label>
+                    </cell>
+                    <cell id="175">
+                        <label id="176">
+                            <text-property name="text">Login Count</text-property>
+                        </label>
+                    </cell>
+                    <cell id="177">
+                        <label id="178">
+                            <text-property name="text">Last Login</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="179">
+                <property name="groupName">NewTableGroup1</property>
+                <expression name="keyExpr">row["serviceType"]</expression>
+                <header>
+                    <row id="180">
+                        <cell id="181">
+                            <data id="182">
+                                <property name="resultSetColumn">serviceType</property>
+                            </data>
+                        </cell>
+                        <cell id="291"/>
+                        <cell id="184"/>
+                        <cell id="185"/>
+                    </row>
+                </header>
+                <footer>
+                    <row id="186">
+                        <cell id="187"/>
+                        <cell id="295"/>
+                        <cell id="189"/>
+                        <cell id="190"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="250">
+                <property name="groupName">NewTableGroup2</property>
+                <expression name="keyExpr" type="javascript">row["logonName"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue" type="javascript">row["logonName"]</expression>
+                </structure>
+                <property name="hideDetail">false</property>
+                <header>
+                    <row id="251">
+                        <cell id="252"/>
+                        <cell id="292">
+                            <data id="299">
+                                <property name="resultSetColumn">logonName</property>
+                            </data>
+                        </cell>
+                        <cell id="254">
+                            <data id="286">
+                                <property name="resultSetColumn">sum</property>
+                            </data>
+                        </cell>
+                        <cell id="255">
+                            <data id="288">
+                                <property name="resultSetColumn">max</property>
+                            </data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="256">
+                        <cell id="257"/>
+                        <cell id="294"/>
+                        <cell id="259"/>
+                        <cell id="260"/>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="191">
+                    <cell id="192"/>
+                    <cell id="293"/>
+                    <cell id="195"/>
+                    <cell id="197"/>
+                </row>
+            </detail>
+            <footer>
+                <row id="199">
+                    <property name="fontSize">9pt</property>
+                    <property name="fontStyle">italic</property>
+                    <cell id="200"/>
+                    <cell id="296"/>
+                    <cell id="202"/>
+                    <cell id="203"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

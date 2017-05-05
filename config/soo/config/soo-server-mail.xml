@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd">
+
+	<!-- Mail Service -->
+	<bean id="mailSender" class ="org.springframework.mail.javamail.JavaMailSenderImpl" >
+	    <!-- INSPOO-980 -->
+		<property name="defaultEncoding" value="UTF-8"/>
+		<property name="host" value="${soo.server.mail.host}" />
+		<property name="port" value="${soo.server.mail.port}" />
+		<property name="protocol" value="${soo.server.mail.protocol}" />
+		<property name="username" value="${soo.server.mail.username}" />
+		<property name="password" value="${soo.server.mail.password}" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.from">${soo.server.mail.from}</prop>
+				<prop key="mail.smtps.from">${soo.server.mail.from}</prop>
+    			<prop key="mail.transport.protocol">${soo.server.mail.protocol}</prop>
+				<prop key="mail.smtp.starttls.enable">${soo.server.mail.smtp.starttls.enable}</prop>
+           		<prop key="mail.smtp.auth">${soo.server.mail.auth}</prop>
+           		<prop key="mail.smtps.auth">${soo.server.mail.auth}</prop>
+				<prop key="mail.smtp.ssl.enable">${soo.server.mail.smtp.ssl.enable}</prop>
+           		<prop key="mail.debug">${soo.server.mail.debug}</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

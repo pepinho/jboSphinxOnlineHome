@@ -1,0 +1,192 @@
+<#include "vbwo-labels.txt" encoding="utf-8">
+</#escape> <#-- escaping aus, da dieser Wert als HTML -->
+Subject: ${label_subject}: ${vbwo.caseId} <#if vbwo.receivedAt??>, ${vbwo.receivedAt?number_to_datetime}</#if>
+<#escape x as x?html> <#-- escaping wieder an -->
+Content-Type: text/html
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">body {font-family:Arial,Helvetica,sans-serif;}</style>
+</head>
+<body>
+
+<table>
+<tr>
+<td colspan="2" style="text-align:center;font-weight:bold;">${label_receipt}</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:left;font-weight:bold;">${label_details}</td>
+</tr>
+<tr>
+<td>${label_caseNumber}</td>
+<td>${vbwo.caseId!""}</td>
+</tr>
+<tr>
+<td>${label_workOrderNumber}</td>
+<td>${vbwo.workOrderNumber!""}</td>
+</tr>
+<tr>
+<td>${label_location}</td>
+<td>${vbwo.operationLocation.name!""}</td>
+</tr>
+<tr>
+<td>${label_nearby}</td>
+<td>${vbwo.operationLocation.additionalInfo!""}</td>
+</tr>
+<tr>
+<td>${label_contact}</td>
+<td>${vbwo.fieldCustomer!""}</td>
+</tr>
+<tr>
+<td>${label_phone}</td>
+<td>${vbwo.telephone!""}</td>
+</tr>
+<tr>
+<td>${label_latitude}</td>
+<td>${vbwo.operationLocation.latitude!""}</td>
+</tr>
+<tr>
+<td>${label_longitude}</td>
+<td>${vbwo.operationLocation.longitude!""}</td>
+</tr>
+<tr>
+<td>${label_insuranceProduct}</td>
+<td>${vbwo.tariff!""}</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:left;font-weight:bold;">${label_vehicleDetails}</td>
+</tr>
+<tr>
+<td>${label_vehicle}</td>
+<td>${vbwo.customerVehicle.brand!""} ${vbwo.customerVehicle.model!""}</td>
+</tr>
+<tr>
+<td>${label_event}</td>
+<td>${vbwo.diagnostics!""}</td>
+</tr>
+<tr>
+<td>${label_licensePlate}</td>
+<td>${vbwo.customerVehicle.licensePlate!""}</td>
+</tr>
+<tr>
+<td>${label_registrationDate}</td>
+<td>
+<#if vbwo.customerVehicle.registrationDate??>
+${vbwo.customerVehicle.registrationDate?date}
+<#else>&nbsp;
+</#if>
+</td>
+</tr>
+<tr>
+<td>${label_chassisNumber}</td>
+<td>${vbwo.customerVehicle.chassisNumber!""}</td>
+</tr>
+<tr>
+<td>${label_odometerKilometers}</td>
+<td>${vbwo.customerVehicle.odometerKilometers!""}</td>
+</tr>
+<tr>
+<td>${label_transmissionType}</td>
+<td>
+<#if vbwo.customerVehicle.transmissionType??>
+${label_transmissionTypes[vbwo.customerVehicle.transmissionType]}
+<#else>
+${label_transmissionTypes["UNKNOWN"]}
+</#if>
+</tr>
+<tr>
+<td>${label_propulsionType}</td>
+<td>
+<#if vbwo.customerVehicle.propulsionType??>
+${label_propulsionTypes[vbwo.customerVehicle.propulsionType]}
+<#else>
+${label_propulsionTypes["UNKNOWN"]}
+</#if>
+</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:left;font-weight:bold;">${label_history}</td>
+</tr>
+</#escape> <#-- escaping aus, da dieser Wert als HTML -->
+${vbwo_event_history!""}
+<#escape x as x?html> <#-- escaping wieder an -->
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:left;font-weight:bold;">${label_report}</td>
+</tr>
+<tr>
+<td>${label_result}</td>
+<td>${vbwo_result!""}</td>
+</tr>
+<tr>
+<td>${label_comment}</td>
+<td>${vbwo.comment!""}</td>
+</tr>
+<tr>
+<td>${label_damageCode}</td>
+<td>${vbwo_damageCode!""}</td>
+</tr>
+</#escape> <#-- escaping aus, da dieser Wert als HTML -->
+${vbwo_towingTarget!""}
+<#escape x as x?html> <#-- escaping wieder an -->
+<tr>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:left;font-weight:bold;">${label_damages}</td>
+</tr>
+<tr>
+<td colspan="2"><pre>${message.comment!""}</pre></td>
+</tr>
+<!--Abstand-->
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr>
+<td colspan="2" style="text-align:left;font-weight:bold;">${label_signature}</td>
+</tr>
+<tr>
+<td colspan="2">
+<#if (message.signatures?size > 0)>
+  <#list message.signatures as image>
+    <img width="25%" height="25%" src="cid:${image.uuid}">
+    <p>
+  </#list>
+<#else>
+  ${label_signatureNone}
+</#if>
+</td>
+</tr>
+<!--Abstand-->
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr>
+<td colspan="2" style="text-align:left;font-weight:bold;">${label_photos}</td>
+</tr>
+<tr>
+<td colspan="2">
+<#if (message.photos?size > 0)>
+  <#list message.photos as image>
+    <img src="cid:${image.uuid}">
+    <p>
+  </#list>
+<#else>
+  ${label_photosNone}
+</#if>
+</td>
+</tr>
+</table>
+
+<p>
+${label_mail_footer!""}
+</body>
+</html>
