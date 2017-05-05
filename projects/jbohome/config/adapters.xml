@@ -16,6 +16,18 @@
             <pollingIntervalMillis>-1</pollingIntervalMillis>
             <properties>
                 <entry>
+                    <key>http://192.168.178.11</key>
+                    <value></value>
+                </entry>
+                <entry>
+                    <key>http://192.168.178.12</key>
+                    <value></value>
+                </entry>
+                <entry>
+                    <key>http://192.168.178.13</key>
+                    <value></value>
+                </entry>
+                <entry>
                     <key>wut1.host.address</key>
                     <value>http://192.168.178.10</value>
                 </entry>
@@ -33,22 +45,6 @@
                 </entry>
                 <entry>
                     <key>wut1.output.11</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut1.output.12</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut1.output.13</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut1.output.14</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut1.output.15</key>
                     <value></value>
                 </entry>
                 <entry>
@@ -85,7 +81,7 @@
                 </entry>
                 <entry>
                     <key>wut2.host.address</key>
-                    <value></value>
+                    <value>http://192.168.178.11</value>
                 </entry>
                 <entry>
                     <key>wut2.output.0</key>
@@ -101,22 +97,6 @@
                 </entry>
                 <entry>
                     <key>wut2.output.11</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut2.output.12</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut2.output.13</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut2.output.14</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut2.output.15</key>
                     <value></value>
                 </entry>
                 <entry>
@@ -153,7 +133,7 @@
                 </entry>
                 <entry>
                     <key>wut3.host.address</key>
-                    <value></value>
+                    <value>http://192.168.178.12</value>
                 </entry>
                 <entry>
                     <key>wut3.output.0</key>
@@ -169,22 +149,6 @@
                 </entry>
                 <entry>
                     <key>wut3.output.11</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut3.output.12</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut3.output.13</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut3.output.14</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut3.output.15</key>
                     <value></value>
                 </entry>
                 <entry>
@@ -221,7 +185,7 @@
                 </entry>
                 <entry>
                     <key>wut4.host.address</key>
-                    <value></value>
+                    <value>http://192.168.178.13</value>
                 </entry>
                 <entry>
                     <key>wut4.output.0</key>
@@ -237,22 +201,6 @@
                 </entry>
                 <entry>
                     <key>wut4.output.11</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut4.output.12</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut4.output.13</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut4.output.14</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut4.output.15</key>
                     <value></value>
                 </entry>
                 <entry>
@@ -305,22 +253,6 @@
                 </entry>
                 <entry>
                     <key>wut5.output.11</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut5.output.12</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut5.output.13</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut5.output.14</key>
-                    <value></value>
-                </entry>
-                <entry>
-                    <key>wut5.output.15</key>
                     <value></value>
                 </entry>
                 <entry>
