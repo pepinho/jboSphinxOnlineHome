@@ -42,10 +42,6 @@ div.td {
             <div class="td">9</div>
             <div class="td">10</div>
             <div class="td">11</div>
-            <div class="td">12</div>
-            <div class="td">13</div>
-            <div class="td">14</div>
-            <div class="td">15</div>
         </div>
 		<div class="tr">
 			<div class="td">Outputs:</div>
@@ -61,10 +57,6 @@ div.td {
 			<div class="td">${output9}</div>
 			<div class="td">${output10}</div>
 			<div class="td">${output11}</div>
-			<div class="td">${output12}</div>
-			<div class="td">${output13}</div>
-			<div class="td">${output14}</div>
-			<div class="td">${output15}</div>
 		</div>
 		<div class="tr">
             <div class="td">Inputs:</div>
@@ -80,10 +72,6 @@ div.td {
             <div class="td">${input9}</div>
             <div class="td">${input10}</div>
             <div class="td">${input11}</div>
-            <div class="td">${input12}</div>
-            <div class="td">${input13}</div>
-            <div class="td">${input14}</div>
-            <div class="td">${input15}</div>            
         </div>
         <div class="tr">
             <div class="td">Counter:</div>
@@ -99,10 +87,6 @@ div.td {
             <div class="td">${counter9}</div>
             <div class="td">${counter10}</div>
             <div class="td">${counter11}</div>
-            <div class="td">${counter12}</div>
-            <div class="td">${counter13}</div>
-            <div class="td">${counter14}</div>
-            <div class="td">${counter15}</div>
         </div>
 	</div>
 	</main>

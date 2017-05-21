@@ -26,11 +26,19 @@ public abstract class AbstractTcpConnector implements ITcpConnector {
      */
     @Override
     public synchronized void connect(String address) throws ConnectionFailedException {
+        connect(address, true);
+    }
+
+    /*
+     * @see de.jbo.soo.home.io.ITcpConnector#connect(java.lang.String, boolean)
+     */
+    @Override
+    public void connect(String address, boolean handleException) throws ConnectionFailedException {
         this.address = address;
         if (this.address.endsWith("/")) {
             this.address = this.address.substring(0, this.address.length() - 1);
         }
-        isInitialized = connectExec(address);
+        isInitialized = connectExec(address, handleException);
     }
 
     /*
@@ -41,7 +49,7 @@ public abstract class AbstractTcpConnector implements ITcpConnector {
         return address;
     }
 
-    protected abstract boolean connectExec(String address) throws ConnectionFailedException;
+    protected abstract boolean connectExec(String address, boolean handleException) throws ConnectionFailedException;
 
     /*
      * @see de.jbo.soo.home.io.ITcpConnector#close()

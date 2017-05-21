@@ -46,6 +46,8 @@ public class WutIOInstance implements IConnectionResultListener {
         ON, OFF;
     }
 
+    private static final String RESPONSE_DOCTYPE = "<!DOCTYPE html>";
+
     private static final String VALUE_ID_PREFIX_WUT = "wut.";
 
     private static final String VALUE_ID_PREFIX_OUTPUT = ".output.";
@@ -91,9 +93,19 @@ public class WutIOInstance implements IConnectionResultListener {
         LOG.info("Connecting WUT " + wutIndex + " ...");
         connector.addResultListener(this);
         try {
-            connector.connect(hostAddress);
+            boolean handleException = true;
+            // XXX workaround for wut-servlets - since startup simulatenous with
+            // adapter, they are not yet available officially at this point
+            if (hostAddress.contains("wut-servlet")) {
+                handleException = false;
+            }
+            // XXX workaround
+            connector.connect(hostAddress, handleException);
             isConnected = connector.isInitialized();
-            LOG.info("Successfully connected.");
+
+            if (isConnected) {
+                LOG.info("Successfully connected.");
+            }
         } catch (ConnectionFailedException e) {
             isConnected = false;
             LOG.error("Failed connecting.", e);
@@ -338,8 +350,13 @@ public class WutIOInstance implements IConnectionResultListener {
     public void onResult(Object result) {
         synchronized (this) {
             try {
-                LOG.trace("     response: " + result);
-                IOProcessor.fillResponseFromWutToDataStore(result.toString(), dataStore);
+                String resultString = result.toString();
+                if (!resultString.contains(RESPONSE_DOCTYPE)) {
+                    LOG.trace("     response: " + result);
+                    IOProcessor.fillResponseFromWutToDataStore(result.toString(), dataStore);
+                } else {
+                    LOG.trace("     response: OK");
+                }
             } catch (InvalidFormatException | UnknownCommandException e) {
                 LOG.error("Error parsing response from WUT: " + result, e);
             }

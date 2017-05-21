@@ -32,7 +32,7 @@ import de.jbo.soo.home.connection.wut.io.IOProcessor;
 @Controller
 public class BaseController {
 
-    static final int DATA_STORE_SIZE = 16;
+    static final int DATA_STORE_SIZE = 12;
 
     private static final String DATASTORE_FILENAME = "wutServletDataStore.properties";
 

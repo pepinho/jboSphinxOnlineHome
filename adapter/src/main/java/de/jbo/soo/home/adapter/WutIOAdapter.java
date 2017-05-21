@@ -82,12 +82,23 @@ public class WutIOAdapter extends DataSourceAdapter {
                     dumpProperties("wut" + wutIndex, getProperties());
                     wut.initDataPoints(propertiesProvider, getProperties(), getAdapterSpec());
                     wut.connect();
-                    wuts.add(wut);
+
+                    if (wut.isConnected()) {
+                        wuts.add(wut);
+                    }
                 } else {
                     LOG.info("No address property set for WUT " + wutIndex);
                 }
             }
         }
+    }
+
+    private boolean isConnectionsAvailable() {
+        boolean wutAvailable = false;
+        synchronized (wuts) {
+            wutAvailable = !wuts.isEmpty();
+        }
+        return wutAvailable;
     }
 
     private void stopTimer() {
@@ -126,7 +137,10 @@ public class WutIOAdapter extends DataSourceAdapter {
                 stopTimer();
                 closeWUTs();
                 initWUTs();
-                startTimer();
+                if (isConnectionsAvailable()) {
+                    LOG.info("WUTs initialized. Starting timer...");
+                    startTimer();
+                }
             }
         }
     }
@@ -205,8 +219,12 @@ public class WutIOAdapter extends DataSourceAdapter {
         synchronized (wuts) {
             if (!isConnected) {
                 initWUTs();
-                startTimer();
-                isConnected = true;
+                if (isConnectionsAvailable()) {
+                    startTimer();
+                    isConnected = true;
+                } else {
+                    LOG.info("No WUTs initialized yet.");
+                }
             }
             for (WutIOInstance wut : wuts) {
                 definitions.addAll(wut.getValueDefinitions());

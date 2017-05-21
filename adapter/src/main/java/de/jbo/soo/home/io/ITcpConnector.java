@@ -16,6 +16,8 @@ package de.jbo.soo.home.io;
 public interface ITcpConnector {
     void connect(String address) throws ConnectionFailedException;
 
+    void connect(String address, boolean handleException) throws ConnectionFailedException;
+
     void close();
 
     void sendCommand(String command);

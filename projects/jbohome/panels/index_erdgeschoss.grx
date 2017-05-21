@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 11 079
 nd 0
-dd 19.11.2016 16.03.2017
+dd 19.11.2016 21.05.2017
 sd 1 0 0
 ad 0 0
    0
@@ -650,7 +650,7 @@ gp 0.24526462241147673 0.0
 ep 11 1 0 0 0 0
    36 window-contact-terasse-fenster-links
    1
-   4100 0 28 "soo:nodeId=wut.1.output.15
+   4100 0 27 "soo:nodeId=wut.1.output.9
 \000"
 ap 0
    0
@@ -662,7 +662,7 @@ gp 0.24526462241147673 0.0
 ep 11 1 0 0 0 0
    37 window-contact-terasse-fenster-rechts
    1
-   4100 0 28 "soo:nodeId=wut.1.output.15
+   4100 0 27 "soo:nodeId=wut.1.output.9
 \000"
 ap 0
    0
@@ -674,7 +674,7 @@ gp 0.24526462241147673 0.0
 ep 11 1 0 0 0 0
    27 window_contact-fenster-oben
    1
-   4100 0 28 "soo:nodeId=wut.1.output.15
+   4100 0 27 "soo:nodeId=wut.1.output.9
 \000"
 ap 0
    0

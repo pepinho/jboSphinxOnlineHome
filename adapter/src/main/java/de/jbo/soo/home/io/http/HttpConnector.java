@@ -28,23 +28,42 @@ import de.jbo.soo.home.io.SendFailedException;
 public class HttpConnector extends AbstractTcpConnector {
     private static final Logger LOG = LoggerFactory.getLogger(HttpConnector.class);
 
-    private HttpClient httpClient = null;
+    private HttpClient httpClient() {
+        HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
+        return httpClientBuilder.build();
+    }
+
+    private HttpGet httpGet(String address) {
+        HttpGet getRequest = new HttpGet(address);
+        getRequest.setHeader("Accept", "text/html,application/xhtml+xml,application/xml");
+        getRequest.setHeader("Accept-Encoding", "gzip, deflate");
+        getRequest.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0");
+        getRequest.setHeader("Accept-Charset", System.getProperty("file.encoding"));
+        return getRequest;
+    }
 
     /*
      * @see
-     * de.jbo.soo.home.io.AbstractTcpConnector#connectExec(java.lang.String)
+     * de.jbo.soo.home.io.AbstractTcpConnector#connectExec(java.lang.String,
+     * boolean)
      */
     @Override
-    protected boolean connectExec(String address) throws ConnectionFailedException {
+    protected boolean connectExec(String address, boolean handleException) throws ConnectionFailedException {
         LOG.info("Connecting to: " + address);
-        HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
-        httpClient = httpClientBuilder.build();
-        HttpGet getRequest = new HttpGet(address);
+        HttpClient httpClient = httpClient();
+        HttpGet getRequest = httpGet(address);
         try {
             HttpResponse response = httpClient.execute(getRequest);
+            LOG.trace("HTTP response: " + response.getStatusLine().getStatusCode() + "-" + response.getStatusLine().getReasonPhrase());
             boolean status = response.getStatusLine().getStatusCode() == HttpStatus.SC_OK;
             getRequest.releaseConnection();
             LOG.info("Connection established: " + status);
+            if (!status && handleException) {
+                throw new IOException("HTTP response code " + response.getStatusLine().getStatusCode() + " - " + response.getStatusLine().getReasonPhrase());
+            } else if (!status && !handleException) {
+                LOG.trace("Status was false, but overriding since 'handleException' is false");
+                status = true;
+            }
             return status;
         } catch (IOException e) {
             throw new ConnectionFailedException(address, e);
@@ -57,7 +76,6 @@ public class HttpConnector extends AbstractTcpConnector {
     @Override
     protected boolean execClose() {
         LOG.info("Closing connection...");
-        httpClient = null;
         LOG.info("Connection closed.");
         return true;
     }
@@ -69,21 +87,23 @@ public class HttpConnector extends AbstractTcpConnector {
     @Override
     protected String execSendCommand(String command) throws SendFailedException {
         LOG.trace("      execSendCommand: " + getAddress() + command);
-        HttpGet getRequest = new HttpGet(getAddress() + command);
+        String content = null;
+        HttpGet getRequest = httpGet(getAddress() + command);
         try {
-            HttpResponse response = httpClient.execute(getRequest);
+            HttpResponse response = httpClient().execute(getRequest);
             int status = response.getStatusLine().getStatusCode();
             if (status == HttpStatus.SC_OK) {
                 LOG.trace("     Command sent. Reading response content...");
-                String content = getContent(response);
-                getRequest.releaseConnection();
-                return content;
+                content = getContent(response);
             } else {
                 throw new IOException("HTTP call returned status " + status + " (" + response.getStatusLine().getReasonPhrase() + ")");
             }
         } catch (IOException e) {
             throw new SendFailedException(getAddress(), command, e);
+        } finally {
+            getRequest.releaseConnection();
         }
+        return content;
     }
 
     private String getContent(HttpResponse response) throws UnsupportedOperationException, IOException {
