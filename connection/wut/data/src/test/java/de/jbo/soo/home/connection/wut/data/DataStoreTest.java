@@ -27,7 +27,7 @@ import org.junit.Test;
  * @version 17.07.2016 jbo - created <br>
  */
 public class DataStoreTest {
-    private static final String FILENAME = "DataStore.xml";
+    private static final String FILENAME = "DataStore.properties";
 
     /**
      * @throws java.lang.Exception

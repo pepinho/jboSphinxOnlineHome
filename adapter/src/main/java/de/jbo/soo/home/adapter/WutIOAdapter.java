@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 import org.apache.commons.configuration.Configuration;
 import org.slf4j.Logger;
@@ -57,7 +58,7 @@ public class WutIOAdapter extends DataSourceAdapter {
 
     private TimerTask timerWutRefreshTaks = null;
 
-    private volatile boolean isConnected = false;
+    private ScheduledThreadPoolExecutor scheduler = new ScheduledThreadPoolExecutor(PropertiesProvider.SUPPORTED_WUT_COUNT);
 
     private void closeWUTs() {
         LOG.info("Closed WUTs...");
@@ -69,26 +70,38 @@ public class WutIOAdapter extends DataSourceAdapter {
         }
     }
 
+    private WutIOInstance initWut(int wutIndex) {
+        LOG.info("Initializing WUT " + wutIndex);
+        String hostAddress = propertiesProvider.getHostAddressValue(getProperties(), wutIndex);
+        if ((hostAddress != null) && !hostAddress.isEmpty()) {
+            LOG.info("Connecting WUT + " + wutIndex + " to " + hostAddress);
+            WutIOInstance wut = new WutIOInstance(hostAddress, wutIndex);
+            dumpProperties("wut" + wutIndex, getProperties());
+            wut.initDataPoints(propertiesProvider, getProperties(), getAdapterSpec());
+            wut.connect();
+            if (wut.isConnected()) {
+                LOG.info("WUT " + wutIndex + " successfully initialized.");
+                return wut;
+            } else {
+                LOG.info("No address property set for WUT " + wutIndex);
+            }
+        }
+        return null;
+    }
+
     private void initWUTs() {
         synchronized (wuts) {
             LOG.info("Initializing WUTs...");
             wuts.clear();
             for (int wutIndex = 1; wutIndex <= PropertiesProvider.SUPPORTED_WUT_COUNT; wutIndex++) {
-                LOG.info("Initializing WUT " + wutIndex);
-                String hostAddress = propertiesProvider.getHostAddressValue(getProperties(), wutIndex);
-                if ((hostAddress != null) && !hostAddress.isEmpty()) {
-                    LOG.info("Connecting WUT + " + wutIndex + " to " + hostAddress);
-                    WutIOInstance wut = new WutIOInstance(hostAddress, wutIndex);
-                    dumpProperties("wut" + wutIndex, getProperties());
-                    wut.initDataPoints(propertiesProvider, getProperties(), getAdapterSpec());
-                    wut.connect();
-
-                    if (wut.isConnected()) {
-                        wuts.add(wut);
-                    }
-                } else {
-                    LOG.info("No address property set for WUT " + wutIndex);
+                WutIOInstance wut = initWut(wutIndex);
+                if (wut != null) {
+                    wuts.add(wut);
                 }
+            }
+            if (isConnectionsAvailable()) {
+                LOG.info("WUTs initialized. Starting timer...");
+                startTimer();
             }
         }
     }
@@ -132,24 +145,18 @@ public class WutIOAdapter extends DataSourceAdapter {
     @Override
     public void afterPropertiesSet() {
         synchronized (wuts) {
-            if (isConnected) {
-                LOG.info("afterPropertiesSet()");
-                stopTimer();
-                closeWUTs();
-                initWUTs();
-                if (isConnectionsAvailable()) {
-                    LOG.info("WUTs initialized. Starting timer...");
-                    startTimer();
-                }
-            }
+            LOG.info("afterPropertiesSet()");
+            stopTimer();
+            closeWUTs();
+            initWUTs();
         }
     }
 
-    private void refreshWUTs() {
-        synchronized (wuts) {
-            LOG.debug("--> refreshWUTs()");
-            for (WutIOInstance wut : wuts) {
-                if (wut.isConnected()) {
+    private void refreshWUT(WutIOInstance wut) {
+        if (wut.isConnected()) {
+            Runnable schedule = new Runnable() {
+                @Override
+                public void run() {
                     LOG.debug("    refreshing " + wut.toString());
                     Collection<Value> changedValues = wut.refreshValues();
                     if (!changedValues.isEmpty()) {
@@ -159,8 +166,18 @@ public class WutIOAdapter extends DataSourceAdapter {
                         LOG.debug("    no changes on refresh...");
                     }
                 }
-                LOG.debug("<-- refreshWUTs()");
+            };
+            scheduler.execute(schedule);
+        }
+    }
+
+    private void refreshWUTs() {
+        synchronized (wuts) {
+            LOG.debug("--> refreshWUTs()");
+            for (WutIOInstance wut : wuts) {
+                refreshWUT(wut);
             }
+            LOG.debug("<-- refreshWUTs()");
         }
     }
 
@@ -204,7 +221,6 @@ public class WutIOAdapter extends DataSourceAdapter {
     protected void doDisposeAdapter() throws Throwable {
         stopTimer();
         closeWUTs();
-        isConnected = false;
     }
 
     /*
@@ -217,15 +233,6 @@ public class WutIOAdapter extends DataSourceAdapter {
         LOG.info("getAvailableData()");
         List<ValueDefinition2> definitions = new ArrayList<>();
         synchronized (wuts) {
-            if (!isConnected) {
-                initWUTs();
-                if (isConnectionsAvailable()) {
-                    startTimer();
-                    isConnected = true;
-                } else {
-                    LOG.info("No WUTs initialized yet.");
-                }
-            }
             for (WutIOInstance wut : wuts) {
                 definitions.addAll(wut.getValueDefinitions());
             }
@@ -241,13 +248,17 @@ public class WutIOAdapter extends DataSourceAdapter {
     @Override
     public Collection<Value> getValues(Collection<String> ids) {
         LOG.info("getValues()");
-        List<Value> definitions = new ArrayList<>();
+        List<Value> values = new ArrayList<>();
         synchronized (wuts) {
-            for (WutIOInstance wut : wuts) {
-                definitions.addAll(wut.getValues(ids));
+            for (String id : ids) {
+                for (WutIOInstance wut : wuts) {
+                    if (wut.isAvailable(id)) {
+                        values.add(wut.getValue(id));
+                    }
+                }
             }
         }
-        return definitions;
+        return values;
     }
 
     /*
@@ -270,10 +281,15 @@ public class WutIOAdapter extends DataSourceAdapter {
     public boolean setValues(Collection<Value> values) {
         synchronized (wuts) {
             LOG.debug("--> setValues()");
-            for (WutIOInstance wut : wuts) {
-                wut.setValues(values);
+            for (Value value : values) {
+                for (WutIOInstance wut : wuts) {
+                    if (wut.isAvailable(value)) {
+                        wut.setValue(value);
+                    }
+                }
+                informValuesChanged(values, true);
+
             }
-            informValuesChanged(values, true);
             LOG.debug("<-- setValues()");
         }
         return true;

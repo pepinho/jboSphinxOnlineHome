@@ -9,11 +9,11 @@ package de.jbo.soo.home.data;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -202,28 +202,34 @@ public class WutIOInstance implements IConnectionResultListener {
         return new ArrayList<ValueDefinition2>(valueDefinitions.values());
     }
 
-    public synchronized void setValues(Collection<Value> values) {
-        for (Value value : values) {
-            ValueDefinition2 def = valueDefinitions.get(value.getId());
-            if (def != null) {
-                LOG.debug("Set value '" + value.getId() + "' to '" + value.getValue() + "'");
-                int index = Integer.parseInt(def.getNativeObjectType());
-                if (value.getId().contains(VALUE_ID_PREFIX_COUNTER)) {
-                    dataStore.setCounter(index, Integer.parseInt(value.getValue().toString()));
-                } else if (value.getId().contains(VALUE_ID_PREFIX_INPUT)) {
-                    dataStore.setInput(index, Boolean.parseBoolean(value.getValue().toString()));
-                } else {
-                    boolean output = transformValue(Integer.parseInt(value.getValue().toString()));
-                    dataStore.setOutput(index, output);
-                    String request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_OUTPUTACCESS + index, password, IOProcessor.PARAM_STATE, (output == true) ? IOProcessor.OUTPUT_ACCESS_STATE_ON : IOProcessor.OUTPUT_ACCESS_STATE_OFF);
-                    LOG.debug("     Sending output-access: " + request);
-                    connector.sendCommand(request);
-                }
-                value.setTimeOfValue(value.getTimeOfChange() - 1);
-                this.values.put(value.getId(), value);
+    public synchronized boolean isAvailable(Value value) {
+        return valueDefinitions.containsKey(value.getId());
+    }
+
+    public synchronized boolean isAvailable(String id) {
+        return valueDefinitions.containsKey(id);
+    }
+
+    public synchronized void setValue(Value value) {
+        ValueDefinition2 def = valueDefinitions.get(value.getId());
+        if (def != null) {
+            LOG.debug("Set value '" + value.getId() + "' to '" + value.getValue() + "'");
+            int index = Integer.parseInt(def.getNativeObjectType());
+            if (value.getId().contains(VALUE_ID_PREFIX_COUNTER)) {
+                dataStore.setCounter(index, Integer.parseInt(value.getValue().toString()));
+            } else if (value.getId().contains(VALUE_ID_PREFIX_INPUT)) {
+                dataStore.setInput(index, Boolean.parseBoolean(value.getValue().toString()));
+            } else {
+                boolean output = transformValue(Integer.parseInt(value.getValue().toString()));
+                dataStore.setOutput(index, output);
+                String request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_OUTPUTACCESS + index, password, IOProcessor.PARAM_STATE, (output == true) ? IOProcessor.OUTPUT_ACCESS_STATE_ON : IOProcessor.OUTPUT_ACCESS_STATE_OFF);
+                LOG.debug("     Sending output-access: " + request);
+                connector.sendCommand(request);
             }
+            this.values.put(value.getId(), value);
+
+            dump(Arrays.asList(value));
         }
-        dump(values);
     }
 
     private Set<String> getKeys(String substring, Set<String> originalKeys) {
@@ -328,18 +334,12 @@ public class WutIOInstance implements IConnectionResultListener {
         }
     }
 
-    public synchronized Collection<Value> getValues(Collection<String> ids) {
+    public synchronized Value getValue(String id) {
         if (values.isEmpty()) {
             refreshValues();
         }
 
-        List<Value> values = new ArrayList<>();
-        for (String id : ids) {
-            if (values.contains(id)) {
-                values.add(this.values.get(id));
-            }
-        }
-        return values;
+        return values.get(id);
     }
 
     /*
