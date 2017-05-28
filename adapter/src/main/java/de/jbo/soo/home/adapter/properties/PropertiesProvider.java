@@ -38,6 +38,8 @@ public class PropertiesProvider {
 
     private static final String EMPTY_VALUE = "";
 
+    static final String KEY_USE_SEPARATE_REFRESH_THREADS = "useSeparateRefreshThreads";
+
     public void supplyDefault(Map<String, String> properties) {
         LOG.info(properties.toString());
         for (int wutIndex = 1; wutIndex <= PropertiesProvider.SUPPORTED_WUT_COUNT; wutIndex++) {
@@ -56,6 +58,23 @@ public class PropertiesProvider {
                 LOG.info("default-values for WUT " + wutIndex + " are already initialized.");
             }
         }
+
+        /*
+         * non-wut properties
+         */
+        if (!properties.containsKey(KEY_USE_SEPARATE_REFRESH_THREADS)) {
+            properties.put(KEY_USE_SEPARATE_REFRESH_THREADS, "false");
+        }
+    }
+
+    /**
+     * @param properties
+     *            The properties to look into.
+     * @return True if wut-refresh should each be scheduled in separate threads,
+     *         False otherwise.
+     */
+    public boolean isUseSeparateRefreshThreads(Map<String, String> properties) {
+        return Boolean.parseBoolean(properties.get(KEY_USE_SEPARATE_REFRESH_THREADS));
     }
 
     /**

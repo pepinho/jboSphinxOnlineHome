@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 11 079
 nd 0
-dd 19.11.2016 04.02.2017
+dd 19.11.2016 28.05.2017
 sd 1 0 0
 ad 0 0
    0
@@ -148,4 +148,29 @@ ep 2 1 0 0 0 0
 ap 1 1 1
 gp 215.16753152817614 563.895182342777
    215.1666208695722 197.76211177193295
+ep 11 1 0 0 0 0
+   34 symbol_window_contact_keller_gross
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.7
+\000"
+ap 0
+   0
+gp 0.5849234393404004 0.0
+   704.0620162375903 0.0
+   3.4971655328798152 -327.6878897392287
+   12 _GR_SYM_PTH/
+   25 symbol_window_contact.grx
+ep 11 1 0 0 0 0
+   26 symbol_window_contact_b?ro
+   2
+   4100 0 27 "soo:nodeId=wut.4.output.8
+\000"
+   4220 0 32 "symbol_window_contact_b&#252;ro\000"
+ap 0
+   0
+gp 0.4440938919737503 0.0
+   251.31419053928988 0.0
+   3.4971655328798152 -109.23699688208586
+   12 _GR_SYM_PTH/
+   25 symbol_window_contact.grx
 ee

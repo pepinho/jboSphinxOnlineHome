@@ -259,7 +259,7 @@ public class WutIOInstance implements IConnectionResultListener {
         if (!values.isEmpty()) {
             for (Value value : values) {
                 StringBuilder buffer = new StringBuilder();
-                buffer.append("      value id=" + value.getId());
+                buffer.append("value id=" + value.getId());
                 buffer.append(", time-of-value=" + formatter.format(new Date(value.getTimeOfValue())));
                 buffer.append(", time-of-change=" + formatter.format(new Date(value.getTimeOfChange())));
                 buffer.append(", value=" + value.getValue());

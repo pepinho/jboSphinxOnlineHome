@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 11 079
 nd 0
-dd 19.11.2016 21.05.2017
+dd 19.11.2016 28.05.2017
 sd 1 0 0
 ad 0 0
    0
@@ -10,11 +10,24 @@ gd 1.0 1.0
    0.0 0.0
    1920.0 1080.0
    0
+ep 11 1 0 0 0 0
+   19 symbol_alarm_rahmen
+   1
+   4100 0 26 "soo:nodeId=wut.2.input.0
+\000"
+ap 0
+   0
+gp 6.124684502776371 0.0
+   -132.68819409389107 0.0
+   38.10204081632652 -4267.825255102034
+   12 _GR_SYM_PTH/
+   23 symbol_alarm_rahmen.grx
 ep 9 16385 0 0 0 0
    25 light-area-eg-aussen-oben
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 27 "soo:nodeId=wut.3.output.6
+\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 999.276718555131 1049.4273544857683
@@ -30,7 +43,8 @@ ep 9 16385 0 0 0 0
    20 light-area-eg-flur-2
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 27 "soo:nodeId=wut.1.input.11
+\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 911.3987870601289 499.1093672075528
@@ -46,7 +60,8 @@ ep 9 16385 0 0 0 0
    28 light-area-eg-eingang-aussen
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.8\000"
+   4100 0 27 "soo:nodeId=wut.1.output.9
+\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 1410.2583059737547 200.23333445103466
@@ -58,57 +73,12 @@ dp 0
    0 1 0.0
    1.0 2.0
    -1
-ep 5 16385 0 0 0 0
-   27 light-area-eg-eingang-innen
-   3
-   4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
-   4218 2 3 "64\000"
-ap 0 1 1 1 0 31 0 10
-gp 1304.1384990637184 224.37772509799044
-   114.76053155333686
-dp 0
-   6
-   0 1 0.0
-   1.0 2.0
-   -1
-ep 9 16385 0 0 0 0
-   29 light-area-eg-treppe-runter-2
-   3
-   4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
-   4218 2 3 "64\000"
-ap 0 1 1 1 0 31 0 10
-gp 1171.3645672941452 332.72820650753135
-   1066.0537500262824 329.0282015657545
-   1276.7234044740503 330.8377837260772
-   105.37579546648448 3.176712347141271 6.265244524961539 0
-dp 0
-   6
-   0 1 0.0
-   1.0 2.0
-   -1
-ep 9 16385 0 0 0 0
-   27 light-area-eg-treppe-runter
-   3
-   4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
-   4218 2 3 "64\000"
-ap 0 1 1 1 0 31 0 10
-gp 1036.8026149325453 213.3645359665376
-   1044.1220829947003 108.24325525952833
-   1035.0686163603516 318.7260636659136
-   105.37579546648627 4.7819055771187875 1.5872524477594645 0
-dp 0
-   6
-   0 1 0.0
-   1.0 2.0
-   -1
 ep 9 16385 0 0 0 0
    25 light-area-eg-treppe-hoch
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 28 "soo:nodeId=wut.3.output.10
+\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 1020.985712752868 258.14966302605944
@@ -124,7 +94,8 @@ ep 5 16385 0 0 0 0
    25 light-area-eg-k?che-links
    4
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 27 "soo:nodeId=wut.2.output.4
+\000"
    4220 0 31 "light-area-eg-k&#252;che-links\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -139,7 +110,8 @@ ep 5 16385 0 0 0 0
    26 light-area-eg-k?che-rechts
    4
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 27 "soo:nodeId=wut.2.output.4
+\000"
    4220 0 32 "light-area-eg-k&#252;che-rechts\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -154,7 +126,8 @@ ep 5 16385 0 0 0 0
    33 light-area-eg-k?che-arbeitsplatte
    4
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 27 "soo:nodeId=wut.2.output.6
+\000"
    4220 0 39 "light-area-eg-k&#252;che-arbeitsplatte\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -165,30 +138,12 @@ dp 0
    0 1 0.0
    1.0 2.0
    -1
-ep 7 16385 0 0 0 0
-   18 light-area-eg-flur
-   3
-   4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
-   4218 2 3 "64\000"
-ap 0 1 1 1 0 31 0 10
-gp 6
-   1179.1386874913196 610.7142857142858
-   1183.0670525355356 498.21428571428567
-   1044.6428571428573 497.71017653879665
-   1044.6428571428573 348.56575428038445
-   1364.464285714286 349.8468269093107
-   1369.0581742374425 610.7142857142858
-dp 0
-   6
-   0 1 0.0
-   1.0 2.0
-   -1
 ep 10 16385 0 0 0 0
    29 light-area-eg-wohnzimmer-sofa
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 27 "soo:nodeId=wut.4.output.1
+\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 1160.7597539492654 520.7142857142857
@@ -204,7 +159,7 @@ ep 6 16385 0 0 0 0
    16 light-area-eg-wc
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.1.output.1
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -218,11 +173,12 @@ dp 0
    1.0 2.0
    -1
 ep 6 16385 0 0 0 0
-   27 light-area-eg-abstellzimmer
-   3
+   18 light-area-eg-b?ro
+   4
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.3.output.8
 \000"
+   4220 0 24 "light-area-eg-b&#252;ro\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 1183.1627943312046 748.1339520767051
@@ -234,27 +190,12 @@ dp 0
    0 1 0.0
    1.0 2.0
    -1
-ep 9 16385 0 0 0 0
-   29 light-area-eg-wohnzimmer-wand
-   3
-   4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
-   4218 2 3 "64\000"
-ap 0 1 1 1 0 31 0 10
-gp 1092.458725291301 1007.8521622304021
-   923.6530465259912 1003.3011647564548
-   1261.2681956572349 1003.4440474181712
-   168.86701501899324 3.1685461030915767 6.257078280911793 0
-dp 0
-   6
-   0 1 0.0
-   1.0 2.0
-   -1
 ep 5 16385 0 0 0 0
    30 light-area-eg-wohnzimmer-tisch
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 27 "soo:nodeId=wut.2.output.8
+\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 985.6344024214977 691.6166236616959
@@ -268,7 +209,8 @@ ep 5 16385 0 0 0 0
    23 light-area-eg-esszimmer
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 27 "soo:nodeId=wut.2.output.7
+\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 616.4962560381323 732.5443988646258
@@ -282,7 +224,8 @@ ep 9 16385 0 0 0 0
    28 light-area-eg-terasse-rechts
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 28 "soo:nodeId=wut.1.output.10
+\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 338.1084657122671 720.3848220814837
@@ -298,7 +241,8 @@ ep 9 16385 0 0 0 0
    27 light-area-eg-terasse-links
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 26 "soo:nodeId=wut.1.output.7\000"
+   4100 0 28 "soo:nodeId=wut.1.output.10
+\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 345.8853412163727 395.17096740654085
@@ -380,7 +324,7 @@ gp 339.9466861793956 20.44757664852864
 ep 11 1 0 0 0 0
    30 light-switch-eg-terasse-rechts
    1
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 28 "soo:nodeId=wut.1.output.10
 \000"
 ap 0
    0
@@ -392,7 +336,7 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    29 light-switch-eg-terasse-links
    1
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 28 "soo:nodeId=wut.1.output.10
 \000"
 ap 0
    0
@@ -404,7 +348,7 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    25 light-switch-eg-esszimmer
    1
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.2.output.7
 \000"
 ap 0
    0
@@ -416,7 +360,7 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    32 light-switch-eg-wohnzimmer-tisch
    1
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.2.output.8
 \000"
 ap 0
    0
@@ -426,22 +370,11 @@ gp 1.0 0.0
    12 _GR_SYM_PTH/
    17 symbol_switch.grx
 ep 11 1 0 0 0 0
-   31 light-switch-eg-wohnzimmer-wand
-   1
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   20 light-switch-eg-b?ro
+   2
+   4100 0 27 "soo:nodeId=wut.3.output.8
 \000"
-ap 0
-   0
-gp 1.0 0.0
-   1053.2939852966365 0.0
-   1.0 919.30428549162
-   12 _GR_SYM_PTH/
-   17 symbol_switch.grx
-ep 11 1 0 0 0 0
-   29 light-switch-eg-abstellzimmer
-   1
-   4100 0 27 "soo:nodeId=wut.1.output.7
-\000"
+   4220 0 26 "light-switch-eg-b&#252;ro\000"
 ap 0
    0
 gp 1.0 0.0
@@ -452,7 +385,7 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    18 light-switch-eg-wc
    1
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.1.output.1
 \000"
 ap 0
    0
@@ -464,7 +397,7 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    31 light-switch-eg-wohnzimmer-sofa
    1
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.4.output.1
 \000"
 ap 0
    0
@@ -474,21 +407,9 @@ gp 1.0 0.0
    12 _GR_SYM_PTH/
    17 symbol_switch.grx
 ep 11 1 0 0 0 0
-   20 light-switch-eg-flur
-   1
-   4100 0 27 "soo:nodeId=wut.1.output.7
-\000"
-ap 0
-   0
-gp 1.0 0.0
-   1240.7739112969482 0.0
-   1.0 396.10303368165364
-   12 _GR_SYM_PTH/
-   17 symbol_switch.grx
-ep 11 1 0 0 0 0
    35 light-switch-eg-k?che-arbeitsplatte
    2
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.2.output.6
 \000"
    4220 0 41 "light-switch-eg-k&#252;che-arbeitsplatte\000"
 ap 0
@@ -501,7 +422,7 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    28 light-switch-eg-k?che-rechts
    2
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.2.output.4
 \000"
    4220 0 34 "light-switch-eg-k&#252;che-rechts\000"
 ap 0
@@ -512,11 +433,11 @@ gp 1.0 0.0
    12 _GR_SYM_PTH/
    17 symbol_switch.grx
 ep 11 1 0 0 0 0
-   28 light-switch-eg-k?che-rechts
+   27 light-switch-eg-k?che-links
    2
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.2.output.4
 \000"
-   4220 0 34 "light-switch-eg-k&#252;che-rechts\000"
+   4220 0 33 "light-switch-eg-k&#252;che-links\000"
 ap 0
    0
 gp 1.0 0.0
@@ -525,35 +446,9 @@ gp 1.0 0.0
    12 _GR_SYM_PTH/
    17 symbol_switch.grx
 ep 11 1 0 0 0 0
-   28 light-switch-eg-k?che-rechts
-   2
-   4100 0 27 "soo:nodeId=wut.1.output.7
-\000"
-   4220 0 34 "light-switch-eg-k&#252;che-rechts\000"
-ap 0
-   0
-gp 1.0 0.0
-   664.1681108107393 0.0
-   1.0 168.83763517222795
-   12 _GR_SYM_PTH/
-   17 symbol_switch.grx
-ep 11 1 0 0 0 0
-   27 light-switch-eg-k?che-links
-   2
-   4100 0 27 "soo:nodeId=wut.1.output.7
-\000"
-   4220 0 33 "light-switch-eg-k&#252;che-links\000"
-ap 0
-   0
-gp 1.0 0.0
-   480.7642641199829 0.0
-   1.0 168.83763517222783
-   12 _GR_SYM_PTH/
-   17 symbol_switch.grx
-ep 11 1 0 0 0 0
    27 light-switch-eg-treppe-hoch
    1
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 28 "soo:nodeId=wut.3.output.10
 \000"
 ap 0
    0
@@ -563,33 +458,9 @@ gp 1.0 0.0
    12 _GR_SYM_PTH/
    17 symbol_switch.grx
 ep 11 1 0 0 0 0
-   29 light-switch-eg-treppe-runter
-   1
-   4100 0 27 "soo:nodeId=wut.1.output.7
-\000"
-ap 0
-   0
-gp 1.0 0.0
-   1024.7138738837923 0.0
-   1.0 161.9610485829122
-   12 _GR_SYM_PTH/
-   17 symbol_switch.grx
-ep 11 1 0 0 0 0
-   29 light-switch-eg-eingang-innen
-   1
-   4100 0 27 "soo:nodeId=wut.1.output.7
-\000"
-ap 0
-   0
-gp 1.0 0.0
-   1264.3963320148334 0.0
-   1.0 166.76329969115108
-   12 _GR_SYM_PTH/
-   17 symbol_switch.grx
-ep 11 1 0 0 0 0
    30 light-switch-eg-eingang-aussen
    1
-   4100 0 27 "soo:nodeId=wut.1.output.8
+   4100 0 27 "soo:nodeId=wut.1.output.9
 \000"
 ap 0
    0
@@ -599,21 +470,9 @@ gp 1.0 0.0
    12 _GR_SYM_PTH/
    17 symbol_switch.grx
 ep 11 1 0 0 0 0
-   31 light-switch-eg-treppe-runter-2
-   1
-   4100 0 27 "soo:nodeId=wut.1.output.7
-\000"
-ap 0
-   0
-gp 1.0 0.0
-   1125.6298248842172 0.0
-   1.0 236.54689626619688
-   12 _GR_SYM_PTH/
-   17 symbol_switch.grx
-ep 11 1 0 0 0 0
    22 light-switch-eg-flur-2
    1
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.1.input.11
 \000"
 ap 0
    0
@@ -625,7 +484,7 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    27 light-switch-eg-aussen-oben
    1
-   4100 0 27 "soo:nodeId=wut.1.output.7
+   4100 0 27 "soo:nodeId=wut.3.output.6
 \000"
 ap 0
    0
@@ -637,7 +496,7 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    26 window-contact-terasse-t?r
    2
-   4100 0 27 "soo:nodeId=wut.1.output.8
+   4100 0 28 "soo:nodeId=wut.4.output.11
 \000"
    4220 0 32 "window-contact-terasse-t&#252;r\000"
 ap 0
@@ -650,19 +509,19 @@ gp 0.24526462241147673 0.0
 ep 11 1 0 0 0 0
    36 window-contact-terasse-fenster-links
    1
-   4100 0 27 "soo:nodeId=wut.1.output.9
+   4100 0 27 "soo:nodeId=wut.4.output.9
 \000"
 ap 0
    0
 gp 0.24526462241147673 0.0
-   319.2465645670179 0.0
+   320.85370742416075 0.0
    5.030300190807761 -411.57164825164523
    12 _GR_SYM_PTH/
    25 symbol_window_contact.grx
 ep 11 1 0 0 0 0
    37 window-contact-terasse-fenster-rechts
    1
-   4100 0 27 "soo:nodeId=wut.1.output.9
+   4100 0 28 "soo:nodeId=wut.4.output.10
 \000"
 ap 0
    0
@@ -674,7 +533,7 @@ gp 0.24526462241147673 0.0
 ep 11 1 0 0 0 0
    27 window_contact-fenster-oben
    1
-   4100 0 27 "soo:nodeId=wut.1.output.9
+   4100 0 27 "soo:nodeId=wut.4.output.8
 \000"
 ap 0
    0
@@ -684,15 +543,99 @@ gp 0.5662016302883915 0.0
    12 _GR_SYM_PTH/
    25 symbol_window_contact.grx
 ep 11 1 0 0 0 0
-   19 symbol_alarm_rahmen
+   17 window-contact-wc
    1
-   4100 0 27 "soo:nodeId=wut.1.output.9
+   4100 0 27 "soo:nodeId=wut.1.output.4
 \000"
 ap 0
    0
-gp 6.124684502776371 0.0
-   -132.68819409389107 0.0
-   38.10204081632652 -4267.825255102034
+gp 0.20230716223586576 0.0
+   1355.5865778563395 0.0
+   2.9246197246661345 283.7518979907491
    12 _GR_SYM_PTH/
-   23 symbol_alarm_rahmen.grx
+   25 symbol_window_contact.grx
+ep 11 1 0 0 0 0
+   19 window-contact-flur
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.5
+\000"
+ap 0
+   0
+gp 0.20616064892476288 0.0
+   1354.4980280525306 0.0
+   3.9282593744812258 -96.73746457817494
+   12 _GR_SYM_PTH/
+   25 symbol_window_contact.grx
+ep 11 1 0 0 0 0
+   26 symbol_steckdose_esszimmer
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.6
+\000"
+ap 0
+   0
+gp 0.43750000000000033 0.0
+   377.59627375189166 0.0
+   0.43750000000000033 677.0217487897245
+   12 _GR_SYM_PTH/
+   20 symbol_steckdose.grx
+ep 11 1 0 0 0 0
+   20 door-context-eingang
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.8
+\000"
+ap 0
+   0
+gp 0.20616064892476288 0.0
+   1350.0463208059357 0.0
+   6.375109278666627 -644.2369224349177
+   12 _GR_SYM_PTH/
+   25 symbol_window_contact.grx
+ep 11 1 0 0 0 0
+   30 symbol_steckdose_tvwand_rechts
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.9
+\000"
+ap 0
+   0
+gp 0.43750000000000033 0.0
+   1055.5862975945072 0.0
+   0.43750000000000033 947.1524792284353
+   12 _GR_SYM_PTH/
+   20 symbol_steckdose.grx
+ep 11 1 0 0 0 0
+   34 symbol_steckdose_tvwand_ganz_links
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.2
+\000"
+ap 0
+   0
+gp 0.43750000000000033 0.0
+   418.4709619969734 0.0
+   0.43750000000000033 929.8548099848668
+   12 _GR_SYM_PTH/
+   20 symbol_steckdose.grx
+ep 11 1 0 0 0 0
+   23 symbol_steckdose_sofa_1
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.3
+\000"
+ap 0
+   0
+gp 0.43750000000000033 0.0
+   786.5521526626063 0.0
+   0.43750000000000033 503.092102087772
+   12 _GR_SYM_PTH/
+   20 symbol_steckdose.grx
+ep 11 1 0 0 0 0
+   23 symbol_steckdose_sofa_2
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.3
+\000"
+ap 0
+   0
+gp 0.43750000000000033 0.0
+   870.4164341452032 0.0
+   0.43750000000000033 503.45763059004196
+   12 _GR_SYM_PTH/
+   20 symbol_steckdose.grx
 ee

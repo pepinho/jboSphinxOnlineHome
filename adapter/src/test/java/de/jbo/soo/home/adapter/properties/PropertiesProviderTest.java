@@ -132,5 +132,12 @@ public class PropertiesProviderTest {
                 assertKeyExists(inputToOutputMappingKey, properties);
             }
         }
+
+        assertKeyExists(PropertiesProvider.KEY_USE_SEPARATE_REFRESH_THREADS, properties);
+        assertFalse(provider.isUseSeparateRefreshThreads(properties));
+        // 2nd init must not overwrite already existing values...
+        properties.put(PropertiesProvider.KEY_USE_SEPARATE_REFRESH_THREADS, "true");
+        provider.supplyDefault(properties);
+        assertTrue(provider.isUseSeparateRefreshThreads(properties));
     }
 }

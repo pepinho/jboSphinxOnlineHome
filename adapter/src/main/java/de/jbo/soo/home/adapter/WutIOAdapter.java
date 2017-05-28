@@ -56,9 +56,11 @@ public class WutIOAdapter extends DataSourceAdapter {
 
     private Timer timerWutRefresh = new Timer("WUT refresh timer", true);
 
-    private TimerTask timerWutRefreshTaks = null;
+    private TimerTask timerWutRefreshTask = null;
 
     private ScheduledThreadPoolExecutor scheduler = new ScheduledThreadPoolExecutor(PropertiesProvider.SUPPORTED_WUT_COUNT);
+
+    private boolean useSeparateRefreshThreads = false;
 
     private void closeWUTs() {
         LOG.info("Closed WUTs...");
@@ -120,7 +122,7 @@ public class WutIOAdapter extends DataSourceAdapter {
             isTimerActive = false;
             timerWutRefresh.cancel();
             timerWutRefresh.purge();
-            timerWutRefreshTaks.cancel();
+            timerWutRefreshTask.cancel();
         }
     }
 
@@ -128,13 +130,13 @@ public class WutIOAdapter extends DataSourceAdapter {
         if (!isTimerActive) {
             LOG.info("Starting timer to refresh WUTs...");
             isTimerActive = true;
-            timerWutRefreshTaks = new TimerTask() {
+            timerWutRefreshTask = new TimerTask() {
                 @Override
                 public void run() {
                     refreshWUTs();
                 }
             };
-            timerWutRefresh.schedule(timerWutRefreshTaks, REFRESH_TIMER, REFRESH_TIMER);
+            timerWutRefresh.schedule(timerWutRefreshTask, REFRESH_TIMER, REFRESH_TIMER);
         }
     }
 
@@ -146,6 +148,7 @@ public class WutIOAdapter extends DataSourceAdapter {
     public void afterPropertiesSet() {
         synchronized (wuts) {
             LOG.info("afterPropertiesSet()");
+            useSeparateRefreshThreads = propertiesProvider.isUseSeparateRefreshThreads(getProperties());
             stopTimer();
             closeWUTs();
             initWUTs();
@@ -157,27 +160,25 @@ public class WutIOAdapter extends DataSourceAdapter {
             Runnable schedule = new Runnable() {
                 @Override
                 public void run() {
-                    LOG.debug("    refreshing " + wut.toString());
                     Collection<Value> changedValues = wut.refreshValues();
                     if (!changedValues.isEmpty()) {
-                        LOG.debug("    values changed on refresh...");
                         informValuesChanged(changedValues, true);
-                    } else {
-                        LOG.debug("    no changes on refresh...");
                     }
                 }
             };
-            scheduler.execute(schedule);
+            if (useSeparateRefreshThreads) {
+                scheduler.execute(schedule);
+            } else {
+                schedule.run();
+            }
         }
     }
 
     private void refreshWUTs() {
         synchronized (wuts) {
-            LOG.debug("--> refreshWUTs()");
             for (WutIOInstance wut : wuts) {
                 refreshWUT(wut);
             }
-            LOG.debug("<-- refreshWUTs()");
         }
     }
 
@@ -254,6 +255,7 @@ public class WutIOAdapter extends DataSourceAdapter {
                 for (WutIOInstance wut : wuts) {
                     if (wut.isAvailable(id)) {
                         values.add(wut.getValue(id));
+                        break;
                     }
                 }
             }
@@ -285,6 +287,7 @@ public class WutIOAdapter extends DataSourceAdapter {
                 for (WutIOInstance wut : wuts) {
                     if (wut.isAvailable(value)) {
                         wut.setValue(value);
+                        break;
                     }
                 }
                 informValuesChanged(values, true);
