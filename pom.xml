@@ -34,7 +34,7 @@
 
 	<dependencyManagement>
 		<dependencies>
-		     <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+			<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
@@ -81,7 +81,7 @@
 				<artifactId>sphinx-online-adapter-common-tests</artifactId>
 				<version>${ingmbh-soo.version}</version>
 			</dependency>
-			
+
 			<!-- in-gmbh sphinx online application-war -->
 			<dependency>
 				<groupId>de.ingmbh.sphinx.online</groupId>
@@ -194,7 +194,7 @@
 
 	<build>
 		<plugins>
-		    <!-- Eclipse project -->
+			<!-- Eclipse project -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
@@ -226,7 +226,7 @@
 					</archive>
 				</configuration>
 			</plugin>
-			
+
 			<!-- compiler plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -255,7 +255,67 @@
 	</build>
 
 	<profiles>
-
+		<profile>
+			<id>deploy</id>
+			<activation>
+                <activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<!-- assembly plugin -->
+					<plugin>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>create jbohome.zip</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<finalName>jbohome</finalName>
+									<appendAssemblyId>false</appendAssemblyId>
+									<descriptor>config-jbohome-zip-assembly.xml</descriptor>
+									<filters>
+										<filter>config-jbohome-zip-assembly-customer-filter.properties</filter>
+									</filters>
+									<runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
+								</configuration>
+							</execution>
+							<execution>
+								<id>create jbohome.zip for test environment</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<finalName>jbohome-test</finalName>
+									<appendAssemblyId>false</appendAssemblyId>
+									<descriptor>config-jbohome-zip-assembly.xml</descriptor>
+									<filters>
+										<filter>config-jbohome-zip-assembly-test-filter.properties</filter>
+									</filters>
+									<runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
+								</configuration>
+							</execution>
+							<execution>
+								<id>create config.zip</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<finalName>config</finalName>
+									<appendAssemblyId>false</appendAssemblyId>
+									<descriptor>config-soo-config-zip-assembly.xml</descriptor>
+									<runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 	</profiles>
 	<name>soo home automation for wut-io-devices</name>
 </project>
