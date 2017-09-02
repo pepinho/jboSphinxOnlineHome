@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<nodegroups>
+    <nodegroup>
+        <includedNodeIds>
+            <nodeId>wut.2.input.10</nodeId>
+            <sortIndex>1</sortIndex>
+        </includedNodeIds>
+        <includedNodeIds>
+            <nodeId>wut.2.input.11</nodeId>
+            <sortIndex>2</sortIndex>
+        </includedNodeIds>
+        <label>counter-lights</label>
+        <logicalName>counter-lights</logicalName>
+    </nodegroup>
+</nodegroups>

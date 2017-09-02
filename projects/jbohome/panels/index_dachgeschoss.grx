@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 11 079
 nd 0
-dd 19.11.2016 29.05.2017
+dd 19.11.2016 02.09.2017
 sd 1 0 0
 ad 0 0
    0
@@ -77,7 +77,7 @@ ep 6 16385 0 0 0 0
    25 light-area-dg-unten-links
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 28 "soo:nodeId=wut.2.output.11
+   4100 0 28 "soo:nodeId=wut.2.output.10
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -145,7 +145,7 @@ ep 6 16385 0 0 0 0
    24 light-area-dg-oben-links
    3
    4200 0 14 "${soo:nodeId}\000"
-   4100 0 28 "soo:nodeId=wut.2.output.10
+   4100 0 28 "soo:nodeId=wut.2.output.11
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -228,7 +228,7 @@ gp 345.3395433222528 33.30471950567153
 ep 11 1 0 0 0 0
    26 light-switch-dg-oben-links
    1
-   4100 0 28 "soo:nodeId=wut.2.output.10
+   4100 0 28 "soo:nodeId=wut.2.output.11
 \000"
 ap 0
    0
@@ -288,7 +288,7 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    27 light-switch-dg-unten-links
    1
-   4100 0 28 "soo:nodeId=wut.2.output.11
+   4100 0 28 "soo:nodeId=wut.2.output.10
 \000"
 ap 0
    0

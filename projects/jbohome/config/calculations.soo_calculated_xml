@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<adapterCalculated>
+    <identifierPrefix></identifierPrefix>
+    <nodeTypes/>
+    <nodeTypeMappings/>
+     <values>
+     	<value>
+     		<id>sum.counter.lights</id>
+     		<dataPointIds>
+     			<dataPointId>wut2.input.10</dataPointId>
+     		</dataPointIds>
+     		<function>SUM</function>
+     	</value>
+     </values>
+    <scripts/>
+</adapterCalculated>

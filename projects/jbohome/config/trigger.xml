@@ -1,2 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<triggers/>
+<triggers>
+    <trigger>
+        <creationTime>1504346650427</creationTime>
+        <dataPointIds>wut.2.input.10</dataPointIds>
+        <dataPointIds>wut.2.input.11</dataPointIds>
+        <eventDescription>Lights!!!</eventDescription>
+        <eventSeverity>1</eventSeverity>
+        <eventType>MESSAGE</eventType>
+        <label>trigger-lights</label>
+        <logicalName>trigger-lights</logicalName>
+        <properties>
+            <entry>
+                <key>predicate</key>
+                <value>HIGHER</value>
+            </entry>
+            <entry>
+                <key>value</key>
+                <value>0.0</value>
+            </entry>
+        </properties>
+        <severityType>INFO</severityType>
+        <triggerType>TRIGGER_CHANGE_OF_VALUE</triggerType>
+        <updateTime>1504347690039</updateTime>
+        <workflowParameters/>
+    </trigger>
+</triggers>

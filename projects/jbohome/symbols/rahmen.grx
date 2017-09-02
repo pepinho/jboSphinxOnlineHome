@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 11 079
 nd 0
-dd 19.11.2016 11.02.2017
+dd 19.11.2016 02.09.2017
 sd 1 0 0
 ad 0 0
    0
@@ -85,4 +85,15 @@ ap 1 1 17
 gp 0 2
    128.0 0.0
    128.0 1080.0
+ep 11 1 0 0 0 0
+   21 symbol_counter_lights
+   1
+   4100 0 43 "soo:nodeId=calculations.sum.counter.lights\000"
+ap 0
+   0
+gp 1.0 0.0
+   3.2978651014680906 0.0
+   1.0 599.4253491842461
+   12 _GR_SYM_PTH/
+   25 symbol_counter_lights.grx
 ee

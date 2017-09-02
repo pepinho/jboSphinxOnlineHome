@@ -3,12 +3,29 @@
     <adapters>
         <adapter>
             <adapterType>
+                <className>de.ingmbh.sphinx.online.adapter.calculated.AdapterCalculated</className>
+                <description>Adapter for calculating a data source</description>
+                <name>calculated</name>
+                <userCreatable>true</userCreatable>
+            </adapterType>
+            <dbId>1</dbId>
+            <description></description>
+            <disabled>false</disabled>
+            <domainName>local.jbohome</domainName>
+            <name>calculations</name>
+            <pollingIntervalMillis>-1</pollingIntervalMillis>
+            <properties/>
+            <releaseCode>d</releaseCode>
+            <url>${project_loc}/config/calculations.soo_calculated_xml</url>
+        </adapter>
+        <adapter>
+            <adapterType>
                 <className>de.jbo.soo.home.adapter.WutIOAdapter</className>
                 <description>Adapter connecting to WUT-IO devices via http</description>
                 <name>WUT-IO</name>
                 <userCreatable>true</userCreatable>
             </adapterType>
-            <dbId>1</dbId>
+            <dbId>2</dbId>
             <description>WUT IO adapter</description>
             <disabled>false</disabled>
             <domainName>local.jbohome</domainName>
@@ -286,14 +303,14 @@
     </adapters>
     <valueDefinitions>
         <valueDefinition>
-            <adapterId>1</adapterId>
+            <adapterId>2</adapterId>
             <dataType>UNSPECIFIED</dataType>
             <enums/>
             <flags>0</flags>
             <historyBufferLimit>0</historyBufferLimit>
             <id>=$0</id>
             <mappedAdapter2>
-                <dbId>1</dbId>
+                <dbId>2</dbId>
                 <description></description>
                 <disabled>false</disabled>
                 <pollingIntervalMillis>-1</pollingIntervalMillis>
