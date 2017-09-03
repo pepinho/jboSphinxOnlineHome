@@ -15,7 +15,7 @@
             <name>calculations</name>
             <pollingIntervalMillis>-1</pollingIntervalMillis>
             <properties/>
-            <releaseCode>d</releaseCode>
+            <releaseCode></releaseCode>
             <url>${project_loc}/config/calculations.soo_calculated_xml</url>
         </adapter>
         <adapter>

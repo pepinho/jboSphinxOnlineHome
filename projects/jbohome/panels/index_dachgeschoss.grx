@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 11 079
 nd 0
-dd 19.11.2016 02.09.2017
+dd 19.11.2016 03.09.2017
 sd 1 0 0
 ad 0 0
    0
@@ -333,4 +333,100 @@ gp 0.7268395845518097 0.0
    1.5620461947590074 -120.23768005668245
    12 _GR_SYM_PTH/
    25 symbol_window_contact.grx
+ep 11 1 0 0 0 0
+   24 rollo-hoch-dg-oben-links
+   0
+ap 0
+   0
+gp 0.5 0.0
+   500.0 0.0
+   0.5 960.0
+   12 _GR_SYM_PTH/
+   13 symbol_up.grx
+ep 11 1 0 0 0 0
+   26 rollo-runter-dg-oben-links
+   0
+ap 0
+   0
+gp 0.5000000000000006 0.0
+   500.0 0.0
+   0.5 900.0
+   12 _GR_SYM_PTH/
+   15 symbol_down.grx
+ep 11 1 0 0 0 0
+   25 rollo-hoch-dg-unten-links
+   0
+ap 0
+   0
+gp 0.5 0.0
+   510.0 0.0
+   0.5 180.0
+   12 _GR_SYM_PTH/
+   13 symbol_up.grx
+ep 11 1 0 0 0 0
+   27 rollo-runter-dg-unten-links
+   0
+ap 0
+   0
+gp 0.5000000000000006 0.0
+   510.0 0.0
+   0.5 120.0
+   12 _GR_SYM_PTH/
+   15 symbol_down.grx
+ep 11 1 0 0 0 0
+   26 rollo-hoch-dg-unten-rechts
+   0
+ap 0
+   0
+gp 0.5 0.0
+   1200.0 0.0
+   0.5 180.0
+   12 _GR_SYM_PTH/
+   13 symbol_up.grx
+ep 11 1 0 0 0 0
+   28 rollo-runter-dg-unten-rechts
+   0
+ap 0
+   0
+gp 0.5000000000000006 0.0
+   1200.0 0.0
+   0.5 120.0
+   12 _GR_SYM_PTH/
+   15 symbol_down.grx
+ep 11 1 0 0 0 0
+   25 rollo-aktiv-dg-oben-links
+   1
+   4100 0 26 "soo:nodeId=wut.3.input.4
+\000"
+ap 0
+   0
+gp 0.6566138979682066 0.0
+   422.8029668191787 0.0
+   0.6760039852833145 916.3558848708785
+   12 _GR_SYM_PTH/
+   22 symbol_rollo_aktiv.grx
+ep 11 1 0 0 0 0
+   26 rollo-aktiv-dg-unten-links
+   1
+   4100 0 26 "soo:nodeId=wut.3.input.4
+\000"
+ap 0
+   0
+gp 0.6566138979682066 0.0
+   424.76725253346444 0.0
+   0.6760039852833145 142.0701705851642
+   12 _GR_SYM_PTH/
+   22 symbol_rollo_aktiv.grx
+ep 11 1 0 0 0 0
+   27 rollo_aktiv_dg-unten-rechts
+   1
+   4100 0 26 "soo:nodeId=wut.3.input.4
+\000"
+ap 0
+   0
+gp 0.6566138979682066 0.0
+   1273.695823962036 0.0
+   0.6760039852833145 142.42731344230708
+   12 _GR_SYM_PTH/
+   22 symbol_rollo_aktiv.grx
 ee
