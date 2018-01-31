@@ -8,6 +8,7 @@
      		<id>sum.counter.lights</id>
      		<dataPointIds>
      			<dataPointId>wut2.input.10</dataPointId>
+				<dataPointId>wut2.input.11</dataPointId>
      		</dataPointIds>
      		<function>SUM</function>
      	</value>

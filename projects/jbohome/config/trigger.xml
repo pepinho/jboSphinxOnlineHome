@@ -12,16 +12,16 @@
         <properties>
             <entry>
                 <key>predicate</key>
-                <value>HIGHER</value>
+                <value>HIGHER_OR_EQUAL</value>
             </entry>
             <entry>
                 <key>value</key>
-                <value>0.0</value>
+                <value>1.0</value>
             </entry>
         </properties>
         <severityType>INFO</severityType>
         <triggerType>TRIGGER_CHANGE_OF_VALUE</triggerType>
-        <updateTime>1504347690039</updateTime>
+        <updateTime>1517373878018</updateTime>
         <workflowParameters/>
     </trigger>
 </triggers>
