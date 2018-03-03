@@ -1,22 +1,22 @@
 0   Dialog
 1   SansSerif
 2   Serif
-3   Monospaced
-4   DialogInput
+3   Dialog
+4   Dialog
 5   Arial
 6   Arial Black
 7   Arial Narrow
-8   AvantGarde Bk BT
-9   AvantGarde Md BT
+8   Dialog
+9   Dialog
 10  Book Antiqua
 11  Bookman Old Style
 12  Century Gothic
 13  Comic Sans MS
-14  CommonBullets
+14  Dialog
 15  Courier New
-16  Default
+16  Dialog
 17  Dialog
-18  DialogInput
+18  Dialog
 19  Garamond
 20  Haettenschweiler
 21  Impact
@@ -25,21 +25,21 @@
 24  Lucida Sans
 25  Lucida Sans Typewriter
 26  Lucida Sans Unicode
-27  Marlett
-28  Monospaced
+27  Dialog
+28  Dialog
 29  Monotype Corsiva
-30  MS Outlook
+30  Dialog
 31  SansSerif
 32  Serif
-33  Symbol
+33  Dialog
 34  Tahoma
 35  Times New Roman
 36  Trebuchet MS
 37  Verdana
-38  Webdings
-39  Wingdings
-40  Wingdings 2
-41  Wingdings 3
+38  Dialog
+39  Dialog
+40  Dialog
+41  Dialog
 42  Times New Roman
 43  Trebuchet MS
 44  Verdana

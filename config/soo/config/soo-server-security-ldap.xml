@@ -1,59 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-	<bean id="ldapContextSource"
-		class="org.springframework.security.ldap.DefaultSpringSecurityContextSource">
+	<bean id="ldapContextSource" class="org.springframework.security.ldap.DefaultSpringSecurityContextSource">
 		<constructor-arg value="${soo.server.security.ldap.context.providerUrl}" />
-		<property name="userDn"
-			value="${soo.server.security.ldap.context.credentials.userDn}" />
-		<property name="password"
-			value="${soo.server.security.ldap.context.credentials.password}" />
+		<property name="userDn" value="${soo.server.security.ldap.context.credentials.userDn}" />
+		<property name="password" value="${soo.server.security.ldap.context.credentials.password}" />
 	</bean>
 
-	<!-- needs to be named "authenticationProvider" because referenced by this 
-		name -->
-	<bean id="authenticationProvider"
-		class="org.springframework.security.ldap.authentication.LdapAuthenticationProvider">
+	<!-- needs to be named "externalAuthenticationProvider" because referenced by this name -->
+	<bean id="externalAuthenticationProvider" class="org.springframework.security.ldap.authentication.LdapAuthenticationProvider">
 		<constructor-arg>
-			<bean
-				class="org.springframework.security.ldap.authentication.BindAuthenticator">
+			<bean class="org.springframework.security.ldap.authentication.BindAuthenticator">
 				<constructor-arg ref="ldapContextSource" />
 				<property name="userSearch">
 					<ref bean="ldapUserSearch" />
 				</property>
 			</bean>
-		</constructor-arg>			
-		<constructor-arg ref="ldapAuthoritiesPopulator"/>
+		</constructor-arg>
+		<constructor-arg ref="ldapAuthoritiesPopulator" />
+		<!-- INSPOO-2634 Mapping from LDAP Role to AAA ROLE -->		
+		<property name="authoritiesMapper" ref="authoritiesMapper" />
+		<!-- INSPOO-758 -->		
+		<property name="userDetailsContextMapper" ref="userDetailsContextMapper"/>
 	</bean>
 
-	<bean id="ldapAuthoritiesPopulator"
-		class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
+	<!-- INSPOO-758 CustomInetOrgPerson -->	
+	<bean id="userDetailsContextMapper" class="de.ingmbh.aaa.service.ldap.AAALdapUserDetailsMapper">
+		<!-- explizit, da sonst nicht eindeutig -->
+		<property name="userDetailsService" ref="userDetailsService"/>
+	</bean>
+
+	<!-- INSPOO-2634 Mapping from LDAP Role to AAA ROLE -->
+	<bean id="authoritiesMapper" class="de.ingmbh.aaa.service.ldap.AAAGrantedAuthoritiesMapper">
+		<property name="aaaRoleByLdapRole">
+			<map>
+				<entry key="ROLE_USR_AL_TEAM_SPHINX" value="ROLE_ADMIN" />
+			</map>
+		</property>
+		<!-- optional default role for any authenticated user -->
+		<property name="defaultRole" value="ROLE_VIEWER"/>
+	</bean>
+
+	<bean id="ldapAuthoritiesPopulator" class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
 		<constructor-arg ref="ldapContextSource" />
-		<constructor-arg
-			value="${soo.server.security.ldap.authorities.groupSearchBase}" />
-		<property name="groupRoleAttribute"
-			value="${soo.server.security.ldap.authorities.groupRoleAttribute}" />
-		<property name="searchSubtree"
-			value="${soo.server.security.ldap.authorities.searchSubtree}" />
-		<property name="groupSearchFilter"
-			value="${soo.server.security.ldap.authorities.groupSearchFilter}" />
+		<constructor-arg value="${soo.server.security.ldap.authorities.groupSearchBase}" />
+		<property name="groupRoleAttribute" value="${soo.server.security.ldap.authorities.groupRoleAttribute}" />
+		<property name="searchSubtree" value="${soo.server.security.ldap.authorities.searchSubtree}" />
+		<property name="groupSearchFilter" value="${soo.server.security.ldap.authorities.groupSearchFilter}" />
+		<!-- INSPOO-3179 MUST BE "ROLE_" (which is the default) -->
+		<property name="rolePrefix" value="ROLE_"/>
 	</bean>
 
-	<bean id="ldapUserSearch"
-		class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
-		<constructor-arg index="0"
-			value="${soo.server.security.ldap.userSearch.searchBase}" />
-		<constructor-arg index="1"
-			value="${soo.server.security.ldap.userSearch.searchFilter}" />
+	<bean id="ldapUserSearch" class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
+		<constructor-arg index="0" value="${soo.server.security.ldap.userSearch.searchBase}" />
+		<constructor-arg index="1" value="${soo.server.security.ldap.userSearch.searchFilter}" />
 		<constructor-arg index="2" ref="ldapContextSource" />
 	</bean>
 
-	<bean id="userDetailsService"
-		class="org.springframework.security.ldap.userdetails.LdapUserDetailsService">
+	<!-- needs to be named "userDetailsServiceInput" because referenced by this name -->
+	<bean id="userDetailsServiceInput" class="org.springframework.security.ldap.userdetails.LdapUserDetailsService">
 		<constructor-arg ref="ldapUserSearch" />
-		<constructor-arg ref="ldapAuthoritiesPopulator"/>
+		<constructor-arg ref="ldapAuthoritiesPopulator" />
+		<!-- INSPOO-758 -->
+		<property name="userDetailsMapper" ref="userDetailsContextMapper"/>
 	</bean>
 </beans>

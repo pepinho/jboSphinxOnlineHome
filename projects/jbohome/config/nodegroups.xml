@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <nodegroups>
     <nodegroup>
+        <logicalName>adapters</logicalName>
+        <label>Adapter</label>
+        <labelKey>adapters</labelKey>
+        <includedNodeIds>
+            <nodeId>soo:system.projects.jbohome.adapters.calculations</nodeId>
+            <sortIndex>1</sortIndex>
+        </includedNodeIds>
+        <includedNodeIds>
+            <nodeId>soo:system.projects.jbohome.adapters.wut</nodeId>
+            <sortIndex>2</sortIndex>
+        </includedNodeIds>
+    </nodegroup>
+    <nodegroup>
+        <logicalName>counter-lights</logicalName>
+        <label>counter-lights</label>
         <includedNodeIds>
             <nodeId>wut.2.input.10</nodeId>
             <sortIndex>1</sortIndex>
@@ -9,7 +24,5 @@
             <nodeId>wut.2.input.11</nodeId>
             <sortIndex>2</sortIndex>
         </includedNodeIds>
-        <label>counter-lights</label>
-        <logicalName>counter-lights</logicalName>
     </nodegroup>
 </nodegroups>

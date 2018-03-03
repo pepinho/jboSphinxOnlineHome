@@ -75,3 +75,6 @@ projects/_data/WuT_In-Out_Mai2017/Neuer Ordner/Seite 062.jpg
 target/config.zip
 target/jbohome-test.zip
 target/jbohome.zip
+/projects/jbohome/panels/*.svg
+*.svg
+/projects/jbohome/images/*.png

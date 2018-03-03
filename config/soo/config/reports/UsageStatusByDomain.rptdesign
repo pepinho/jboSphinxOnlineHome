@@ -131,6 +131,7 @@ importPackage(Packages.java.lang);
 importPackage(Packages.de.ingmbh.sphinx.online.common.services.audit.vo);
 importPackage(Packages.de.ingmbh.sphinx.online.service);
 importPackage(Packages.de.ingmbh.sphinx.online.service.tariff);
+importPackage(Packages.de.ingmbh.sphinx.online.common);
 
 count = 0;
 usages = new ArrayList();
@@ -196,7 +197,9 @@ if (typeof auditService != 'undefined' &amp;&amp; typeof tariffService != 'undef
 		row["serviceType"] = usage.getServiceType();
 		row["counterId"] = usage.getCounterId();
 		row["count"] = usage.getCount();
-		row["maxCount"] = tariffService.getQuotaMaxTotalByDomainAndService(domainName, usage.getServiceType(), usage.getCounterId());
+		// extract base ServiceType from String
+		var serviceType = SooConstants.ServiceType.valueOf(usage.getServiceType().split(":")[0]);
+		row["maxCount"] = tariffService.getQuotaMaxTotalByDomainAndService(domainName, serviceType, usage.getCounterId());
 
 	} else {
 		/* test data */

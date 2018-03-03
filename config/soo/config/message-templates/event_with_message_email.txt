@@ -1,0 +1,6 @@
+subject: ${messageText_firstLine}
+
+${messageText_remainingLines}
+
+Aufruf der Anwendung
+${ssp["soo.server.http.webUrl"]}#/panel/soo.projectLogicalName=${event.project.logicalName}/index.svg

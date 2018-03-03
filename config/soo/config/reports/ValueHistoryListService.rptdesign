@@ -204,7 +204,7 @@ if (typeof dataManager != 'undefined') {
 
 	for (var i = 0; i < curves.size(); ++i) {
 		var id = curves.get(i).get('id');
-		var list = dataManager.getValueHistoryByIdAndTimeOfValueRange(params["domainName"], id, null, start, stop, true, new Long(params["maxValueGapTime"]), new Long(params["rowLimit"]), false);
+		var list = dataManager.getValueHistoryByIdAndTimeOfValueRange(params["domainName"], id, null, start, stop, true, new Long(params["maxValueGapTime"]), new Long(params["rowLimit"]));
 		historizedValues.addAll(list);
 	}
 } else {

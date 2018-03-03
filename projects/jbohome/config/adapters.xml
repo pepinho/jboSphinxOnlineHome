@@ -6,16 +6,14 @@
                 <className>de.ingmbh.sphinx.online.adapter.calculated.AdapterCalculated</className>
                 <description>Adapter for calculating a data source</description>
                 <name>calculated</name>
-                <userCreatable>true</userCreatable>
             </adapterType>
             <dbId>1</dbId>
             <description></description>
-            <disabled>false</disabled>
             <domainName>local.jbohome</domainName>
             <name>calculations</name>
             <pollingIntervalMillis>-1</pollingIntervalMillis>
             <properties/>
-            <releaseCode>LioEbc QNUwBi ccuK8m rPuh2F xGuCaM vm1KQe nm21F2</releaseCode>
+            <releaseCode>Oknd3d SNUwBi ccuK8m rPuh2F xGuCaM vm1KQe nm4sF2</releaseCode>
             <url>${project_loc}/config/calculations.soo_calculated_xml</url>
         </adapter>
         <adapter>
@@ -23,11 +21,9 @@
                 <className>de.jbo.soo.home.adapter.WutIOAdapter</className>
                 <description>Adapter connecting to WUT-IO devices via http</description>
                 <name>WUT-IO</name>
-                <userCreatable>true</userCreatable>
             </adapterType>
             <dbId>2</dbId>
             <description>WUT IO adapter</description>
-            <disabled>false</disabled>
             <domainName>local.jbohome</domainName>
             <name>wut</name>
             <pollingIntervalMillis>-1</pollingIntervalMillis>
@@ -38,7 +34,7 @@
                 </entry>
                 <entry>
                     <key>wut1.host.address</key>
-                    <value>${wut1.address}</value>
+                    <value>http://localhost/wut-servlet/</value>
                 </entry>
                 <entry>
                     <key>wut1.output.0</key>
@@ -90,7 +86,7 @@
                 </entry>
                 <entry>
                     <key>wut2.host.address</key>
-                    <value>${wut2.address}</value>
+                    <value>http://localhost/wut-servlet-2/</value>
                 </entry>
                 <entry>
                     <key>wut2.output.0</key>
@@ -142,7 +138,7 @@
                 </entry>
                 <entry>
                     <key>wut3.host.address</key>
-                    <value>${wut3.address}</value>
+                    <value>http://localhost/wut-servlet-3/</value>
                 </entry>
                 <entry>
                     <key>wut3.output.0</key>
@@ -194,7 +190,7 @@
                 </entry>
                 <entry>
                     <key>wut4.host.address</key>
-                    <value>${wut4.address}</value>
+                    <value>http://localhost/wut-servlet-4/</value>
                 </entry>
                 <entry>
                     <key>wut4.output.0</key>
@@ -246,7 +242,7 @@
                 </entry>
                 <entry>
                     <key>wut5.host.address</key>
-                    <value>${wut5.address}</value>
+                    <value>http://localhost/wut-servlet-5/</value>
                 </entry>
                 <entry>
                     <key>wut5.output.0</key>
@@ -297,7 +293,7 @@
                     <value></value>
                 </entry>
             </properties>
-            <releaseCode>JMoGac SQUwBi ccuK8m rPuh2F xGuCaM vm1KQe nm21Fw</releaseCode>
+            <releaseCode>uMnd3d SNUwBi ccuK8m rPuh2F xGuCaM vm1KQe nm4sFw</releaseCode>
             <url></url>
         </adapter>
     </adapters>
@@ -311,11 +307,6 @@
             <id>=$0</id>
             <mappedAdapter2>
                 <dbId>2</dbId>
-                <description></description>
-                <disabled>false</disabled>
-                <pollingIntervalMillis>-1</pollingIntervalMillis>
-                <releaseCode></releaseCode>
-                <url></url>
             </mappedAdapter2>
             <mappedId>.*</mappedId>
             <maxDataLength>-1</maxDataLength>

@@ -10,11 +10,8 @@
 		class="de.ingmbh.sphinx.online.service.spring.InMemoryUserDetailsProvider">
 		<property name="userMap">
 			<value>
-			    admin=evET3XZMjXomvAwGgHj/7MNEyFfd0RG7,${soo.server.security.authorization.adminAuthority}
-				user=RWmxzOdjV6yja7mwbIx/kg==,${soo.server.security.authorization.viewerAuthority}
-				guest=kEBt0T9C0qK2DIs0gCfWSQ==,${soo.server.security.authorization.viewerGuestAuthority}
-				none=193AqMR2TwOr+AZubsJpNw==,ROLE_DENIED
-				test-password=RR7FnCAZM5zSOUiA3n3OVw==,${soo.server.security.authorization.viewerAuthority}
+			    admin=gGV/AEwlYXKscA3zEMko0HLXwW9pO4KK,ROLE_ADMIN
+				user=BzpLDHY+x03IL8Q0vkimLw==,ROLE_USER
         	</value>
 		</property>
 	</bean>

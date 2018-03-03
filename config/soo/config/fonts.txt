@@ -1,0 +1,45 @@
+0   Dialog, Arial
+1   SansSerif, sans-serif
+2   Serif
+3   Dialog, Arial
+4   Dialog, Arial
+5   Arial
+6   Arial Black
+7   Arial Narrow
+8   Dialog, Arial
+9   Dialog, Arial
+10  Book Antiqua
+11  Bookman Old Style
+12  Century Gothic
+13  Comic Sans MS
+14  Dialog, Arial
+15  Courier New
+16  Dialog, Arial
+17  Dialog, Arial
+18  Dialog, Arial
+19  Garamond
+20  Haettenschweiler
+21  Impact
+22  Lucida Bright
+23  Lucida Console
+24  Lucida Sans
+25  Lucida Sans Typewriter
+26  Lucida Sans Unicode
+27  Dialog, Arial
+28  Dialog, Arial
+29  Monotype Corsiva
+30  Dialog, Arial
+31  SansSerif, sans-serif
+32  Serif
+33  Dialog, Arial
+34  Tahoma
+35  Times New Roman
+36  Trebuchet MS
+37  Verdana
+38  Dialog, Arial
+39  Dialog, Arial
+40  Dialog, Arial
+41  Dialog, Arial
+42  Times New Roman
+43  Trebuchet MS
+44  Verdana

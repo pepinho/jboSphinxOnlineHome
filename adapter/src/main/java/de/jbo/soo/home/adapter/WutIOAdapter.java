@@ -21,7 +21,7 @@ import org.apache.commons.configuration.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.ingmbh.sphinx.online.adapter.common.DataSourceAdapter;
+import de.ingmbh.sphinx.online.adapter.common.DataSourceAdapter6;
 import de.ingmbh.sphinx.online.common.vo.Value;
 import de.ingmbh.sphinx.online.common.vo.ValueDefinition2;
 import de.jbo.soo.home.adapter.properties.PropertiesProvider;
@@ -31,7 +31,7 @@ import de.jbo.soo.home.data.WutIOInstance;
  * @author Josef Baro (jbo) <br>
  * @version 03.10.2016 jbo - created <br>
  */
-public class WutIOAdapter extends DataSourceAdapter {
+public class WutIOAdapter extends DataSourceAdapter6 {
     private static final Logger LOG = LoggerFactory.getLogger(WutIOAdapter.class);
 
     /**
@@ -48,7 +48,7 @@ public class WutIOAdapter extends DataSourceAdapter {
 
     private static final long REFRESH_TIMER = 1000;
 
-    private PropertiesProvider propertiesProvider = new PropertiesProvider();
+    private PropertiesProvider propertiesProvider = null;
 
     private List<WutIOInstance> wuts = new ArrayList<>();
 
@@ -61,6 +61,11 @@ public class WutIOAdapter extends DataSourceAdapter {
     private ScheduledThreadPoolExecutor scheduler = new ScheduledThreadPoolExecutor(PropertiesProvider.SUPPORTED_WUT_COUNT);
 
     private boolean useSeparateRefreshThreads = false;
+
+    public WutIOAdapter(PropertiesProvider propertiesProvider) {
+        super();
+        this.propertiesProvider = propertiesProvider;
+    }
 
     private void closeWUTs() {
         LOG.info("Closed WUTs...");
@@ -296,16 +301,6 @@ public class WutIOAdapter extends DataSourceAdapter {
             LOG.debug("<-- setValues()");
         }
         return true;
-    }
-
-    /*
-     * @see de.ingmbh.sphinx.online.adapter.common.DataSourceAdapter#
-     * supplyDefaultProperties(java.util.Map)
-     */
-    @Override
-    public void supplyDefaultProperties(Map<String, String> properties) {
-        LOG.info("supplyDefaultProperties()");
-        propertiesProvider.supplyDefault(properties);
     }
 
 }

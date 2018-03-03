@@ -1,0 +1,3 @@
+title: ${event.severityType} ${event.descriptionFinished}
+
+${event.sourceLabel}

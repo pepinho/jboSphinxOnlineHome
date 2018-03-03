@@ -196,8 +196,8 @@ if (params["timestampTo"] != undefined) {
 }
 
 if (typeof dataManager != 'undefined') {
-	var tempValues = dataManager.getValueHistoryByIdAndTimeOfValueRange(params["domainName"], params["nodeId1"], null, start, stop, true, null, new Long(params["rowLimit"]), false);
-	var humidityValues = dataManager.getValueHistoryByIdAndTimeOfValueRange(params["domainName"], params["nodeId2"], null, start, stop, true, null, new Long(params["rowLimit"]), false);
+	var tempValues = dataManager.getValueHistoryByIdAndTimeOfValueRange(params["domainName"], params["nodeId1"], null, start, stop, true, null, new Long(params["rowLimit"]));
+	var humidityValues = dataManager.getValueHistoryByIdAndTimeOfValueRange(params["domainName"], params["nodeId2"], null, start, stop, true, null, new Long(params["rowLimit"]));
 
 	var minLength = Math.min(tempValues.size(), humidityValues.size());
 	for (var i = 0; i < minLength; ++i) {

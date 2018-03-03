@@ -11,7 +11,7 @@
 		<property name="userMap">
 			<value>
 			<!-- old-style multi-tencancy via contexts - obsolete -->
-			<!-- %tenant.primaryAdmin.logonName%=%password%,${soo.server.security.authorization.managerAuthority} -->				
+			<!-- %tenant.primaryAdmin.logonName%=%password%,ROLE_MANAGER -->				
         	</value>
 		</property>
 	</bean>

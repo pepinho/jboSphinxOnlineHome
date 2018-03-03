@@ -4,6 +4,7 @@
     <list-property name="includeScripts">
         <property>lib/js/sooChartExtensions.js</property>
         <property>lib/js/sooConversion.js</property>
+        <property>lib/js/sooReportSupport.js</property>
     </list-property>
     <property name="units">in</property>
     <property name="theme">defaultTheme</property>

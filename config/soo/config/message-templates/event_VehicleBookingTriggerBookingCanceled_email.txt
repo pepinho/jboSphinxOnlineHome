@@ -1,0 +1,29 @@
+<#include "ems-labels.txt" encoding="utf-8">
+</#escape> <#-- escaping aus f�r subject -->
+subject: ${label_subject_prefix}${event.getSeverityType().getLabel()}: ${event.getDescription()}
+<#escape x as x?html> <#-- escaping wieder an -->
+Content-Type: text/html
+
+</#escape> <#-- escaping aus, da dieser Wert als HTML -->
+${label_html_prefix!""}
+<#escape x as x?html> <#-- escaping wieder an -->
+<p>
+<#if (booking.cancelationUserId)??>
+${addressee.helperCreateGUILabel()}, folgende Buchung wurde storniert:
+<#else>
+${addressee.helperCreateGUILabel()}, folgende Buchung wurde von dem System storniert, da leider kein Fahrzeug zugewiesen werden konnte:
+</#if>
+<p> 
+<table>
+<tr><td>Buchungs-Kennung:<td>${booking.id}
+<tr><td>Erstellungsdatum:<td>${booking.timeOfCreation?number_to_datetime} Uhr
+<tr><td>Datum der Stornierung:<td>${booking.timeOfCancellation?number_to_datetime} Uhr
+<tr><td>Abholung:<td>${booking.timeOfBookingStart?number_to_datetime} Uhr
+<tr><td>Rückgabe:<td>${booking.timeOfBookingEnd?number_to_datetime} Uhr
+</table>
+<p>
+Link zur Anwendung: <a href="${ssp["soo.server.http.webUrl"]}">${ssp["soo.server.http.webUrl"]}</a>
+</#escape> <#-- escaping aus, da dieser Wert als HTML -->
+${label_html_suffix!""}
+<#escape x as x?html> <#-- escaping wieder an -->
+<#-- TEMPLATE ENDE -->

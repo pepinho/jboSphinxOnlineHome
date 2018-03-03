@@ -1,0 +1,9 @@
+subject: sphinx open: Service-Nutzungsreport
+# body
+Sehr geehrte Damen und Herren,
+
+im Anhang finden Sie den Bericht zum aktuellen Service-Nutzungsstatus des Mandanten '${domainName}', auf der Site ${ssp["soo.server.http.webUrl"]}
+
+Ihr sphinx open Team
+
+

@@ -1,0 +1,40 @@
+ { 
+	 "sidebar": [
+		 {
+			 "title": "Projekt:",
+			 "type": "projectselection",
+		     "slot":0
+		 },
+		 {
+			 "title": "sphinx open online",
+			 "type": "navlist",
+		     "slot":1,
+			 "menuelements": [
+				 {"title": "Panels", "url": "#/panel", "icon": "panels-sooicon"},
+				 {"title": "Dashboard", "url": "#/dashboard", "icon": "chart-sooicon"},
+				 {"title": "Tabellen", "url": "#/table", "icon":"table-sooicon"},
+				 {"title": "Events", "url": "#/table/events", "icon":"table-sooicon"},
+				 {"title": "Tasks", "url": "#/table/tasks", "icon":"table-sooicon"}
+			 ]
+		 },
+		 {
+			 "title": "sphinx open Designer",
+			 "type": "navlist",
+		     "slot":99,
+		     "roles": "ROLE_MANAGER, ROLE_ADMIN",
+			 "menuelements": [
+				 {"title": "Designer starten", "url": "#/designer", "icon": "cloud-sooicon"}
+			 ]
+		 }
+	 ],
+	 "statusbar": {
+		 "displayDomain": true,
+		 "displayUserInfo": true,
+		 "displayUserAuthorities": true,
+		 "displayEventsAlert": true,
+		 "displayInfobox": true,
+		 "displayRefreshButton":true,
+		 "displayConnectivityInfo":true
+	 },
+	 "footer": []
+}

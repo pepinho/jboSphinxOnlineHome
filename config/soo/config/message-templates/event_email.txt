@@ -1,0 +1,26 @@
+</#escape> <#-- escaping aus für subject -->
+subject: ${event.getSeverityType().getLabel()}: ${event.getDescription()} @ ${event.getSourceLabel()}
+<#escape x as x?html> <#-- escaping wieder an -->
+Content-Type: text/html
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+body {font-family:Arial,Helvetica,sans-serif;}
+tr {vertical-align: top; }
+table { border-collapse:collapse; }
+table, th, td { border: 1px solid black; }
+td {padding: 5px; }
+</style>
+</head>
+<body>
+
+Folgendes Ereignis hat sich zugetragen: <br>
+${event.getUpdateTime()?number_to_datetime} - ${event.getSeverityType().getLabel()}: ${event.getDescription()} @ ${event.getSourceLabel()}<br>
+
+Link zur Anwendung: ${ssp["soo.server.http.webUrl"]}<br>
+
+</body>
+</html>
+

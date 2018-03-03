@@ -10,20 +10,25 @@
 		<timestamp>b${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 		<jdk.version>1.8</jdk.version>
-		<spring.version>4.1.1.RELEASE</spring.version>
+		<spring.version>4.3.9.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
 		<junit.version>4.11</junit.version>
 		<logback.version>1.0.13</logback.version>
 		<jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
 		<aopalliance.version>1.0</aopalliance.version>
-		<commons-codec.version>1.6</commons-codec.version>
+		<commons-codec.version>1.10</commons-codec.version>
 		<commons-configuration.version>1.10</commons-configuration.version>
-		<ingmbh-aaa.version>1.1.0</ingmbh-aaa.version>
-		<ingmbh-soo.version>4.0.0</ingmbh-soo.version>
-		<ingmbh-sphinx-app-swing.version>4.1.0</ingmbh-sphinx-app-swing.version>
-		<slf4j.version>1.6.1</slf4j.version>
+		<commons-lang.version>2.6</commons-lang.version>
+		<commons-http.version>4.5.2</commons-http.version>
+		<ingmbh-aaa.version>4.0.1</ingmbh-aaa.version>
+		<ingmbh-soo.version>6.5.3</ingmbh-soo.version>
+		<slf4j.version>1.6.6</slf4j.version>
 		<servlet-api.version>3.1.0</servlet-api.version>
 		<commons-io.version>2.5</commons-io.version>
+		<ingmbh-sphinx.version>13.0.1</ingmbh-sphinx.version>
+		<ingmbh-netlinx.version>2.5.0</ingmbh-netlinx.version>
+		<ingmbh-objectpool.version>2.1.0</ingmbh-objectpool.version>
+		<ingmbh-langsupport.version>1.1.4</ingmbh-langsupport.version>
 	</properties>
 
 	<modules>
@@ -53,6 +58,13 @@
 				<artifactId>commons-codec</artifactId>
 				<version>${commons-codec.version}</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${commons-lang.version}</version>
+			</dependency>
+
 
 			<!-- in-gmbh weblets aaa common -->
 			<dependency>
@@ -90,10 +102,41 @@
 				<type>war</type>
 			</dependency>
 
+			<!-- in-gmbh sphinx open 2d api -->
 			<dependency>
-				<groupId>de.ingmbh.sphinx.app</groupId>
-				<artifactId>de.ingmbh.sphinx.app.swing</artifactId>
-				<version>${ingmbh-sphinx-app-swing.version}</version>
+				<groupId>de.ingmbh.sphinx.api2d</groupId>
+				<artifactId>de.ingmbh.sphinx.api2d</artifactId>
+				<version>${ingmbh-sphinx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.ingmbh.sphinx.api2d</groupId>
+				<artifactId>de.ingmbh.sphinx.api2d.gal</artifactId>
+				<version>${ingmbh-sphinx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.ingmbh.sphinx.api2d</groupId>
+				<artifactId>de.ingmbh.sphinx.api2d.gal.awt</artifactId>
+				<version>${ingmbh-sphinx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.ingmbh.framework</groupId>
+				<artifactId>de.ingmbh.framework.netlinx</artifactId>
+				<version>${ingmbh-netlinx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.ingmbh.framework</groupId>
+				<artifactId>de.ingmbh.framework.objectpool</artifactId>
+				<version>${ingmbh-objectpool.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.ingmbh.sphinx</groupId>
+				<artifactId>de.ingmbh.sphinx.common</artifactId>
+				<version>${ingmbh-sphinx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.ingmbh.framework.langsupport</groupId>
+				<artifactId>de.ingmbh.framework.langsupport</artifactId>
+				<version>${ingmbh-langsupport.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
@@ -179,7 +222,7 @@
 			<dependency>
 				<groupId>org.apache.httpcomponents</groupId>
 				<artifactId>httpclient</artifactId>
-				<version>4.5.2</version>
+				<version>${commons-http.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -258,7 +301,7 @@
 		<profile>
 			<id>deploy</id>
 			<activation>
-                <activeByDefault>true</activeByDefault>
+				<activeByDefault>true</activeByDefault>
 			</activation>
 			<build>
 				<plugins>

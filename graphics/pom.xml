@@ -16,15 +16,40 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>de.ingmbh.sphinx.app</groupId>
-			<artifactId>de.ingmbh.sphinx.app.swing</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.ingmbh.sphinx.api2d</groupId>
+			<artifactId>de.ingmbh.sphinx.api2d</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.ingmbh.sphinx.api2d</groupId>
+			<artifactId>de.ingmbh.sphinx.api2d.gal</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.ingmbh.sphinx.api2d</groupId>
+			<artifactId>de.ingmbh.sphinx.api2d.gal.awt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.ingmbh.framework</groupId>
+			<artifactId>de.ingmbh.framework.netlinx</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.ingmbh.sphinx</groupId>
+			<artifactId>de.ingmbh.sphinx.common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.ingmbh.framework.langsupport</groupId>
+			<artifactId>de.ingmbh.framework.langsupport</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
 	</dependencies>
 </project>

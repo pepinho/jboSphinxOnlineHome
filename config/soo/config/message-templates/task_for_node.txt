@@ -1,0 +1,8 @@
+subject: Messstelle prüfen: <#if valueDefinition.label??>${valueDefinition.label} (${valueDefinition.id!""})<#else>${valueDefinition.id!""}</#if>
+
+Bitte folgende Messsstelle prüfen:
+<#if valueDefinition.label??>
+${valueDefinition.label} (${valueDefinition.id!""})
+<#else>
+${valueDefinition.id!""}
+</#if>

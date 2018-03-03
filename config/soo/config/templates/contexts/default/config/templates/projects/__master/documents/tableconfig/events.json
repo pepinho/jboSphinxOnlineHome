@@ -1,0 +1,124 @@
+{
+	"labelIntern" : "event",
+	"title" : "Events",
+	"dataModus": "event",
+	"paginator" : false,
+	"itemsPerPage" : 10,
+	"responsive" : true,
+	"loadOnlyLatest" : true,
+	"selectionMode" : "single",
+	"editable" : false,
+	"canExport" : false,
+	"defaultSortField": "updateTime",
+	"defaultSortOrder": "-1",
+	"pollingInterval":	2000,
+	"clickableRow": true,
+	"ignoreKeyValues":
+		[
+		 	{
+				"sourceOfValue":"eventState",
+				"ignoreValues":[ "FAILURE", "FINISHED"]
+			},
+		 	{
+				"sourceOfValue":"eventType",
+				"ignoreValues":[ "WORKFLOW"]
+			}
+		],
+	"resizableColumns" : false,
+	"showOnClient": true,
+	"scrollable" : true,
+	"lazy": false,
+	"columnConfigs" : [ {
+		"header" : "Time",
+		"dataField" : "updateTime",
+		"colWidth": "170px",
+		"sortable" : true,
+		"dateTimeFormat": "YYYY-MM-DD HH:mm:ss",
+		"selectionMode" : "single",
+		"editable" : false,
+		"templateType" : "date",
+		"filter" : false
+	}, {
+		"header" : "Severity",
+		"dataField" : "severityType",
+		"colWidth": "130px",
+		"sortable" : true,
+		"selectionMode" : "single",
+		"editable" : false,
+		"filter" : false,
+		"valueImgReplacement" : {	
+			"valueImgRules" : 
+				[	
+				 	{
+				 		"dataValue": "ERROR",
+				 		"imageUrl" : "/app/table_module/assets/img/event_error.png",
+				 		"text" : "Error"
+				 
+				 	}
+				 	,{
+				 		"dataValue": "INFO",
+				 		"imageUrl" : "/app/table_module/assets/img/event_info.png",
+				 		"text" : "Info"
+				 	
+				 	},
+				 	{
+				 		"dataValue": "ALARM",
+				 		"imageUrl" : "/app/table_module/assets/img/event_alarm.png",
+				 		"text": "Alarm"				 	
+				 	},
+				 	{
+				 		"dataValue": "WARNING",
+				 		"imageUrl" : "/app/table_module/assets/img/event_info.png",
+				 		"text": "Warning"				 	
+				 	}
+				]
+		}
+	}, {
+		"header" : "Source",
+		"dataField" : "sourceLabel",
+		"sortable" : true,
+		"selectionMode" : "single",
+		"editable" : false,
+		"templateType" : "default",
+		"filter" : false
+	}, {
+		"header" : "Message",
+		"dataField" : "description",
+		"colWidth": "220px",
+		"sortable" : true,
+		"selectionMode" : "single",
+		"editable" : true,
+		"templateType" : "default",
+		"filter" : false
+	}, {
+		"header" : "Type of event",
+		"dataField" : "eventType",
+		"colWidth": "180px",
+		"sortable" : true,
+		"selectionMode" : "single",
+		"editable" : false,
+		"templateType" : "default",
+		"filter" : false,
+		"valueImgReplacement" : {	
+			"valueImgRules" : 
+				[	
+				 	{
+				 		"dataValue": "MESSAGE",
+				 		"imageUrl" : "/app/table_module/assets/img/event_message.png",
+				 		"text" : "Message"
+				 
+				 	},
+				 	{
+				 		"dataValue": "USER_INTERACTION",
+				 		"imageUrl" : "/app/table_module/assets/img/event_action.png",
+				 		"text": "Action"
+				 	},
+				 	{
+				 		"dataValue": "WORKFLOW",
+				 		"imageUrl" : "/app/table_module/assets/img/event_work_flow.png",
+				 		"text": "Workflow"
+				 	}
+				]
+		}
+	} ]
+}

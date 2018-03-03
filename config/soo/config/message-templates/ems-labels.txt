@@ -1,0 +1,30 @@
+<#assign
+label_subject_prefix = "Nachricht von EMOBILITY-SCOUT: "
+label_html_prefix = "
+<html>
+<head>
+<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">
+<style type=\"text/css\">
+body {
+  font-family:Arial,Helvetica,sans-serif;
+  background-color: #eef1f2;
+}
+tr {vertical-align: top; }
+table { border-collapse:collapse; }
+table, th, td { border: 1px solid black; }
+td {padding: 5px; }
+</style>
+</head>
+<body>
+"
+label_html_suffix = "
+<p>
+<hr>
+<p>
+Dies ist eine automatisch versendete Nachricht. Antworten Sie bitte nicht auf diese E-Mail und kontaktieren Sie bei Fragen ihren Helpdesk.
+<p>
+Link zum Projekt: <a href=\"http://www.emobilityscout.de/\">http://www.emobilityscout.de/</a>
+</body>
+</html>
+"
+>

@@ -218,9 +218,9 @@ public class WutIOInstance implements IConnectionResultListener {
             if (value.getId().contains(VALUE_ID_PREFIX_COUNTER)) {
                 dataStore.setCounter(index, Integer.parseInt(value.getValue().toString()));
             } else if (value.getId().contains(VALUE_ID_PREFIX_INPUT)) {
-                dataStore.setInput(index, Boolean.parseBoolean(value.getValue().toString()));
+                dataStore.setInput(index, transformValue(Integer.parseInt(value.getValue().toString())));
             } else {
-                boolean output = transformValue(Integer.parseInt(value.getValue().toString()));
+                boolean output = Boolean.parseBoolean(value.getValue().toString());
                 dataStore.setOutput(index, output);
                 String request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_OUTPUTACCESS + index, password, IOProcessor.PARAM_STATE, (output == true) ? IOProcessor.OUTPUT_ACCESS_STATE_ON : IOProcessor.OUTPUT_ACCESS_STATE_OFF);
                 LOG.debug("     Sending output-access: " + request);
@@ -338,8 +338,9 @@ public class WutIOInstance implements IConnectionResultListener {
         if (values.isEmpty()) {
             refreshValues();
         }
-
-        return values.get(id);
+        Value value = values.get(id);
+        LOG.info("getValue(" + id + ") = " + value);
+        return value;
     }
 
     /*

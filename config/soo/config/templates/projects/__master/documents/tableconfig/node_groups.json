@@ -1,0 +1,83 @@
+{
+	"labelIntern" : "ng_0",
+	"title" : "Node Groups",
+	"dataModus": "nodeGroup",
+	"showOnClient": true,	
+	"editable":true,
+	"canExport": false,
+	"scrollable": true,
+	"scrollHeight": "100vh",
+	"defaultSortField": "sortIndex",
+	"defaultSortOrder": "1",
+	"resizableColumns" : false,
+	"reorderableColumns" : false,
+	"columnToggle" : false,
+	"selectionMode" : "single",
+	"pollingInterval":1000,
+	"columnConfigs" : [ 
+       {
+		   "header" : "Index",
+		   "colWidth": "80px",
+		   "sortable": true,
+		   "dataField" : "sortIndex"
+       },
+	   {
+		   "header" : "Id",
+		   "colWidth": "330px",
+		   "sortable": true,
+		   "filter ":true,
+		   "dataField" : "id"
+
+	   },
+	   {
+		   "header" : "Name",
+		   "sortable": true,
+		   "dataField" : "valueDefinition.label"
+	   },
+	   {
+		   "header" : "Status",
+		   "sortable": true,
+		   "colWidth": "80px",
+		   "editable": false,
+		   "valueReplacements":[
+                {
+                	"oldDataValue":"0",
+                	"newDataValue":"GOOD"
+                },
+                {
+                	"oldDataValue":"-2147483648",
+                	"newDataValue":"BAD"
+                }
+		   ],
+           
+		   "dataField" : "value.status"
+	   }, 
+	   {
+		   "header" : "Value",
+		   "sortable": true,
+		   "dataField" : "value.value",
+		   "checkTypeDefinition": true,
+		   "checkEditableInField": "valueDefinition.writable", 
+		   "roundNumberToDigits": 2,
+		   "valueCellAlignment": "right",
+		   "asToggleButton": {"onLabel": "ein", "offLabel": "aus"},
+		   "asProgressBar": {"condition": {"source":"valueDefinition.physicalUnit", "value":"%"}},
+		   "editable": true,
+		   "showPhysicalUnit": true
+	   },
+	   {
+		   "header" : "Time of Value",
+		   "sortable": true,
+		   "dateTimeFormat": "YYYY-MM-DD HH:mm",
+		   "dataField" : "value.timeOfValue",
+		   "colWidth": "115px"
+	   },
+	   {
+		   "header" : "Time of Change",
+		   "sortable": true,
+		   "dateTimeFormat": "YYYY-MM-DD HH:mm",
+		   "dataField" : "value.timeOfChange",
+		   "colWidth": "115px"
+	   }
+	   ]
+ }

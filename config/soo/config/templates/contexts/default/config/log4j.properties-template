@@ -1,9 +1,24 @@
 log4j.rootCategory=INFO, LOGFILE<appenderSuffix>
 log4j.logger.de.ingmbh=INFO
 log4j.logger.com.ingmbh=INFO
+
+# these are too verbose on INFO
 log4j.logger.org.quartz=WARN
+log4j.logger.org.hibernate.tool.hbm2ddl.TableMetadata=WARN
+log4j.logger.io.milton.http.HttpManager=WARN
+log4j.logger.org.apache.commons.httpclient.auth.AuthChallengeProcessor=WARN
+
+# these are too verbose on WARN
+# INSPOO-2440
+log4j.logger.net.anotheria.moskito.core.util.BuiltInOSProducer=ERROR
+# INSPOO-2061
+log4j.logger.org.apache.olingo.client.core.communication.header.ODataErrorResponseChecker=ERROR
+# INSPOO-1966 - this setting may not be effective (INSPOO-2123)
+log4j.logger.com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector=ERROR
+
 # turn this to debug in order to trace HTTP requests
 log4j.logger.de.ingmbh.sphinx.online.server.RequestMonitorFilter=INFO
+
 # turn this to debug in order to trace HTTP Cache relevant requests
 log4j.logger.de.ingmbh.sphinx.online.server.cache=INFO
 
