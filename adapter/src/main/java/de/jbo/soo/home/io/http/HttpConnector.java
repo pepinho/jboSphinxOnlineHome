@@ -9,9 +9,11 @@ package de.jbo.soo.home.io.http;
 
 import java.io.IOException;
 import java.io.InputStream;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.slf4j.Logger;
@@ -35,20 +37,22 @@ public class HttpConnector extends AbstractTcpConnector {
 
     private HttpGet httpGet(String address) {
         HttpGet getRequest = new HttpGet(address);
+        RequestConfig config = RequestConfig.custom().setConnectionRequestTimeout(5000).build();
+        getRequest.setConfig(config);
         getRequest.setHeader("Accept", "text/html,application/xhtml+xml,application/xml");
         getRequest.setHeader("Accept-Encoding", "gzip, deflate");
         getRequest.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0");
         getRequest.setHeader("Accept-Charset", System.getProperty("file.encoding"));
+
         return getRequest;
     }
 
     /*
      * @see
-     * de.jbo.soo.home.io.AbstractTcpConnector#connectExec(java.lang.String,
-     * boolean)
+     * de.jbo.soo.home.io.AbstractTcpConnector#connectExec(java.lang.String)
      */
     @Override
-    protected boolean connectExec(String address, boolean handleException) throws ConnectionFailedException {
+    protected boolean connectExec(String address) throws ConnectionFailedException {
         LOG.info("Connecting to: " + address);
         HttpClient httpClient = httpClient();
         HttpGet getRequest = httpGet(address);
@@ -58,11 +62,8 @@ public class HttpConnector extends AbstractTcpConnector {
             boolean status = response.getStatusLine().getStatusCode() == HttpStatus.SC_OK;
             getRequest.releaseConnection();
             LOG.info("Connection established: " + status);
-            if (!status && handleException) {
+            if (!status) {
                 throw new IOException("HTTP response code " + response.getStatusLine().getStatusCode() + " - " + response.getStatusLine().getReasonPhrase());
-            } else if (!status && !handleException) {
-                LOG.trace("Status was false, but overriding since 'handleException' is false");
-                status = true;
             }
             return status;
         } catch (IOException e) {

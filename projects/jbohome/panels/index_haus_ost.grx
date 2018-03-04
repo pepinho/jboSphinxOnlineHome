@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
-grinx a 11 079
+grinx a 13 01
 nd 0
-dd 19.11.2016 28.05.2017
+dd 19.11.2016 04.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -44,7 +44,7 @@ gp 2.0 0.0
 ep 6 16385 0 0 0 0
    14 light-ug-links
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.3.output.1
 \000"
    4218 2 3 "64\000"
@@ -61,7 +61,7 @@ dp 0
 ep 6 16385 0 0 0 0
    15 light-ug-rechts
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.3.output.0
 \000"
    4218 2 3 "64\000"
@@ -78,8 +78,8 @@ dp 0
 ep 6 16385 0 0 0 0
    14 light-dg-links
    3
-   4200 0 14 "${soo:nodeId}\000"
-   4100 0 28 "soo:nodeId=wut.2.output.11
+   4200 0 22 "${soo:nodeId}@Visible\000"
+   4100 0 28 "soo:nodeId=wut.2.output.10
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -95,7 +95,7 @@ dp 0
 ep 6 16385 0 0 0 0
    14 light-dg-mitte
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 28 "soo:nodeId=wut.3.output.10
 \000"
    4218 2 3 "64\000"
@@ -112,9 +112,8 @@ dp 0
 ep 6 16385 0 0 0 0
    15 light-dg-rechts
    3
-   4200 0 14 "${soo:nodeId}\000"
-   4100 0 27 "soo:nodeId=wut.1.output.0
-\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
+   4100 0 26 "soo:nodeId=wut.2.output.2\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 1079.003323200124 530.6741402627749
@@ -153,7 +152,9 @@ gp 0.5587315258091904 0.0
 ep 7 16385 0 0 0 0
    12 alarm-rahmen
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 73 "${soo:nodeId}@Visible
+${soo:nodeId}@ChangeBrushColor
+${soo:nodeId}@Flash\000"
    4100 0 26 "soo:nodeId=wut.2.input.0
 \000"
    4218 2 4 "128\000"
@@ -228,7 +229,7 @@ gp 0.585990485930342 0.0
 ep 9 16385 0 0 0 0
    24 light-area-terasse-links
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 28 "soo:nodeId=wut.1.output.10
 \000"
    4218 2 3 "64\000"

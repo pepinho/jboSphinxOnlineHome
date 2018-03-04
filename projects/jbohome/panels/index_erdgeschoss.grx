@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
-grinx a 11 079
+grinx a 13 01
 nd 0
-dd 19.11.2016 03.09.2017
+dd 19.11.2016 04.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -25,7 +25,7 @@ gp 6.124684502776371 0.0
 ep 9 16385 0 0 0 0
    25 light-area-eg-aussen-oben
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.3.output.6
 \000"
    4218 2 3 "64\000"
@@ -42,7 +42,7 @@ dp 0
 ep 9 16385 0 0 0 0
    20 light-area-eg-flur-2
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.1.input.11
 \000"
    4218 2 3 "64\000"
@@ -59,7 +59,7 @@ dp 0
 ep 9 16385 0 0 0 0
    28 light-area-eg-eingang-aussen
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.1.output.9
 \000"
    4218 2 3 "64\000"
@@ -76,7 +76,7 @@ dp 0
 ep 9 16385 0 0 0 0
    25 light-area-eg-treppe-hoch
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 28 "soo:nodeId=wut.3.output.10
 \000"
    4218 2 3 "64\000"
@@ -93,7 +93,7 @@ dp 0
 ep 5 16385 0 0 0 0
    25 light-area-eg-k?che-links
    4
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.2.output.4
 \000"
    4220 0 31 "light-area-eg-k&#252;che-links\000"
@@ -109,7 +109,7 @@ dp 0
 ep 5 16385 0 0 0 0
    26 light-area-eg-k?che-rechts
    4
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.2.output.4
 \000"
    4220 0 32 "light-area-eg-k&#252;che-rechts\000"
@@ -125,7 +125,7 @@ dp 0
 ep 5 16385 0 0 0 0
    33 light-area-eg-k?che-arbeitsplatte
    4
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.2.output.6
 \000"
    4220 0 39 "light-area-eg-k&#252;che-arbeitsplatte\000"
@@ -141,7 +141,7 @@ dp 0
 ep 10 16385 0 0 0 0
    29 light-area-eg-wohnzimmer-sofa
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.4.output.1
 \000"
    4218 2 3 "64\000"
@@ -158,7 +158,7 @@ dp 0
 ep 6 16385 0 0 0 0
    16 light-area-eg-wc
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.1.output.1
 \000"
    4218 2 3 "64\000"
@@ -175,16 +175,16 @@ dp 0
 ep 6 16385 0 0 0 0
    18 light-area-eg-b?ro
    4
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.3.output.8
 \000"
    4220 0 24 "light-area-eg-b&#252;ro\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
-gp 1183.1627943312046 748.1339520767051
-   1373.1470511216346 748.1339520767051
-   1373.1470511216346 1008.7854773117035
-   1183.1627943312046 1008.7854773117035
+gp 1183.1627943312046 746.5268092195623
+   1373.1470511216346 746.5268092195623
+   1373.1470511216346 1007.1783344545607
+   1183.1627943312046 1007.1783344545607
 dp 0
    6
    0 1 0.0
@@ -193,7 +193,7 @@ dp 0
 ep 5 16385 0 0 0 0
    30 light-area-eg-wohnzimmer-tisch
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.2.output.8
 \000"
    4218 2 3 "64\000"
@@ -208,7 +208,7 @@ dp 0
 ep 5 16385 0 0 0 0
    23 light-area-eg-esszimmer
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.2.output.7
 \000"
    4218 2 3 "64\000"
@@ -223,7 +223,7 @@ dp 0
 ep 9 16385 0 0 0 0
    28 light-area-eg-terasse-rechts
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 28 "soo:nodeId=wut.1.output.10
 \000"
    4218 2 3 "64\000"
@@ -240,7 +240,7 @@ dp 0
 ep 9 16385 0 0 0 0
    27 light-area-eg-terasse-links
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 28 "soo:nodeId=wut.1.output.10
 \000"
    4218 2 3 "64\000"

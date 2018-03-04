@@ -78,3 +78,5 @@ target/jbohome.zip
 /projects/jbohome/panels/*.svg
 *.svg
 /projects/jbohome/images/*.png
+/projects/jbohome/panels/*.png
+/projects/jbohome/symbols/*.png

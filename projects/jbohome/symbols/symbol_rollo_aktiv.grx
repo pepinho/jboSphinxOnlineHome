@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
-grinx a 11 079
+grinx a 13 01
 nd 0
-dd 03.09.2017 03.09.2017
+dd 03.09.2017 04.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -35,7 +35,8 @@ gp    0
 ep 15 16385 0 0 0 0
    18 arrow_unten_rechts
    1
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 42 "${soo:nodeId}@Flash
+${soo:nodeId}@Visible\000"
 ap 0
    0
 gp    0
@@ -67,7 +68,8 @@ dp 0
 ep 15 16385 0 0 0 0
    17 arrow_oben_rechts
    1
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 42 "${soo:nodeId}@Flash
+${soo:nodeId}@Visible\000"
 ap 0
    0
 gp    0
@@ -99,7 +101,8 @@ dp 0
 ep 15 16385 0 0 0 0
    16 arrow_oben_links
    1
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 42 "${soo:nodeId}@Flash
+${soo:nodeId}@Visible\000"
 ap 0
    0
 gp    0
@@ -131,7 +134,8 @@ dp 0
 ep 15 16385 0 0 0 0
    17 arrow_unten_links
    1
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 42 "${soo:nodeId}@Flash
+${soo:nodeId}@Visible\000"
 ap 0
    0
 gp    0

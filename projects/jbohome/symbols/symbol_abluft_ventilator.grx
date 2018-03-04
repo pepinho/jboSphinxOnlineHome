@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
-grinx a 11 079
+grinx a 13 01
 nd 0
-dd 28.05.2017 28.05.2017
+dd 28.05.2017 04.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -31,7 +31,7 @@ gp    0
 ep 4 16385 0 0 0 0
    0
    1
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 29 "${soo:nodeId}@ChangePenColor\000"
 ap 1 1 1
 gp 100.0 100.0
    100.0 160.0
@@ -46,7 +46,7 @@ dp 0
 ep 3 16385 0 0 0 0
    0
    2
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 29 "${soo:nodeId}@ChangePenColor\000"
    4215 0 5 "10.0\000"
 ap 1 1 1
 gp 14 2
@@ -62,7 +62,7 @@ ee
 ep 10 16385 0 0 0 0
    7 fl?gel2
    2
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 31 "${soo:nodeId}@ChangeBrushColor\000"
    4220 0 13 "fl&#252;gel2\000"
 ap 1 1 1 1 0 18 0 10
 gp 99.99999999999999 99.99999999999994
@@ -78,7 +78,7 @@ dp 0
 ep 10 16385 0 0 0 0
    7 fl?gel1
    2
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 31 "${soo:nodeId}@ChangeBrushColor\000"
    4220 0 13 "fl&#252;gel1\000"
 ap 1 1 1 1 0 18 0 10
 gp 100.0 100.0
@@ -94,7 +94,7 @@ dp 0
 ep 5 16385 0 0 0 0
    5 mitte
    2
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 31 "${soo:nodeId}@ChangeBrushColor\000"
    4216 0 2 "5\000"
 ap 1 1 1 5 0 15 0 10
 gp 100.0 100.0
@@ -114,7 +114,7 @@ gp    0
 ep 4 16385 0 0 0 0
    0
    1
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 29 "${soo:nodeId}@ChangePenColor\000"
 ap 1 1 1
 gp 96.86137085234226 98.78178157274434
    92.28446574191815 38.95660343167928
@@ -129,7 +129,7 @@ dp 0
 ep 3 16385 0 0 0 0
    0
    2
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 29 "${soo:nodeId}@ChangePenColor\000"
    4215 0 5 "10.0\000"
 ap 1 1 1
 gp 14 2

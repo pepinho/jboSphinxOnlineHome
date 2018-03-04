@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
-grinx a 11 079
+grinx a 13 01
 nd 0
-dd 19.11.2016 28.05.2017
+dd 19.11.2016 04.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -44,7 +44,7 @@ gp 2.0 0.0
 ep 6 16385 0 0 0 0
    15 light-eg-rechts
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 26 "soo:nodeId=wut.1.input.1
 \000"
    4218 2 3 "64\000"
@@ -61,7 +61,9 @@ dp 0
 ep 7 16385 0 0 0 0
    12 alarm-rahmen
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 73 "${soo:nodeId}@Visible
+${soo:nodeId}@ChangeBrushColor
+${soo:nodeId}@Flash\000"
    4100 0 26 "soo:nodeId=wut.2.input.0
 \000"
    4218 2 4 "128\000"
@@ -146,7 +148,7 @@ gp 0.4969228902170403 0.0
 ep 9 16385 0 0 0 0
    28 light-area-eg-eingang-aussen
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.1.output.9
 \000"
    4218 2 3 "64\000"
@@ -163,7 +165,7 @@ dp 0
 ep 9 16385 0 0 0 0
    25 light-area-eg-aussen-oben
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.3.output.6
 \000"
    4218 2 3 "64\000"

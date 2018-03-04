@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
-grinx a 11 079
+grinx a 13 01
 nd 0
-dd 19.11.2016 28.05.2017
+dd 19.11.2016 04.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -44,7 +44,7 @@ gp 2.0 0.0
 ep 6 16385 0 0 0 0
    14 light-eg-links
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.2.output.7
 \000"
    4218 2 3 "64\000"
@@ -61,7 +61,7 @@ dp 0
 ep 6 16385 0 0 0 0
    14 light-eg-mitte
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.2.output.7
 \000"
    4218 2 3 "64\000"
@@ -78,7 +78,7 @@ dp 0
 ep 6 16385 0 0 0 0
    15 light-eg-rechts
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.2.output.4
 \000"
    4218 2 3 "64\000"
@@ -132,7 +132,9 @@ gp 0.5360268637037536 0.0
 ep 7 16385 0 0 0 0
    12 alarm-rahmen
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 73 "${soo:nodeId}@Visible
+${soo:nodeId}@ChangeBrushColor
+${soo:nodeId}@Flash\000"
    4100 0 26 "soo:nodeId=wut.2.input.0
 \000"
    4218 2 4 "128\000"
@@ -163,8 +165,8 @@ dp 0
 ep 6 1 0 0 0 0
    18 link_untergeschoss
    2
-   4218 2 4 "128\000"
    4009 0 24 "index_untergeschoss.grx\000"
+   4218 2 4 "128\000"
 ap 0 1 1 0 0 2 0 10
 gp 409.8214285714286 120.53571428571422
    1213.392857142857 120.53571428571422
@@ -173,8 +175,8 @@ gp 409.8214285714286 120.53571428571422
 ep 6 1 0 0 0 0
    16 link_erdgeschoss
    2
-   4218 2 4 "128\000"
    4009 0 22 "index_erdgeschoss.grx\000"
+   4218 2 4 "128\000"
 ap 0 1 1 0 0 2 0 10
 gp 407.60600699307327 347.1428571428571
    1213.392857142857 347.1428571428571
@@ -183,8 +185,8 @@ gp 407.60600699307327 347.1428571428571
 ep 6 1 0 0 0 0
    17 link_dachgeschoss
    2
-   4218 2 4 "128\000"
    4009 0 23 "index_dachgeschoss.grx\000"
+   4218 2 4 "128\000"
 ap 0 1 1 0 0 2 0 10
 gp 411.42857142857144 586.6071428571429
    1211.7857142857142 586.6071428571429
@@ -193,7 +195,7 @@ gp 411.42857142857144 586.6071428571429
 ep 9 16385 0 0 0 0
    25 light-area-terasse-rechts
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 28 "soo:nodeId=wut.1.output.10
 \000"
    4218 2 3 "64\000"
@@ -210,7 +212,7 @@ dp 0
 ep 9 16385 0 0 0 0
    24 light-area-terasse-links
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 28 "soo:nodeId=wut.1.output.10
 \000"
    4218 2 3 "64\000"
@@ -227,7 +229,7 @@ dp 0
 ep 9 16385 0 0 0 0
    25 light-area-eg-aussen-oben
    3
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
    4100 0 27 "soo:nodeId=wut.3.output.6
 \000"
    4218 2 3 "64\000"

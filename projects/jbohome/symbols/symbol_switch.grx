@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
-grinx a 11 079
+grinx a 13 01
 nd 0
-dd 31.10.2016 04.05.2017
+dd 31.10.2016 04.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -13,7 +13,7 @@ gd 1.0 1.0
 ep 5 16385 0 0 0 0
    0
    1
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 31 "${soo:nodeId}@ChangeBrushColor\000"
 ap 0 1 15 1 0 18 0 10
 gp 45.0 55.0
    30.00000000000001
@@ -26,7 +26,7 @@ dp 0
 ep 15 16385 0 0 0 0
    4 rays
    1
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 22 "${soo:nodeId}@Visible\000"
 ap 0
    0
 gp    0
@@ -186,7 +186,7 @@ gp 36
 ep 5 16385 0 0 0 0
    0
    2
-   4200 0 14 "${soo:nodeId}\000"
+   4200 0 31 "${soo:nodeId}@ChangeBrushColor\000"
    4216 0 2 "5\000"
 ap 1 1 32 5 0 19 0 10
 gp 45.0 63.28723768926119

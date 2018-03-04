@@ -34,7 +34,7 @@
                 </entry>
                 <entry>
                     <key>wut1.host.address</key>
-                    <value>http://localhost/wut-servlet/</value>
+                    <value>http://localhost:8080/wut-servlet/</value>
                 </entry>
                 <entry>
                     <key>wut1.output.0</key>
@@ -86,7 +86,7 @@
                 </entry>
                 <entry>
                     <key>wut2.host.address</key>
-                    <value>http://localhost/wut-servlet-2/</value>
+                    <value>http://localhost:8080/wut-servlet-2/</value>
                 </entry>
                 <entry>
                     <key>wut2.output.0</key>
@@ -138,7 +138,7 @@
                 </entry>
                 <entry>
                     <key>wut3.host.address</key>
-                    <value>http://localhost/wut-servlet-3/</value>
+                    <value>http://localhost:8080/wut-servlet-3/</value>
                 </entry>
                 <entry>
                     <key>wut3.output.0</key>
@@ -190,7 +190,7 @@
                 </entry>
                 <entry>
                     <key>wut4.host.address</key>
-                    <value>http://localhost/wut-servlet-4/</value>
+                    <value>http://localhost:8080/wut-servlet-4/</value>
                 </entry>
                 <entry>
                     <key>wut4.output.0</key>
@@ -242,7 +242,7 @@
                 </entry>
                 <entry>
                     <key>wut5.host.address</key>
-                    <value>http://localhost/wut-servlet-5/</value>
+                    <value>http://localhost:8080/wut-servlet-5/</value>
                 </entry>
                 <entry>
                     <key>wut5.output.0</key>

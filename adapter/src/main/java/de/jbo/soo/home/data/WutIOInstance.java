@@ -93,14 +93,7 @@ public class WutIOInstance implements IConnectionResultListener {
         LOG.info("Connecting WUT " + wutIndex + " ...");
         connector.addResultListener(this);
         try {
-            boolean handleException = true;
-            // XXX workaround for wut-servlets - since startup simulatenous with
-            // adapter, they are not yet available officially at this point
-            if (hostAddress.contains("wut-servlet")) {
-                handleException = false;
-            }
-            // XXX workaround
-            connector.connect(hostAddress, handleException);
+            connector.connect(hostAddress);
             isConnected = connector.isInitialized();
 
             if (isConnected) {
@@ -168,11 +161,11 @@ public class WutIOInstance implements IConnectionResultListener {
     }
 
     private ValueDefinition2 initValueDefinitionOutput(AdapterSpec2 adapterSpec, int wutIndex, int index) {
-        return initValueDefinition(adapterSpec, createIdOutput(wutIndex, index), Integer.toString(index), true, ValueType.ENUM, DataType.INT);
+        return initValueDefinition(adapterSpec, createIdOutput(wutIndex, index), Integer.toString(index), true, ValueType.VALUE, DataType.INT);
     }
 
     private ValueDefinition2 initValueDefinitionInput(AdapterSpec2 adapterSpec, int wutIndex, int index) {
-        return initValueDefinition(adapterSpec, createIdInput(wutIndex, index), Integer.toString(index), false, ValueType.ENUM, DataType.INT);
+        return initValueDefinition(adapterSpec, createIdInput(wutIndex, index), Integer.toString(index), false, ValueType.VALUE, DataType.INT);
     }
 
     private ValueDefinition2 initValueDefinitionCounter(AdapterSpec2 adapterSpec, int wutIndex, int index) {
@@ -187,13 +180,13 @@ public class WutIOInstance implements IConnectionResultListener {
         definition.setWritable(writable);
         definition.setValueType(valueType);
         definition.setNativeObjectType(idNative);
+        definition.setMinValue(0.0);
+        definition.setMaxValue(1.0);
         if (valueType.equals(ValueType.ENUM)) {
             Map<Integer, String> enums = new HashMap<>();
             enums.put(InputOutputEnum.ON.ordinal(), InputOutputEnum.ON.name());
             enums.put(InputOutputEnum.OFF.ordinal(), InputOutputEnum.OFF.name());
             definition.setEnums(enums);
-            definition.setMinValue(0.0);
-            definition.setMaxValue(1.0);
         }
         return definition;
     }
@@ -210,26 +203,34 @@ public class WutIOInstance implements IConnectionResultListener {
         return valueDefinitions.containsKey(id);
     }
 
-    public synchronized void setValue(Value value) {
+    public synchronized Value setValue(Value value) {
         ValueDefinition2 def = valueDefinitions.get(value.getId());
         if (def != null) {
+            Object newValue = null;
             LOG.debug("Set value '" + value.getId() + "' to '" + value.getValue() + "'");
             int index = Integer.parseInt(def.getNativeObjectType());
             if (value.getId().contains(VALUE_ID_PREFIX_COUNTER)) {
-                dataStore.setCounter(index, Integer.parseInt(value.getValue().toString()));
+                newValue = Integer.parseInt(value.getValue().toString());
+                dataStore.setCounter(index, (Integer) newValue);
             } else if (value.getId().contains(VALUE_ID_PREFIX_INPUT)) {
-                dataStore.setInput(index, transformValue(Integer.parseInt(value.getValue().toString())));
+                newValue = Integer.parseInt(value.getValue().toString());
+                dataStore.setInput(index, transformValue((Integer) newValue));
             } else {
                 boolean output = Boolean.parseBoolean(value.getValue().toString());
+                newValue = transformValue(output);
                 dataStore.setOutput(index, output);
                 String request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_OUTPUTACCESS + index, password, IOProcessor.PARAM_STATE, (output == true) ? IOProcessor.OUTPUT_ACCESS_STATE_ON : IOProcessor.OUTPUT_ACCESS_STATE_OFF);
                 LOG.debug("     Sending output-access: " + request);
                 connector.sendCommand(request);
             }
-            this.values.put(value.getId(), value);
+            Value cachedValue = values.get(value.getId());
+            cachedValue.setTimeOfChange(value.getTimeOfChange());
+            cachedValue.setValue(newValue);
 
-            dump(Arrays.asList(value));
+            dump(Arrays.asList(cachedValue));
+            return cachedValue;
         }
+        return null;
     }
 
     private Set<String> getKeys(String substring, Set<String> originalKeys) {
@@ -278,9 +279,12 @@ public class WutIOInstance implements IConnectionResultListener {
             Value value = this.values.get(id);
             if (value == null) {
                 value = new Value();
-                value.setTimeOfValue(time);
+                value.setTimeOfValue(0l);
+                value.setTimeOfChange(0l);
                 value.setId(def.getId());
                 value.setDataType(def.getDataType());
+                value.setStatus(Value.STATUS_GOOD);
+                value.setValue(0);
             }
 
             int index = Integer.parseInt(def.getNativeObjectType());
