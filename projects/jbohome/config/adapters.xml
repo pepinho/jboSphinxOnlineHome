@@ -299,6 +299,22 @@
     </adapters>
     <valueDefinitions>
         <valueDefinition>
+            <adapterId>1</adapterId>
+            <dataType>UNSPECIFIED</dataType>
+            <enums/>
+            <flags>0</flags>
+            <historyBufferLimit>0</historyBufferLimit>
+            <id>=calculation.$0</id>
+            <mappedAdapter2>
+                <dbId>1</dbId>
+            </mappedAdapter2>
+            <mappedId>.*</mappedId>
+            <maxDataLength>-1</maxDataLength>
+            <readable>true</readable>
+            <valueType>VALUE</valueType>
+            <writable>false</writable>
+        </valueDefinition>
+        <valueDefinition>
             <adapterId>2</adapterId>
             <dataType>UNSPECIFIED</dataType>
             <enums/>

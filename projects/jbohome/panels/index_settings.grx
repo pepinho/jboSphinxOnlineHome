@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
-grinx a 11 079
+grinx a 13 01
 nd 0
-dd 19.11.2016 01.05.2017
+dd 19.11.2016 09.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -24,13 +24,61 @@ gp 1.0 0.0
 ep 8 1 0 0 0 0
    0
    2
-   4221 0 36 "&#220;bersicht - Ein- Ausg&#228;nge\000"
-   4009 2 38 "index_settings_overview_all_inout.grx\000"
+   4221 0 26 "WUT1 - Ein- Ausg&#228;nge\000"
+   4009 0 33 "index_settings_overview_wut1.grx\000"
 ap 1 0 1 0 0
    25.5 0 4
    10 0 0
-gp 267.1145038167939 867.297709923664
+gp 250.0 867.297709923664
    0.0 1.9607843137254901
    11
-   25 "\334bersicht - Ein- Ausg\344nge"
+   20 "WUT1 - Ein- Ausg\344nge"
+ep 8 1 0 0 0 0
+   0
+   2
+   4221 0 26 "WUT2 - Ein- Ausg&#228;nge\000"
+   4009 2 33 "index_settings_overview_wut2.grx\000"
+ap 1 0 1 0 0
+   25.5 0 4
+   10 0 0
+gp 250.0 734.223282442748
+   0.0 1.9607843137254901
+   11
+   20 "WUT2 - Ein- Ausg\344nge"
+ep 8 1 0 0 0 0
+   0
+   2
+   4221 0 26 "WUT3 - Ein- Ausg&#228;nge\000"
+   4009 2 33 "index_settings_overview_wut3.grx\000"
+ap 1 0 1 0 0
+   25.5 0 4
+   10 0 0
+gp 250.0 601.148854961832
+   0.0 1.9607843137254901
+   11
+   20 "WUT3 - Ein- Ausg\344nge"
+ep 8 1 0 0 0 0
+   0
+   2
+   4221 0 26 "WUT4 - Ein- Ausg&#228;nge\000"
+   4009 2 33 "index_settings_overview_wut4.grx\000"
+ap 1 0 1 0 0
+   25.5 0 4
+   10 0 0
+gp 250.0 468.0744274809159
+   0.0 1.9607843137254901
+   11
+   20 "WUT4 - Ein- Ausg\344nge"
+ep 8 1 0 0 0 0
+   0
+   2
+   4221 0 26 "WUT5 - Ein- Ausg&#228;nge\000"
+   4009 2 33 "index_settings_overview_wut5.grx\000"
+ap 1 0 1 0 0
+   25.5 0 4
+   10 0 0
+gp 250.0 335.00000000000006
+   0.0 1.9607843137254901
+   11
+   20 "WUT5 - Ein- Ausg\344nge"
 ee

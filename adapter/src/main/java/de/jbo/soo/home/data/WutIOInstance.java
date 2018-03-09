@@ -56,6 +56,8 @@ public class WutIOInstance implements IConnectionResultListener {
 
     private static final String VALUE_ID_PREFIX_COUNTER = ".counter.";
 
+    private static final String VALUE_ID_ADDRESS = ".address";
+
     private String hostAddress;
 
     private volatile boolean isConnected = false;
@@ -135,6 +137,18 @@ public class WutIOInstance implements IConnectionResultListener {
             valueDef = initValueDefinitionCounter(adapterSpec, wutIndex, index);
             valueDefinitions.put(valueDef.getId(), valueDef);
         }
+
+        // address
+        ValueDefinition2 address = new ValueDefinition2(createIdAddress(wutIndex), adapterSpec, createIdAddress(wutIndex));
+        address.setDataType(DataType.STRING);
+        address.setDefaultValue(hostAddress);
+        address.setReadable(true);
+        address.setWritable(false);
+        address.setValueType(ValueType.URL);
+        address.setNativeObjectType("address");
+        valueDefinitions.put(address.getId(), address);
+
+        initValueAddress();
     }
 
     /**
@@ -158,6 +172,10 @@ public class WutIOInstance implements IConnectionResultListener {
 
     private String createIdCounter(int wutIndex, int index) {
         return createIdPrefix(wutIndex) + VALUE_ID_PREFIX_COUNTER + index;
+    }
+
+    private String createIdAddress(int wutIndex) {
+        return createIdPrefix(wutIndex) + VALUE_ID_ADDRESS;
     }
 
     private ValueDefinition2 initValueDefinitionOutput(AdapterSpec2 adapterSpec, int wutIndex, int index) {
@@ -336,6 +354,20 @@ public class WutIOInstance implements IConnectionResultListener {
             request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_COUNTER, password);
             connector.sendCommand(request);
         }
+    }
+
+    private void initValueAddress() {
+        String idAddress = createIdAddress(wutIndex);
+        LOG.info("Initializing '" + idAddress + "'...");
+        ValueDefinition2 def = valueDefinitions.get(idAddress);
+        Value value = new Value();
+        value.setTimeOfValue(0l);
+        value.setTimeOfChange(System.currentTimeMillis());
+        value.setId(idAddress);
+        value.setDataType(def.getDataType());
+        value.setStatus(Value.STATUS_GOOD);
+        value.setValue(hostAddress);
+        values.put(idAddress, value);
     }
 
     public synchronized Value getValue(String id) {

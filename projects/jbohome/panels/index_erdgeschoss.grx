@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 13 01
 nd 0
-dd 19.11.2016 04.03.2018
+dd 19.11.2016 09.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -190,36 +190,6 @@ dp 0
    0 1 0.0
    1.0 2.0
    -1
-ep 5 16385 0 0 0 0
-   30 light-area-eg-wohnzimmer-tisch
-   3
-   4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 27 "soo:nodeId=wut.2.output.8
-\000"
-   4218 2 3 "64\000"
-ap 0 1 1 1 0 31 0 10
-gp 985.6344024214977 691.6166236616959
-   182.67799744993582
-dp 0
-   6
-   0 1 0.0
-   1.0 2.0
-   -1
-ep 5 16385 0 0 0 0
-   23 light-area-eg-esszimmer
-   3
-   4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 27 "soo:nodeId=wut.2.output.7
-\000"
-   4218 2 3 "64\000"
-ap 0 1 1 1 0 31 0 10
-gp 616.4962560381323 732.5443988646258
-   230.8922831642207
-dp 0
-   6
-   0 1 0.0
-   1.0 2.0
-   -1
 ep 9 16385 0 0 0 0
    28 light-area-eg-terasse-rechts
    3
@@ -343,30 +313,6 @@ ap 0
 gp 1.0 0.0
    283.8308377300065 0.0
    1.0 335.20833260372046
-   12 _GR_SYM_PTH/
-   17 symbol_switch.grx
-ep 11 1 0 0 0 0
-   25 light-switch-eg-esszimmer
-   1
-   4100 0 27 "soo:nodeId=wut.2.output.7
-\000"
-ap 0
-   0
-gp 1.0 0.0
-   575.7515701746449 0.0
-   1.0 677.5365223757531
-   12 _GR_SYM_PTH/
-   17 symbol_switch.grx
-ep 11 1 0 0 0 0
-   32 light-switch-eg-wohnzimmer-tisch
-   1
-   4100 0 27 "soo:nodeId=wut.2.output.8
-\000"
-ap 0
-   0
-gp 1.0 0.0
-   957.9573753344838 0.0
-   1.0 629.6798240402325
    12 _GR_SYM_PTH/
    17 symbol_switch.grx
 ep 11 1 0 0 0 0
@@ -567,18 +513,6 @@ gp 0.20616064892476288 0.0
    12 _GR_SYM_PTH/
    25 symbol_window_contact.grx
 ep 11 1 0 0 0 0
-   26 symbol_steckdose_esszimmer
-   1
-   4100 0 27 "soo:nodeId=wut.1.output.6
-\000"
-ap 0
-   0
-gp 0.43750000000000033 0.0
-   377.59627375189166 0.0
-   0.43750000000000033 677.0217487897245
-   12 _GR_SYM_PTH/
-   20 symbol_steckdose.grx
-ep 11 1 0 0 0 0
    20 door-context-eingang
    1
    4100 0 27 "soo:nodeId=wut.1.output.8
@@ -615,30 +549,6 @@ gp 0.43750000000000033 0.0
    12 _GR_SYM_PTH/
    20 symbol_steckdose.grx
 ep 11 1 0 0 0 0
-   23 symbol_steckdose_sofa_1
-   1
-   4100 0 27 "soo:nodeId=wut.4.output.3
-\000"
-ap 0
-   0
-gp 0.43750000000000033 0.0
-   786.5521526626063 0.0
-   0.43750000000000033 503.092102087772
-   12 _GR_SYM_PTH/
-   20 symbol_steckdose.grx
-ep 11 1 0 0 0 0
-   23 symbol_steckdose_sofa_2
-   1
-   4100 0 27 "soo:nodeId=wut.4.output.3
-\000"
-ap 0
-   0
-gp 0.43750000000000033 0.0
-   870.4164341452032 0.0
-   0.43750000000000033 503.45763059004196
-   12 _GR_SYM_PTH/
-   20 symbol_steckdose.grx
-ep 11 1 0 0 0 0
    18 rollo-hoch-eg-alle
    0
 ap 0
@@ -670,4 +580,94 @@ gp 0.6566138979682066 0.0
    0.6760039852833145 414.2381095164619
    12 _GR_SYM_PTH/
    22 symbol_rollo_aktiv.grx
+ep 5 16385 0 0 0 0
+   30 light-area-eg-wohnzimmer-tisch
+   3
+   4200 0 22 "${soo:nodeId}@Visible\000"
+   4100 0 27 "soo:nodeId=wut.2.output.8
+\000"
+   4218 2 3 "64\000"
+ap 0 1 1 1 0 31 0 10
+gp 985.6344024214977 691.6166236616959
+   182.67799744993582
+dp 0
+   6
+   0 1 0.0
+   1.0 2.0
+   -1
+ep 11 1 0 0 0 0
+   32 light-switch-eg-wohnzimmer-tisch
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.8
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   957.9573753344838 0.0
+   1.0 629.6798240402325
+   12 _GR_SYM_PTH/
+   17 symbol_switch.grx
+ep 5 16385 0 0 0 0
+   23 light-area-eg-esszimmer
+   3
+   4200 0 22 "${soo:nodeId}@Visible\000"
+   4100 0 27 "soo:nodeId=wut.2.output.7
+\000"
+   4218 2 3 "64\000"
+ap 0 1 1 1 0 31 0 10
+gp 616.4962560381323 732.5443988646258
+   230.8922831642207
+dp 0
+   6
+   0 1 0.0
+   1.0 2.0
+   -1
+ep 11 1 0 0 0 0
+   25 light-switch-eg-esszimmer
+   1
+   4100 0 27 "soo:nodeId=wut.2.output.7
+\000"
+ap 0
+   0
+gp 1.0 0.0
+   575.7515701746449 0.0
+   1.0 677.5365223757531
+   12 _GR_SYM_PTH/
+   17 symbol_switch.grx
+ep 11 1 0 0 0 0
+   23 symbol_steckdose_sofa_2
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.3
+\000"
+ap 0
+   0
+gp 0.43750000000000033 0.0
+   870.4164341452032 0.0
+   0.43750000000000033 503.45763059004196
+   12 _GR_SYM_PTH/
+   20 symbol_steckdose.grx
+ep 11 1 0 0 0 0
+   23 symbol_steckdose_sofa_1
+   1
+   4100 0 27 "soo:nodeId=wut.4.output.3
+\000"
+ap 0
+   0
+gp 0.43750000000000033 0.0
+   786.5521526626063 0.0
+   0.43750000000000033 503.092102087772
+   12 _GR_SYM_PTH/
+   20 symbol_steckdose.grx
+ep 11 1 0 0 0 0
+   26 symbol_steckdose_esszimmer
+   1
+   4100 0 27 "soo:nodeId=wut.1.output.6
+\000"
+ap 0
+   0
+gp 0.43750000000000033 0.0
+   377.59627375189166 0.0
+   0.43750000000000033 677.0217487897245
+   12 _GR_SYM_PTH/
+   20 symbol_steckdose.grx
 ee

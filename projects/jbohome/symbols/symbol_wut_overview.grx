@@ -1,0 +1,337 @@
+integrierte informationssysteme (c)
+grinx a 13 01
+nd 0
+dd 09.03.2018 09.03.2018
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   1920.0 1080.0
+   0
+ep 8 1 0 0 0 0
+   0
+   0
+ap 1 1 1 0 0
+   25.5 0 4
+   10 0 0
+gp 130.0 935.0
+   0.0 1.9607843137254901
+   11
+   4 "WUT:"
+ep 8 16385 0 0 0 0
+   0
+   1
+   4200 0 30 "${wut-address}@DigitalDisplay\000"
+ap 1 0 1 0 0
+   25.5 0 4
+   10 0 0
+gp 285.0 935.0
+   0.0 1.9607843137254901
+   11
+   14 "${wut-address}"
+dp 0
+   5
+   0 6 2 0 0.0
+   0.0 100.0
+   -1
+ep 8 1 0 0 0 0
+   0
+   0
+ap 1 0 1 0 0
+   25.5 0 4
+   10 0 0
+gp 130.0 795.0
+   0.0 1.9607843137254901
+   11
+   8 "Outputs:"
+ep 8 1 0 0 0 0
+   0
+   0
+ap 1 0 1 0 0
+   25.5 0 4
+   10 0 0
+gp 170.1785714285714 400.0
+   0.0 1.9607843137254901
+   11
+   7 "Inputs:"
+ep 15 1 0 0 0 0
+   0
+   0
+ap 0
+   0
+gp    0
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 10 "idcount=1\000"
+ap 0
+   0
+gp 1.0 0.0
+   436.9642857142857 0.0
+   1.0 743.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 10 "idcount=2\000"
+ap 0
+   0
+gp 1.0 0.0
+   642.9642857142858 0.0
+   1.0 743.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 10 "idcount=3\000"
+ap 0
+   0
+gp 1.0 0.0
+   848.9642857142858 0.0
+   1.0 743.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 10 "idcount=4\000"
+ap 0
+   0
+gp 1.0 0.0
+   1054.9642857142858 0.0
+   1.0 743.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 10 "idcount=5\000"
+ap 0
+   0
+gp 1.0 0.0
+   1260.9642857142858 0.0
+   1.0 743.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 10 "idcount=6\000"
+ap 0
+   0
+gp 1.0 0.0
+   1466.9642857142853 0.0
+   1.0 743.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=12\000"
+ap 0
+   0
+gp 1.0 0.0
+   1466.9642857142853 0.0
+   1.0 635.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=11\000"
+ap 0
+   0
+gp 1.0 0.0
+   1260.9642857142858 0.0
+   1.0 635.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=10\000"
+ap 0
+   0
+gp 1.0 0.0
+   1054.9642857142858 0.0
+   1.0 635.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 10 "idcount=9\000"
+ap 0
+   0
+gp 1.0 0.0
+   848.9642857142858 0.0
+   1.0 635.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 10 "idcount=8\000"
+ap 0
+   0
+gp 1.0 0.0
+   642.9642857142858 0.0
+   1.0 635.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 10 "idcount=7\000"
+ap 0
+   0
+gp 1.0 0.0
+   436.9642857142857 0.0
+   1.0 635.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ee
+ep 15 1 0 0 0 0
+   0
+   0
+ap 0
+   0
+gp    0
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=13\000"
+ap 0
+   0
+gp 1.0 0.0
+   436.96428571428567 0.0
+   1.0 348.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=14\000"
+ap 0
+   0
+gp 1.0 0.0
+   642.9642857142858 0.0
+   1.0 348.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=15\000"
+ap 0
+   0
+gp 1.0 0.0
+   848.9642857142858 0.0
+   1.0 348.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=16\000"
+ap 0
+   0
+gp 1.0 0.0
+   1054.9642857142858 0.0
+   1.0 348.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=17\000"
+ap 0
+   0
+gp 1.0 0.0
+   1260.9642857142858 0.0
+   1.0 348.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=18\000"
+ap 0
+   0
+gp 1.0 0.0
+   1466.9642857142853 0.0
+   1.0 348.8392857142858
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=24\000"
+ap 0
+   0
+gp 1.0 0.0
+   1466.9642857142853 0.0
+   1.0 240.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=23\000"
+ap 0
+   0
+gp 1.0 0.0
+   1260.9642857142858 0.0
+   1.0 240.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=22\000"
+ap 0
+   0
+gp 1.0 0.0
+   1054.9642857142858 0.0
+   1.0 240.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=21\000"
+ap 0
+   0
+gp 1.0 0.0
+   848.9642857142858 0.0
+   1.0 240.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=20\000"
+ap 0
+   0
+gp 1.0 0.0
+   642.9642857142858 0.0
+   1.0 240.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ep 11 1 0 0 0 0
+   20 symbol_in_out_status
+   1
+   4100 0 11 "idcount=19\000"
+ap 0
+   0
+gp 1.0 0.0
+   436.96428571428567 0.0
+   1.0 240.0
+   12 _GR_SYM_PTH/
+   24 symbol_in_out_status.grx
+ee
+ee

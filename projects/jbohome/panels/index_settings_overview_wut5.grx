@@ -1,0 +1,59 @@
+integrierte informationssysteme (c)
+grinx a 13 01
+nd 0
+dd 01.05.2017 09.03.2018
+sd 1 0 0
+ad 0 0
+   0
+gd 1.0 1.0
+   0.0 0.0
+   0.0 0.0
+   1920.0 1080.0
+   0
+ep 11 8193 0 0 2 0
+   6 rahmen
+   1
+   4100 0 29 "titel=Ein- und Ausg&#228;nge\000"
+ap 0
+   0
+gp 1.0 0.0
+   0.0 0.0
+   1.0 0.0
+   12 _GR_SYM_PTH/
+   10 rahmen.grx
+ep 11 1 0 0 0 0
+   19 symbol_wut_overview
+   1
+   4100 0 681 "wut-address=wut.5.address
+soo:nodeId1=wut.5.output.0
+soo:nodeId2=wut.5.output.1
+soo:nodeId3=wut.5.output.2
+soo:nodeId4=wut.5.output.3
+soo:nodeId5=wut.5.output.4
+soo:nodeId6=wut.5.output.5
+soo:nodeId7=wut.5.output.6
+soo:nodeId8=wut.5.output.7
+soo:nodeId9=wut.5.output.8
+soo:nodeId10=wut.5.output.9
+soo:nodeId11=wut.5.output.10
+soo:nodeId12=wut.5.output.11
+soo:nodeId13=wut.5.input.0
+soo:nodeId14=wut.5.input.1
+soo:nodeId15=wut.5.input.2
+soo:nodeId16=wut.5.input.3
+soo:nodeId17=wut.5.input.4
+soo:nodeId18=wut.5.input.5
+soo:nodeId19=wut.5.input.6
+soo:nodeId20=wut.5.input.7
+soo:nodeId21=wut.5.input.8
+soo:nodeId22=wut.5.input.9
+soo:nodeId23=wut.5.input.10
+soo:nodeId24=wut.5.input.11\000"
+ap 0
+   0
+gp 1.0 0.0
+   145.0 0.0
+   1.0 -85.0
+   12 _GR_SYM_PTH/
+   23 symbol_wut_overview.grx
+ee
