@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 13 01
 nd 0
-dd 19.11.2016 09.03.2018
+dd 19.11.2016 10.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -550,7 +550,8 @@ gp 0.43750000000000033 0.0
    20 symbol_steckdose.grx
 ep 11 1 0 0 0 0
    18 rollo-hoch-eg-alle
-   0
+   1
+   4100 0 26 "soo:nodeId=wut.3.output.7\000"
 ap 0
    0
 gp 0.5 0.0
@@ -560,7 +561,8 @@ gp 0.5 0.0
    13 symbol_up.grx
 ep 11 1 0 0 0 0
    20 rollo-runter-eg-alle
-   0
+   1
+   4100 0 26 "soo:nodeId=wut.3.output.7\000"
 ap 0
    0
 gp 0.5000000000000006 0.0

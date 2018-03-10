@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 13 01
 nd 0
-dd 19.11.2016 09.03.2018
+dd 19.11.2016 10.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -99,7 +99,8 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    12 symbol_alarm
    1
-   4100 0 25 "soo:nodeId=wut.2.input.0\000"
+   4100 0 58 "alarm-active=wut.2.output.1
+alarm-triggered=wut.2.input.0\000"
 ap 0
    0
 gp 0.19607843137255096 0.0
@@ -107,4 +108,15 @@ gp 0.19607843137255096 0.0
    0.19607843137255096 441.9607843137252
    12 _GR_SYM_PTH/
    16 symbol_alarm.grx
+ep 11 1 0 0 0 0
+   22 symbol-alarm-triggered
+   1
+   4100 0 30 "alarm-triggered=wut.2.input.0\000"
+ap 0
+   0
+gp 0.196078431372549 0.0
+   -34.01960784313724 0.0
+   0.196078431372549 440.9803921568626
+   12 _GR_SYM_PTH/
+   26 symbol-alarm-triggered.grx
 ee
