@@ -52,6 +52,25 @@
      		<valueType>VALUE</valueType>
             <dataType>INT</dataType>
      	</value>
+     	<value>
+     		<id>sum.counter.windows</id>
+     		<dataPointIds>
+     			<dataPointId>wut.2.input.3</dataPointId>
+     			<dataPointId>wut.4.input.11</dataPointId>
+     			<dataPointId>wut.4.input.9</dataPointId>
+     			<dataPointId>wut.4.input.10</dataPointId>
+     			<dataPointId>wut.4.input.8</dataPointId>
+     			<dataPointId>wut.1.input.4</dataPointId>
+     			<dataPointId>wut.1.input.5</dataPointId>
+     			<dataPointId>wut.1.input.8</dataPointId>
+     			<dataPointId>wut.4.input.7</dataPointId>
+     			<dataPointId>wut.4.input.6</dataPointId>
+     			<dataPointId>wut.4.input.5</dataPointId>
+     		</dataPointIds>
+     		<function>SUM</function>
+     		<valueType>VALUE</valueType>
+            <dataType>INT</dataType>
+     	</value>
      </values>
     <scripts/>
 </adapterCalculated>

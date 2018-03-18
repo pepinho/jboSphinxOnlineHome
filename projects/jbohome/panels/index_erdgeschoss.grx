@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 13 01
 nd 0
-dd 19.11.2016 10.03.2018
+dd 19.11.2016 18.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -513,7 +513,7 @@ gp 0.20616064892476288 0.0
    12 _GR_SYM_PTH/
    25 symbol_window_contact.grx
 ep 11 1 0 0 0 0
-   20 door-context-eingang
+   20 door-contact-eingang
    1
    4100 0 27 "soo:nodeId=wut.1.output.8
 \000"

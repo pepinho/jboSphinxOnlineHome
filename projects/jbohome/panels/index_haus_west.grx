@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 13 01
 nd 0
-dd 19.11.2016 09.03.2018
+dd 19.11.2016 18.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -99,6 +99,13 @@ gp 0.5859904859303416 0.0
    3.569246934867416 -293.88317587364486
    12 _GR_SYM_PTH/
    25 symbol_window_contact.grx
+ep 15 16385 0 0 0 0
+   12 alarm-rahmen
+   1
+   4200 0 20 "wut.2.input.0@Flash\000"
+ap 0
+   0
+gp    0
 ep 7 16385 0 0 0 0
    12 alarm-rahmen
    3
@@ -126,11 +133,17 @@ dp 0
    0 1 0.0
    1.0 2.0
    -1
+ee
+dp 0
+   3
+   0 1 1 0 0.0
+   2 1.0 2.0
+   -1
 ep 6 1 0 0 0 0
    18 link_untergeschoss
    2
-   4009 0 24 "index_untergeschoss.grx\000"
    4218 2 4 "128\000"
+   4009 0 24 "index_untergeschoss.grx\000"
 ap 0 1 1 0 0 2 0 10
 gp 404.1548336061317 43.05999029636621
    1266.42985727722 43.05999029636621
@@ -139,8 +152,8 @@ gp 404.1548336061317 43.05999029636621
 ep 6 1 0 0 0 0
    16 link_erdgeschoss
    2
-   4009 0 22 "index_erdgeschoss.grx\000"
    4218 2 4 "128\000"
+   4009 0 22 "index_erdgeschoss.grx\000"
 ap 0 1 1 0 0 2 0 10
 gp 404.1554172178225 279.08915274996764
    1263.2142857142858 279.08915274996764
@@ -149,8 +162,8 @@ gp 404.1554172178225 279.08915274996764
 ep 7 1 0 0 0 0
    17 link_dachgeschoss
    2
-   4009 0 23 "index_dachgeschoss.grx\000"
    4218 2 4 "128\000"
+   4009 0 23 "index_dachgeschoss.grx\000"
 ap 0 1 1 0 0 2 0 10
 gp 6
    403.3305561250287 636.5192046241657

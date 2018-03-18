@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 13 01
 nd 0
-dd 19.11.2016 10.03.2018
+dd 19.11.2016 18.03.2018
 sd 1 0 0
 ad 0 0
    0
@@ -92,7 +92,7 @@ ep 11 1 0 0 0 0
 ap 0
    0
 gp 1.0 0.0
-   3.2978651014680906 0.0
+   3.375 0.0
    1.0 599.4253491842461
    12 _GR_SYM_PTH/
    25 symbol_counter_lights.grx
@@ -105,7 +105,7 @@ ap 0
    0
 gp 0.19607843137255096 0.0
    -33.039215686274474 0.0
-   0.19607843137255096 441.9607843137252
+   0.19607843137255096 251.96078431372501
    12 _GR_SYM_PTH/
    16 symbol_alarm.grx
 ep 11 1 0 0 0 0
@@ -116,7 +116,18 @@ ap 0
    0
 gp 0.196078431372549 0.0
    -34.01960784313724 0.0
-   0.196078431372549 440.9803921568626
+   0.196078431372549 250.98039215686282
    12 _GR_SYM_PTH/
    26 symbol-alarm-triggered.grx
+ep 11 1 0 0 0 0
+   22 symbol_counter_windows
+   1
+   4100 0 43 "soo:nodeId=calculation.sum.counter.windows\000"
+ap 0
+   0
+gp 1.0 0.0
+   0.0 0.0
+   1.0 471.0
+   12 _GR_SYM_PTH/
+   26 symbol_counter_windows.grx
 ee
