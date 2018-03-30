@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.jbo.jbo-soo-home</groupId>
 	<artifactId>jbo-soo-home</artifactId>
-	<version>0.9.4</version>
+	<version>0.9.5</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -30,6 +30,10 @@
 		<ingmbh-objectpool.version>2.1.0</ingmbh-objectpool.version>
 		<ingmbh-langsupport.version>1.1.4</ingmbh-langsupport.version>
 	</properties>
+	
+	<scm>
+		<developerConnection>scm:git:ssh://github.com/jboSphinxOnlineHome</developerConnection>
+	</scm>
 
 	<modules>
 		<module>adapter</module>
