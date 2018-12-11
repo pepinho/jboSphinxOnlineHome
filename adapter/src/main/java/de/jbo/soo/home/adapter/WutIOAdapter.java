@@ -249,7 +249,7 @@ public class WutIOAdapter extends DataSourceAdapter6 {
      */
     @Override
     public Collection<Value> getValues(Collection<String> ids) {
-        LOG.info("--> getValues()");
+        LOG.debug("--> getValues()");
         if (!isTimerActive && !isStartup) {
             if (isConnectionsAvailable()) {
                 LOG.info("Initializing 1st connections to WUTs...");
@@ -280,7 +280,7 @@ public class WutIOAdapter extends DataSourceAdapter6 {
             LOG.info("Startup phase. Returning empty values. Connection will be established with the next call...");
             isStartup = false;
         }
-        LOG.info("<-- getValues()");
+        LOG.debug("<-- getValues()");
         return values;
     }
 

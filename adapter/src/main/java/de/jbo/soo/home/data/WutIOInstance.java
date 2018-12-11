@@ -349,10 +349,18 @@ public class WutIOInstance implements IConnectionResultListener {
         if (connector.isInitialized()) {
             String request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_INPUT, password);
             connector.sendCommand(request);
-            request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_OUTPUT, password);
-            connector.sendCommand(request);
-            request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_COUNTER, password);
-            connector.sendCommand(request);
+            // don't update outputs and counters
+            // performance issues on the WUTs with that many requests every
+            // second!!! :(
+            // we just need the inputs anyway for now...
+            // request =
+            // IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_OUTPUT,
+            // password);
+            // connector.sendCommand(request);
+            // request =
+            // IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_COUNTER,
+            // password);
+            // connector.sendCommand(request);
         }
     }
 
@@ -375,7 +383,7 @@ public class WutIOInstance implements IConnectionResultListener {
             refreshValues();
         }
         Value value = values.get(id);
-        LOG.info("getValue(" + id + ") = " + value);
+        LOG.debug("getValue(" + id + ") = " + value);
         return value;
     }
 

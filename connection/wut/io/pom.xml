@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.jbo.jbo-soo-home.connection.wut</groupId>
 		<artifactId>jbo-soo-home-connection-wut</artifactId>
-		<version>0.9.5</version>
+		<version>0.9.6</version>
 	</parent>
 	<groupId>de.jbo.jbo-soo-home.connection.wut.io</groupId>
 	<artifactId>jbo-soo-home-connection-wut-io</artifactId>
