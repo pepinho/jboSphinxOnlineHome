@@ -315,11 +315,14 @@ public class WutIOInstance implements IConnectionResultListener {
                 newValue = transformValue(dataStore.getInput(index));
             } else {
                 boolean storedValue = dataStore.getOutput(index);
-                if (inputToOutputMapping.containsKey(index)) {
-                    if (storedValue == false) {
-                        storedValue = dataStore.getInput(inputToOutputMapping.get(index));
-                    }
-                }
+                // don't map input to output anymore...only inputs will be
+                // applied...
+                // if (inputToOutputMapping.containsKey(index)) {
+                // if (storedValue == false) {
+                // storedValue =
+                // dataStore.getInput(inputToOutputMapping.get(index));
+                // }
+                // }
                 newValue = transformValue(storedValue);
 
             }
