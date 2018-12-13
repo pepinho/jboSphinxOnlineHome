@@ -314,7 +314,7 @@ public class WutIOInstance implements IConnectionResultListener {
             } else if (value.getId().contains(VALUE_ID_PREFIX_INPUT)) {
                 newValue = transformValue(dataStore.getInput(index));
             } else {
-                boolean storedValue = dataStore.getOutput(index);
+                // boolean storedValue = dataStore.getOutput(index);
                 // don't map input to output anymore...only inputs will be
                 // applied...
                 // if (inputToOutputMapping.containsKey(index)) {
@@ -323,7 +323,7 @@ public class WutIOInstance implements IConnectionResultListener {
                 // dataStore.getInput(inputToOutputMapping.get(index));
                 // }
                 // }
-                newValue = transformValue(storedValue);
+                newValue = transformValue(false);
 
             }
             Object previousValue = value.getValue();
