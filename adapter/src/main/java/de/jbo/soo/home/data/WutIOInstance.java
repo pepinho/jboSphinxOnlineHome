@@ -225,7 +225,7 @@ public class WutIOInstance implements IConnectionResultListener {
         ValueDefinition2 def = valueDefinitions.get(value.getId());
         if (def != null) {
             Object newValue = null;
-            LOG.debug("Set value '" + value.getId() + "' to '" + value.getValue() + "'");
+
             int index = Integer.parseInt(def.getNativeObjectType());
             if (value.getId().contains(VALUE_ID_PREFIX_COUNTER)) {
                 newValue = Integer.parseInt(value.getValue().toString());
@@ -234,17 +234,19 @@ public class WutIOInstance implements IConnectionResultListener {
                 newValue = Integer.parseInt(value.getValue().toString());
                 dataStore.setInput(index, transformValue((Integer) newValue));
             } else {
-                boolean output = Boolean.parseBoolean(value.getValue().toString());
-                newValue = transformValue(output);
-                dataStore.setOutput(index, output);
-                String request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_OUTPUTACCESS + index, password, IOProcessor.PARAM_STATE, (output == true) ? IOProcessor.OUTPUT_ACCESS_STATE_ON : IOProcessor.OUTPUT_ACCESS_STATE_OFF);
+                // don't store changed value, original WUT also always resets
+                // the output anyway, so do we...
+                newValue = transformValue(false);
+                dataStore.setOutput(index, false);
+                String request = IOProcessor.createRequest(IOProcessor.ATTRIBUTE_PREFIX_OUTPUTACCESS + index, password, IOProcessor.PARAM_STATE, IOProcessor.OUTPUT_ACCESS_STATE_ON);
                 LOG.debug("     Sending output-access: " + request);
                 connector.sendCommand(request);
+
             }
             Value cachedValue = values.get(value.getId());
             cachedValue.setTimeOfChange(value.getTimeOfChange());
             cachedValue.setValue(newValue);
-
+            LOG.debug("Set value '" + cachedValue.getId() + "' to '" + cachedValue.getValue() + "'");
             dump(Arrays.asList(cachedValue));
             return cachedValue;
         }

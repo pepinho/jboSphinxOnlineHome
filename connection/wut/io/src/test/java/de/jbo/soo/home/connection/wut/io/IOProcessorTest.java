@@ -101,8 +101,8 @@ public class IOProcessorTest {
     public void testProcessOutputAccessValid() {
         IOProcessor.processOutputAccess(0, "ON", dataStore);
         IOProcessor.processOutputAccess(1, "OFF", dataStore);
-        Assert.assertEquals("Value doesn't match!", true, dataStore.getOutput(0));
-        Assert.assertEquals("Value doesn't match!", false, dataStore.getOutput(1));
+        Assert.assertEquals("Value doesn't match!", true, dataStore.getInput(0));
+        Assert.assertEquals("Value doesn't match!", false, dataStore.getInput(1));
     }
 
     @Test
@@ -110,8 +110,8 @@ public class IOProcessorTest {
         IOProcessor.processOutputAccess(0, "ON", dataStore);
         IOProcessor.processOutputAccess(1, "OFF", dataStore);
         IOProcessor.processOutputAccess(1, null, dataStore);
-        Assert.assertEquals("Value doesn't match!", true, dataStore.getOutput(0));
-        Assert.assertEquals("Value doesn't match!", false, dataStore.getOutput(1));
+        Assert.assertEquals("Value doesn't match!", true, dataStore.getInput(0));
+        Assert.assertEquals("Value doesn't match!", false, dataStore.getInput(1));
     }
 
     @Test

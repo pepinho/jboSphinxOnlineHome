@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.jbo.jbo-soo-home.connection</groupId>
 		<artifactId>jbo-soo-home-connection</artifactId>
-		<version>0.9.6</version>
+		<version>0.9.7</version>
 		<relativePath>..</relativePath>
 	</parent>
 

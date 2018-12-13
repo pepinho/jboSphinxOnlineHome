@@ -37,12 +37,12 @@ public class BaseControllerTest {
         return store;
     }
 
-    private void assertDataStoreOutput(int index, boolean expected) {
-        assertDataStoreOutput(index, expected, dataStore());
+    private void assertDataStoreInput(int index, boolean expected) {
+        assertDataStoreInput(index, expected, dataStore());
     }
 
-    private void assertDataStoreOutput(int index, boolean expected, DataStore store) {
-        assertEquals("The output-value doesn't match!", expected, store.getOutput(index));
+    private void assertDataStoreInput(int index, boolean expected, DataStore store) {
+        assertEquals("The input-value doesn't match!", expected, store.getInput(index));
     }
 
     private void assertDataStoreCounter(int index, int expected) {
@@ -160,14 +160,14 @@ public class BaseControllerTest {
     @Test
     public void output_access_to_ON() throws IllegalAccessException {
         baseController.outputaccess(PASSWORD, 0, IOProcessor.OUTPUT_ACCESS_STATE_ON, model);
-        assertDataStoreOutput(0, true);
+        assertDataStoreInput(0, true);
     }
 
     @Test
-    public void output_access_to_ON_and_OFF() throws IllegalAccessException {
+    public void output_access_toggle() throws IllegalAccessException {
         baseController.outputaccess(PASSWORD, 0, IOProcessor.OUTPUT_ACCESS_STATE_ON, model);
-        assertDataStoreOutput(0, true);
-        baseController.outputaccess(PASSWORD, 0, IOProcessor.OUTPUT_ACCESS_STATE_OFF, model);
-        assertDataStoreOutput(0, false);
+        assertDataStoreInput(0, true);
+        baseController.outputaccess(PASSWORD, 0, IOProcessor.OUTPUT_ACCESS_STATE_ON, model);
+        assertDataStoreInput(0, false);
     }
 }

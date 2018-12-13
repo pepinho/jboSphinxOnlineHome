@@ -36,12 +36,15 @@
      			<dataPointId>wut.2.input.2</dataPointId>
      			<dataPointId>wut.2.input.4</dataPointId>
      			<dataPointId>wut.2.input.6</dataPointId>
+				<dataPointId>wut.2.input.7</dataPointId>
+				<dataPointId>wut.2.input.8</dataPointId>
      			<dataPointId>wut.2.input.10</dataPointId>
 				<dataPointId>wut.2.input.11</dataPointId>
 				<dataPointId>wut.3.input.0</dataPointId>
 				<dataPointId>wut.3.input.1</dataPointId>
 				<dataPointId>wut.3.input.2</dataPointId>
 				<dataPointId>wut.3.input.4</dataPointId>
+				<dataPointId>wut.3.input.5</dataPointId>
 				<dataPointId>wut.3.input.6</dataPointId>
 				<dataPointId>wut.3.input.8</dataPointId>
 				<dataPointId>wut.3.input.10</dataPointId>

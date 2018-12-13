@@ -81,8 +81,10 @@ public class IOProcessor {
         if (value == null) {
             return;
         }
-        boolean valueBoolean = (value.equals(OUTPUT_ACCESS_STATE_ON)) ? true : false;
-        dataStore.setOutput(index, valueBoolean);
+        if (value.equals(OUTPUT_ACCESS_STATE_ON)) {
+            // toggle input
+            dataStore.setInput(index, !dataStore.getInput(index));
+        }
     }
 
     public static void processCounterClear(int index, DataStore dataStore) {
