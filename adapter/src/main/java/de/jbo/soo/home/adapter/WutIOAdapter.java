@@ -22,8 +22,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import de.ingmbh.sphinx.online.adapter.common.DataSourceAdapter6;
+import de.ingmbh.sphinx.online.common.vo.DataType;
 import de.ingmbh.sphinx.online.common.vo.Value;
 import de.ingmbh.sphinx.online.common.vo.ValueDefinition2;
+import de.ingmbh.sphinx.online.common.vo.ValueType;
+import de.jbo.soo.home.Version;
 import de.jbo.soo.home.adapter.properties.PropertiesProvider;
 import de.jbo.soo.home.data.WutIOInstance;
 
@@ -46,6 +49,8 @@ public class WutIOAdapter extends DataSourceAdapter6 {
      */
     public static final String ADAPTER_TYPE_DESCRIPTION = "Adapter connecting to WUT-IO devices via http";
 
+    private static Version VERSION = Version.getVersionFromBuild(WutIOAdapter.class);
+
     private static final long REFRESH_TIMER = 1000;
 
     private PropertiesProvider propertiesProvider = null;
@@ -63,6 +68,15 @@ public class WutIOAdapter extends DataSourceAdapter6 {
     private boolean useSeparateRefreshThreads = false;
 
     private boolean isStartup = true;
+
+    private Value versionValue = null;
+
+    public static Version getVersion() {
+        LOG.info("Init version information...");
+        VERSION = Version.getVersionFromBuild(WutIOAdapter.class);
+        LOG.info("Init version information finished: {}", VERSION.toString());
+        return VERSION;
+    }
 
     public WutIOAdapter(PropertiesProvider propertiesProvider) {
         super();
@@ -238,8 +252,29 @@ public class WutIOAdapter extends DataSourceAdapter6 {
                 definitions.addAll(wut.getValueDefinitions());
             }
         }
+        initVersionData(definitions);
         LOG.info("<-- getAvailableData()");
         return definitions;
+    }
+
+    private void initVersionData(List<ValueDefinition2> definitions) {
+        String versionId = "wut.adapter.version";
+        ValueDefinition2 version = new ValueDefinition2(versionId, getAdapterSpec(), versionId);
+        version.setDataType(DataType.STRING);
+        version.setDefaultValue(WutIOAdapter.getVersion());
+        version.setReadable(true);
+        version.setWritable(false);
+        version.setValueType(ValueType.VALUE);
+        version.setNativeObjectType("version");
+        definitions.add(version);
+
+        versionValue = new Value();
+        versionValue.setTimeOfValue(System.currentTimeMillis());
+        versionValue.setTimeOfChange(System.currentTimeMillis());
+        versionValue.setId(versionId);
+        versionValue.setDataType(version.getDataType());
+        versionValue.setStatus(Value.STATUS_GOOD);
+        versionValue.setValue(WutIOAdapter.getVersion().toString());
     }
 
     /*
@@ -265,6 +300,7 @@ public class WutIOAdapter extends DataSourceAdapter6 {
         }
 
         List<Value> values = new ArrayList<>();
+        values.add(versionValue);
         if (!isStartup) {
             synchronized (wuts) {
                 for (String id : ids) {

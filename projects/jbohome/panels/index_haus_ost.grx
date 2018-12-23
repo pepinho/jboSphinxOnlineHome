@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 13 01
 nd 0
-dd 19.11.2016 18.03.2018
+dd 19.11.2016 23.12.2018
 sd 1 0 0
 ad 0 0
    0
@@ -45,7 +45,7 @@ ep 6 16385 0 0 0 0
    14 light-ug-links
    3
    4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 27 "soo:nodeId=wut.3.output.1
+   4100 0 26 "soo:nodeId=wut.3.input.1
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -62,7 +62,7 @@ ep 6 16385 0 0 0 0
    15 light-ug-rechts
    3
    4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 27 "soo:nodeId=wut.3.output.0
+   4100 0 26 "soo:nodeId=wut.3.input.0
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -119,8 +119,8 @@ dp 0
 ep 6 1 0 0 0 0
    18 link_untergeschoss
    2
-   4009 0 24 "index_untergeschoss.grx\000"
    4218 2 4 "128\000"
+   4009 0 24 "index_untergeschoss.grx\000"
 ap 0 1 1 0 0 2 0 10
 gp 504.79769074898906 45.03571428571422
    1367.0727144200773 45.03571428571422
@@ -129,8 +129,8 @@ gp 504.79769074898906 45.03571428571422
 ep 6 1 0 0 0 0
    16 link_erdgeschoss
    2
-   4009 0 22 "index_erdgeschoss.grx\000"
    4218 2 4 "128\000"
+   4009 0 22 "index_erdgeschoss.grx\000"
 ap 0 1 1 0 0 2 0 10
 gp 504.79827436067984 281.06487673931565
    1363.8571428571431 281.06487673931565
@@ -139,8 +139,8 @@ gp 504.79827436067984 281.06487673931565
 ep 7 1 0 0 0 0
    17 link_dachgeschoss
    2
-   4009 0 23 "index_dachgeschoss.grx\000"
    4218 2 4 "128\000"
+   4009 0 23 "index_dachgeschoss.grx\000"
 ap 0 1 1 0 0 2 0 10
 gp 6
    503.97341326788603 638.4949286135137
@@ -165,7 +165,7 @@ ep 9 16385 0 0 0 0
    24 light-area-terasse-links
    3
    4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 28 "soo:nodeId=wut.1.output.10
+   4100 0 27 "soo:nodeId=wut.1.input.10
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -206,7 +206,7 @@ ep 6 16385 0 0 0 0
    14 light-dg-links
    3
    4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 28 "soo:nodeId=wut.2.output.10
+   4100 0 27 "soo:nodeId=wut.2.input.10
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -223,7 +223,7 @@ ep 6 16385 0 0 0 0
    14 light-dg-mitte
    3
    4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 28 "soo:nodeId=wut.3.output.10
+   4100 0 27 "soo:nodeId=wut.3.input.10
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -240,7 +240,7 @@ ep 6 16385 0 0 0 0
    15 light-dg-rechts
    3
    4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 26 "soo:nodeId=wut.2.output.2\000"
+   4100 0 25 "soo:nodeId=wut.2.input.2\000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
 gp 1079.003323200124 530.6741402627749

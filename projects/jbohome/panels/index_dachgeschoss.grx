@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 13 01
 nd 0
-dd 19.11.2016 10.03.2018
+dd 19.11.2016 23.12.2018
 sd 1 0 0
 ad 0 0
    0
@@ -25,8 +25,8 @@ gp 6.124684502776371 0.0
 ep 9 16385 0 0 0 0
    25 light-area-dg-bad-spiegel
    3
-   4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 27 "soo:nodeId=wut.1.output.2
+   4200 0 21 "${wut.input}@Visible\000"
+   4100 0 25 "wut.input=wut.1.input.2
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -42,8 +42,8 @@ dp 0
 ep 6 16385 0 0 0 0
    26 light-area-dg-unten-rechts
    3
-   4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 27 "soo:nodeId=wut.2.output.2
+   4200 0 21 "${wut.input}@Visible\000"
+   4100 0 25 "wut.input=wut.2.input.2
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -59,8 +59,8 @@ dp 0
 ep 6 16385 0 0 0 0
    20 light-area-dg-treppe
    3
-   4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 28 "soo:nodeId=wut.3.output.10
+   4200 0 21 "${wut.input}@Visible\000"
+   4100 0 26 "wut.input=wut.3.input.10
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -76,8 +76,8 @@ dp 0
 ep 6 16385 0 0 0 0
    25 light-area-dg-unten-links
    3
-   4200 0 24 "wut.2.output.10@Visible\000"
-   4100 0 2 "
+   4200 0 21 "${wut.input}@Visible\000"
+   4100 0 26 "wut.input=wut.2.input.10
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -93,8 +93,8 @@ dp 0
 ep 6 16385 0 0 0 0
    18 light-area-dg-flur
    3
-   4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 28 "soo:nodeId=wut.3.output.11
+   4200 0 21 "${wut.input}@Visible\000"
+   4100 0 26 "wut.input=wut.3.input.11
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -110,8 +110,8 @@ dp 0
 ep 6 16385 0 0 0 0
    17 light-area-dg-bad
    3
-   4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 27 "soo:nodeId=wut.1.output.3
+   4200 0 21 "${wut.input}@Visible\000"
+   4100 0 25 "wut.input=wut.1.input.3
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -127,8 +127,8 @@ dp 0
 ep 6 16385 0 0 0 0
    24 light-area-dg-oben-mitte
    3
-   4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 26 "soo:nodeId=wut.1.input.7
+   4200 0 21 "${wut.input}@Visible\000"
+   4100 0 25 "wut.input=wut.1.input.7
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -144,8 +144,8 @@ dp 0
 ep 6 16385 0 0 0 0
    24 light-area-dg-oben-links
    3
-   4200 0 22 "${soo:nodeId}@Visible\000"
-   4100 0 28 "soo:nodeId=wut.2.output.11
+   4200 0 21 "${wut.input}@Visible\000"
+   4100 0 26 "wut.input=wut.2.input.11
 \000"
    4218 2 3 "64\000"
 ap 0 1 1 1 0 31 0 10
@@ -228,8 +228,8 @@ gp 345.3395433222528 33.30471950567153
 ep 11 1 0 0 0 0
    26 light-switch-dg-oben-links
    1
-   4100 0 28 "soo:nodeId=wut.2.output.11
-\000"
+   4100 0 52 "wut.output=wut.2.output.11
+wut.input=wut.2.input.11\000"
 ap 0
    0
 gp 1.0 0.0
@@ -238,21 +238,10 @@ gp 1.0 0.0
    12 _GR_SYM_PTH/
    17 symbol_switch.grx
 ep 11 1 0 0 0 0
-   26 light-switch-dg-oben-mitte
-   1
-   4100 0 26 "soo:nodeId=wut.1.input.7
-\000"
-ap 0
-   0
-gp 1.0 0.0
-   869.7283286858036 0.0
-   1.0 810.9764399069173
-   12 _GR_SYM_PTH/
-   17 symbol_switch.grx
-ep 11 1 0 0 0 0
    25 light-switch-dg-bad-mitte
    1
-   4100 0 27 "soo:nodeId=wut.1.output.3
+   4100 0 51 "wut.output=wut.1.output.3
+wut.input=wut.1.input.3
 \000"
 ap 0
    0
@@ -264,7 +253,9 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    27 light-switch-dg-bad-spiegel
    1
-   4100 0 27 "soo:nodeId=wut.1.output.2
+   4100 0 52 "wut.output=wut.1.output.2
+wut.input=wut.1.input.2
+
 \000"
 ap 0
    0
@@ -276,8 +267,8 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    20 light-switch-dg-flur
    1
-   4100 0 28 "soo:nodeId=wut.3.output.11
-\000"
+   4100 0 52 "wut.output=wut.3.output.11
+wut.input=wut.3.input.11\000"
 ap 0
    0
 gp 1.0 0.0
@@ -288,8 +279,8 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    27 light-switch-dg-unten-links
    1
-   4100 0 28 "soo:nodeId=wut.2.output.10
-\000"
+   4100 0 52 "wut.output=wut.2.output.10
+wut.input=wut.2.input.10\000"
 ap 0
    0
 gp 1.0 0.0
@@ -300,7 +291,8 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    22 light-switch-dg-treppe
    1
-   4100 0 28 "soo:nodeId=wut.3.output.10
+   4100 0 53 "wut.output=wut.3.output.10
+wut.input=wut.3.input.10
 \000"
 ap 0
    0
@@ -312,7 +304,9 @@ gp 1.0 0.0
 ep 11 1 0 0 0 0
    28 light-switch-dg-unten-rechts
    1
-   4100 0 27 "soo:nodeId=wut.2.output.2
+   4100 0 52 "wut.output=wut.2.output.2
+wut.input=wut.2.input.2
+
 \000"
 ap 0
    0
@@ -435,4 +429,15 @@ gp 0.6566138979682066 0.0
    0.6760039852833145 142.42731344230708
    12 _GR_SYM_PTH/
    22 symbol_rollo_aktiv.grx
+ep 11 1 0 0 0 0
+   26 light-switch-dg-oben-mitte
+   1
+   4100 0 24 "wut.input=wut.1.input.7\000"
+ap 0
+   0
+gp 1.0 0.0
+   710.0 0.0
+   1.0 560.0
+   12 _GR_SYM_PTH/
+   27 symbol_switch_no_output.grx
 ee
