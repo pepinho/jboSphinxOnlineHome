@@ -77,6 +77,6 @@ target/jbohome-test.zip
 target/jbohome.zip
 /projects/jbohome/panels/*.svg
 *.svg
-/projects/jbohome/images/*.png
-/projects/jbohome/panels/*.png
-/projects/jbohome/symbols/*.png
+/projects/jbohome/images/*preview*.png
+/projects/jbohome/panels/*preview*.png
+/projects/jbohome/symbols/*preview*.png

@@ -1,7 +1,7 @@
 integrierte informationssysteme (c)
 grinx a 13 01
 nd 0
-dd 19.11.2016 23.12.2018
+dd 19.11.2016 19.01.2019
 sd 1 0 0
 ad 0 0
    0
@@ -689,4 +689,15 @@ gp 1.0 0.0
    1.0 150.0
    12 _GR_SYM_PTH/
    27 symbol_switch_no_output.grx
+ep 11 1 0 0 0 0
+   7 spotify
+   1
+   4009 2 13 "spotify:open\000"
+ap 0
+   0
+gp 0.8832064000000006 0.0
+   856.1679359999999 0.0
+   0.8832064000000006 918.5279360000004
+   12 _GR_SYM_PTH/
+   11 spotify.grx
 ee
